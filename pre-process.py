@@ -26,12 +26,11 @@ def pre_process(imageFile, labelFile, outputImage, outputLabel):
                 #outputImage.write(imageLine)
                 for i in imageLine:
                     if i == ' ':
-                        outputImage.write('0')
+                        outputImage.write(bytes(0))
                     elif i == '+' or i == '#':
-                        outputImage.write('1')
+                        outputImage.write(bytes(1))
                     else:
-                        outputImage.write(i)
-                
+                        outputImage.write(i)               
 
 
 imageFile1 = read_input('digitdata/trainingimages')
