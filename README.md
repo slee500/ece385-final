@@ -10,12 +10,12 @@ The basic process for handwritten digit recognition:
 
 TODO:
 
-[ ] File I/O in C to read input weights and input data
-[ ] Conversion of input data (ASCII) to binary format for easier handling
-[ ] Set up the I/O module to read input weights and input data 
-[ ] Set up the I/O module to output data to the console
-[ ] Figure out how to use the LCD panel
-[ ] Understand the neural network process
+- [ ] File I/O in C to read input weights and input data
+- [ ] Conversion of input data (ASCII) to binary format for easier handling
+- [ ] Set up the I/O module to read input weights and input data 
+- [ ] Set up the I/O module to output data to the console
+- [ ] Figure out how to use the LCD panel
+- [ ] Understand the neural network process
 
 -------
 
