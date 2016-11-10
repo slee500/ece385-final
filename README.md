@@ -6,3 +6,5 @@ The basic process for handwritten digit recognition:
 2. Store these training weights into some kind of a memory block.
 3. Load the input data on the FPGA board
 4. Report the recognized output to the console. 
+
+Combining the MixColumns, SubBytes and ShiftRows into a single round operation: https://code.google.com/archive/p/byte-oriented-aes/
