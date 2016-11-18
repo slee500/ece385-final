@@ -6,11 +6,16 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element $${FILENAME}
    {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
+         type = "String";
+      }
    }
    element altpll_0
    {
@@ -28,6 +33,19 @@
          type = "int";
       }
    }
+   element video_chroma_resampler_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -42,7 +60,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="DE2_CCD.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -52,6 +70,16 @@
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface name="clk_27" internal="altpll_0.c0" type="clock" dir="start" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="rgb"
+   internal="video_chroma_resampler_0.avalon_chroma_sink"
+   type="avalon_streaming"
+   dir="end" />
+ <interface
+   name="y"
+   internal="video_chroma_resampler_0.avalon_chroma_source"
+   type="avalon_streaming"
+   dir="start" />
  <module name="altpll_0" kind="altpll" version="15.0" enabled="1">
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_INCLK_INTERFACE_CLOCK_RATE" value="50000000" />
@@ -225,6 +253,21 @@
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
+ <module
+   name="video_chroma_resampler_0"
+   kind="altera_up_avalon_video_chroma_resampler"
+   version="15.0"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="input_type" value="YCrCb 444" />
+  <parameter name="output_type" value="Y only" />
+ </module>
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk_0.clk"
+   end="video_chroma_resampler_0.clk" />
  <connection
    kind="clock"
    version="15.0"
@@ -235,6 +278,11 @@
    version="15.0"
    start="clk_0.clk_reset"
    end="altpll_0.inclk_interface_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk_0.clk_reset"
+   end="video_chroma_resampler_0.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

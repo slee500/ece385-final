@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2016.11.17.17:34:31"
- outputDirectory="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/">
+ date="2016.11.18.00:24:19"
+ outputDirectory="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -70,16 +70,62 @@
    <property name="synchronousEdges" value="NONE" />
    <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
   </interface>
+  <interface name="rgb" kind="avalon_streaming" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="3" />
+   <port
+       name="rgb_startofpacket"
+       direction="input"
+       role="startofpacket"
+       width="1" />
+   <port name="rgb_endofpacket" direction="input" role="endofpacket" width="1" />
+   <port name="rgb_valid" direction="input" role="valid" width="1" />
+   <port name="rgb_ready" direction="output" role="ready" width="1" />
+   <port name="rgb_data" direction="input" role="data" width="24" />
+  </interface>
+  <interface name="y" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port name="y_ready" direction="input" role="ready" width="1" />
+   <port
+       name="y_startofpacket"
+       direction="output"
+       role="startofpacket"
+       width="1" />
+   <port name="y_endofpacket" direction="output" role="endofpacket" width="1" />
+   <port name="y_valid" direction="output" role="valid" width="1" />
+   <port name="y_data" direction="output" role="data" width="8" />
+  </interface>
  </perimeter>
  <entity
    path=""
-   parameterizationKey="nois:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1479425666,AUTO_UNIQUE_ID=(altpll:15.0:AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_INCLK_INTERFACE_CLOCK_RATE=50000000,AVALON_USE_SEPARATE_SYSCLK=NO,BANDWIDTH=,BANDWIDTH_TYPE=AUTO,CLK0_DIVIDE_BY=50,CLK0_DUTY_CYCLE=50,CLK0_MULTIPLY_BY=27,CLK0_PHASE_SHIFT=0,CLK1_DIVIDE_BY=,CLK1_DUTY_CYCLE=,CLK1_MULTIPLY_BY=,CLK1_PHASE_SHIFT=,CLK2_DIVIDE_BY=,CLK2_DUTY_CYCLE=,CLK2_MULTIPLY_BY=,CLK2_PHASE_SHIFT=,CLK3_DIVIDE_BY=,CLK3_DUTY_CYCLE=,CLK3_MULTIPLY_BY=,CLK3_PHASE_SHIFT=,CLK4_DIVIDE_BY=,CLK4_DUTY_CYCLE=,CLK4_MULTIPLY_BY=,CLK4_PHASE_SHIFT=,CLK5_DIVIDE_BY=,CLK5_DUTY_CYCLE=,CLK5_MULTIPLY_BY=,CLK5_PHASE_SHIFT=,CLK6_DIVIDE_BY=,CLK6_DUTY_CYCLE=,CLK6_MULTIPLY_BY=,CLK6_PHASE_SHIFT=,CLK7_DIVIDE_BY=,CLK7_DUTY_CYCLE=,CLK7_MULTIPLY_BY=,CLK7_PHASE_SHIFT=,CLK8_DIVIDE_BY=,CLK8_DUTY_CYCLE=,CLK8_MULTIPLY_BY=,CLK8_PHASE_SHIFT=,CLK9_DIVIDE_BY=,CLK9_DUTY_CYCLE=,CLK9_MULTIPLY_BY=,CLK9_PHASE_SHIFT=,COMPENSATE_CLOCK=CLK0,DOWN_SPREAD=,DPA_DIVIDER=,DPA_DIVIDE_BY=,DPA_MULTIPLY_BY=,ENABLE_SWITCH_OVER_COUNTER=,EXTCLK0_DIVIDE_BY=,EXTCLK0_DUTY_CYCLE=,EXTCLK0_MULTIPLY_BY=,EXTCLK0_PHASE_SHIFT=,EXTCLK1_DIVIDE_BY=,EXTCLK1_DUTY_CYCLE=,EXTCLK1_MULTIPLY_BY=,EXTCLK1_PHASE_SHIFT=,EXTCLK2_DIVIDE_BY=,EXTCLK2_DUTY_CYCLE=,EXTCLK2_MULTIPLY_BY=,EXTCLK2_PHASE_SHIFT=,EXTCLK3_DIVIDE_BY=,EXTCLK3_DUTY_CYCLE=,EXTCLK3_MULTIPLY_BY=,EXTCLK3_PHASE_SHIFT=,FEEDBACK_SOURCE=,GATE_LOCK_COUNTER=,GATE_LOCK_SIGNAL=,HIDDEN_CONSTANTS=CT#PORT_clk5 PORT_UNUSED CT#PORT_clk4 PORT_UNUSED CT#PORT_clk3 PORT_UNUSED CT#PORT_clk2 PORT_UNUSED CT#PORT_clk1 PORT_UNUSED CT#PORT_clk0 PORT_USED CT#CLK0_MULTIPLY_BY 27 CT#PORT_SCANWRITE PORT_UNUSED CT#PORT_SCANACLR PORT_UNUSED CT#PORT_PFDENA PORT_UNUSED CT#PORT_PLLENA PORT_UNUSED CT#PORT_SCANDATA PORT_UNUSED CT#PORT_SCANCLKENA PORT_UNUSED CT#WIDTH_CLOCK 5 CT#PORT_SCANDATAOUT PORT_UNUSED CT#LPM_TYPE altpll CT#PLL_TYPE AUTO CT#CLK0_PHASE_SHIFT 0 CT#PORT_PHASEDONE PORT_UNUSED CT#OPERATION_MODE NORMAL CT#PORT_CONFIGUPDATE PORT_UNUSED CT#COMPENSATE_CLOCK CLK0 CT#PORT_CLKSWITCH PORT_UNUSED CT#INCLK0_INPUT_FREQUENCY 20000 CT#PORT_SCANDONE PORT_UNUSED CT#PORT_CLKLOSS PORT_UNUSED CT#PORT_INCLK1 PORT_UNUSED CT#AVALON_USE_SEPARATE_SYSCLK NO CT#PORT_INCLK0 PORT_USED CT#PORT_clkena5 PORT_UNUSED CT#PORT_clkena4 PORT_UNUSED CT#PORT_clkena3 PORT_UNUSED CT#PORT_clkena2 PORT_UNUSED CT#PORT_clkena1 PORT_UNUSED CT#PORT_clkena0 PORT_UNUSED CT#PORT_ARESET PORT_USED CT#BANDWIDTH_TYPE AUTO CT#INTENDED_DEVICE_FAMILY {Cyclone IV E} CT#PORT_SCANREAD PORT_UNUSED CT#PORT_PHASESTEP PORT_UNUSED CT#PORT_SCANCLK PORT_UNUSED CT#PORT_CLKBAD1 PORT_UNUSED CT#PORT_CLKBAD0 PORT_UNUSED CT#PORT_FBIN PORT_UNUSED CT#PORT_PHASEUPDOWN PORT_UNUSED CT#PORT_extclk3 PORT_UNUSED CT#PORT_extclk2 PORT_UNUSED CT#PORT_extclk1 PORT_UNUSED CT#PORT_PHASECOUNTERSELECT PORT_UNUSED CT#PORT_extclk0 PORT_UNUSED CT#PORT_ACTIVECLOCK PORT_UNUSED CT#CLK0_DUTY_CYCLE 50 CT#CLK0_DIVIDE_BY 50 CT#PORT_LOCKED PORT_USED,HIDDEN_CUSTOM_ELABORATION=altpll_avalon_elaboration,HIDDEN_CUSTOM_POST_EDIT=altpll_avalon_post_edit,HIDDEN_IF_PORTS=IF#locked {output 0} IF#reset {input 0} IF#clk {input 0} IF#readdata {output 32} IF#write {input 0} IF#phasedone {output 0} IF#address {input 2} IF#c0 {output 0} IF#writedata {input 32} IF#read {input 0} IF#areset {input 0},HIDDEN_IS_FIRST_EDIT=0,HIDDEN_IS_NUMERIC=IN#WIDTH_CLOCK 1 IN#CLK0_DUTY_CYCLE 1 IN#PLL_TARGET_HARCOPY_CHECK 1 IN#SWITCHOVER_COUNT_EDIT 1 IN#INCLK0_INPUT_FREQUENCY 1 IN#PLL_LVDS_PLL_CHECK 1 IN#PLL_AUTOPLL_CHECK 1 IN#PLL_FASTPLL_CHECK 1 IN#PLL_ENHPLL_CHECK 1 IN#DIV_FACTOR0 1 IN#LVDS_MODE_DATA_RATE_DIRTY 1 IN#GLOCK_COUNTER_EDIT 1 IN#CLK0_DIVIDE_BY 1 IN#MULT_FACTOR0 1 IN#CLK0_MULTIPLY_BY 1 IN#USE_MIL_SPEED_GRADE 1,HIDDEN_MF_PORTS=MF#areset 1 MF#clk 1 MF#locked 1 MF#inclk 1,HIDDEN_PRIVATES=PT#GLOCKED_FEATURE_ENABLED 0 PT#SPREAD_FEATURE_ENABLED 0 PT#BANDWIDTH_FREQ_UNIT MHz PT#CUR_DEDICATED_CLK c0 PT#INCLK0_FREQ_EDIT 50.000 PT#BANDWIDTH_PRESET Low PT#PLL_LVDS_PLL_CHECK 0 PT#BANDWIDTH_USE_PRESET 0 PT#AVALON_USE_SEPARATE_SYSCLK NO PT#PLL_ENHPLL_CHECK 0 PT#OUTPUT_FREQ_UNIT0 MHz PT#PHASE_RECONFIG_FEATURE_ENABLED 1 PT#CREATE_CLKBAD_CHECK 0 PT#CLKSWITCH_CHECK 0 PT#INCLK1_FREQ_EDIT 100.000 PT#NORMAL_MODE_RADIO 1 PT#SRC_SYNCH_COMP_RADIO 0 PT#PLL_ARESET_CHECK 1 PT#LONG_SCAN_RADIO 1 PT#SCAN_FEATURE_ENABLED 1 PT#PHASE_RECONFIG_INPUTS_CHECK 0 PT#USE_CLK0 1 PT#PRIMARY_CLK_COMBO inclk0 PT#BANDWIDTH 1.000 PT#GLOCKED_COUNTER_EDIT_CHANGED 1 PT#PLL_FASTPLL_CHECK 0 PT#SPREAD_FREQ_UNIT KHz PT#PLL_AUTOPLL_CHECK 1 PT#LVDS_PHASE_SHIFT_UNIT0 deg PT#SWITCHOVER_FEATURE_ENABLED 0 PT#MIG_DEVICE_SPEED_GRADE Any PT#OUTPUT_FREQ_MODE0 1 PT#BANDWIDTH_FEATURE_ENABLED 1 PT#INCLK0_FREQ_UNIT_COMBO MHz PT#ZERO_DELAY_RADIO 0 PT#OUTPUT_FREQ0 27.00000000 PT#SHORT_SCAN_RADIO 0 PT#LVDS_MODE_DATA_RATE_DIRTY 0 PT#CUR_FBIN_CLK c0 PT#PLL_ADVANCED_PARAM_CHECK 0 PT#CLKBAD_SWITCHOVER_CHECK 0 PT#PHASE_SHIFT_STEP_ENABLED_CHECK 0 PT#DEVICE_SPEED_GRADE 7 PT#PLL_FBMIMIC_CHECK 0 PT#LVDS_MODE_DATA_RATE {Not Available} PT#LOCKED_OUTPUT_CHECK 1 PT#SPREAD_PERCENT 0.500 PT#PHASE_SHIFT0 0.00000000 PT#DIV_FACTOR0 1 PT#CNX_NO_COMPENSATE_RADIO 0 PT#USE_CLKENA0 0 PT#CREATE_INCLK1_CHECK 0 PT#GLOCK_COUNTER_EDIT 1048575 PT#INCLK1_FREQ_UNIT_COMBO MHz PT#EFF_OUTPUT_FREQ_VALUE0 27.000000 PT#SPREAD_FREQ 50.000 PT#USE_MIL_SPEED_GRADE 0 PT#EXPLICIT_SWITCHOVER_COUNTER 0 PT#STICKY_CLK0 1 PT#EXT_FEEDBACK_RADIO 0 PT#MIRROR_CLK0 0 PT#SWITCHOVER_COUNT_EDIT 1 PT#SELF_RESET_LOCK_LOSS 0 PT#PLL_PFDENA_CHECK 0 PT#INT_FEEDBACK__MODE_RADIO 1 PT#INCLK1_FREQ_EDIT_CHANGED 1 PT#CLKLOSS_CHECK 0 PT#SYNTH_WRAPPER_GEN_POSTFIX 0 PT#PHASE_SHIFT_UNIT0 deg PT#BANDWIDTH_USE_AUTO 1 PT#HAS_MANUAL_SWITCHOVER 1 PT#MULT_FACTOR0 1 PT#SPREAD_USE 0 PT#GLOCKED_MODE_CHECK 0 PT#SACN_INPUTS_CHECK 0 PT#DUTY_CYCLE0 50.00000000 PT#INTENDED_DEVICE_FAMILY {Cyclone IV E} PT#PLL_TARGET_HARCOPY_CHECK 0 PT#INCLK1_FREQ_UNIT_CHANGED 1 PT#RECONFIG_FILE ALTPLL1479419156891349.mif PT#ACTIVECLK_CHECK 0,HIDDEN_USED_PORTS=UP#locked used UP#c0 used UP#areset used UP#inclk0 used,INCLK0_INPUT_FREQUENCY=20000,INCLK1_INPUT_FREQUENCY=,INTENDED_DEVICE_FAMILY=Cyclone IV E,INVALID_LOCK_MULTIPLIER=,LOCK_HIGH=,LOCK_LOW=,OPERATION_MODE=NORMAL,PLL_TYPE=AUTO,PORT_ACTIVECLOCK=PORT_UNUSED,PORT_ARESET=PORT_USED,PORT_CLKBAD0=PORT_UNUSED,PORT_CLKBAD1=PORT_UNUSED,PORT_CLKLOSS=PORT_UNUSED,PORT_CLKSWITCH=PORT_UNUSED,PORT_CONFIGUPDATE=PORT_UNUSED,PORT_ENABLE0=,PORT_ENABLE1=,PORT_FBIN=PORT_UNUSED,PORT_FBOUT=,PORT_INCLK0=PORT_USED,PORT_INCLK1=PORT_UNUSED,PORT_LOCKED=PORT_USED,PORT_PFDENA=PORT_UNUSED,PORT_PHASECOUNTERSELECT=PORT_UNUSED,PORT_PHASEDONE=PORT_UNUSED,PORT_PHASESTEP=PORT_UNUSED,PORT_PHASEUPDOWN=PORT_UNUSED,PORT_PLLENA=PORT_UNUSED,PORT_SCANACLR=PORT_UNUSED,PORT_SCANCLK=PORT_UNUSED,PORT_SCANCLKENA=PORT_UNUSED,PORT_SCANDATA=PORT_UNUSED,PORT_SCANDATAOUT=PORT_UNUSED,PORT_SCANDONE=PORT_UNUSED,PORT_SCANREAD=PORT_UNUSED,PORT_SCANWRITE=PORT_UNUSED,PORT_SCLKOUT0=,PORT_SCLKOUT1=,PORT_VCOOVERRANGE=,PORT_VCOUNDERRANGE=,PORT_clk0=PORT_USED,PORT_clk1=PORT_UNUSED,PORT_clk2=PORT_UNUSED,PORT_clk3=PORT_UNUSED,PORT_clk4=PORT_UNUSED,PORT_clk5=PORT_UNUSED,PORT_clk6=,PORT_clk7=,PORT_clk8=,PORT_clk9=,PORT_clkena0=PORT_UNUSED,PORT_clkena1=PORT_UNUSED,PORT_clkena2=PORT_UNUSED,PORT_clkena3=PORT_UNUSED,PORT_clkena4=PORT_UNUSED,PORT_clkena5=PORT_UNUSED,PORT_extclk0=PORT_UNUSED,PORT_extclk1=PORT_UNUSED,PORT_extclk2=PORT_UNUSED,PORT_extclk3=PORT_UNUSED,PORT_extclkena0=,PORT_extclkena1=,PORT_extclkena2=,PORT_extclkena3=,PRIMARY_CLOCK=,QUALIFY_CONF_DONE=,SCAN_CHAIN=,SCAN_CHAIN_MIF_FILE=,SCLKOUT0_PHASE_SHIFT=,SCLKOUT1_PHASE_SHIFT=,SELF_RESET_ON_GATED_LOSS_LOCK=,SELF_RESET_ON_LOSS_LOCK=,SKIP_VCO=,SPREAD_FREQUENCY=,SWITCH_OVER_COUNTER=,SWITCH_OVER_ON_GATED_LOCK=,SWITCH_OVER_ON_LOSSCLK=,SWITCH_OVER_TYPE=,USING_FBMIMICBIDIR_PORT=,VALID_LOCK_MULTIPLIER=,VCO_DIVIDE_BY=,VCO_FREQUENCY_CONTROL=,VCO_MULTIPLY_BY=,VCO_PHASE_SHIFT_STEP=,WIDTH_CLOCK=5,WIDTH_PHASECOUNTERSELECT=)(clock_source:15.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(clock:15.0:)(reset:15.0:)"
+   parameterizationKey="nois:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1479450255,AUTO_UNIQUE_ID=(altpll:15.0:AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_INCLK_INTERFACE_CLOCK_RATE=50000000,AVALON_USE_SEPARATE_SYSCLK=NO,BANDWIDTH=,BANDWIDTH_TYPE=AUTO,CLK0_DIVIDE_BY=50,CLK0_DUTY_CYCLE=50,CLK0_MULTIPLY_BY=27,CLK0_PHASE_SHIFT=0,CLK1_DIVIDE_BY=,CLK1_DUTY_CYCLE=,CLK1_MULTIPLY_BY=,CLK1_PHASE_SHIFT=,CLK2_DIVIDE_BY=,CLK2_DUTY_CYCLE=,CLK2_MULTIPLY_BY=,CLK2_PHASE_SHIFT=,CLK3_DIVIDE_BY=,CLK3_DUTY_CYCLE=,CLK3_MULTIPLY_BY=,CLK3_PHASE_SHIFT=,CLK4_DIVIDE_BY=,CLK4_DUTY_CYCLE=,CLK4_MULTIPLY_BY=,CLK4_PHASE_SHIFT=,CLK5_DIVIDE_BY=,CLK5_DUTY_CYCLE=,CLK5_MULTIPLY_BY=,CLK5_PHASE_SHIFT=,CLK6_DIVIDE_BY=,CLK6_DUTY_CYCLE=,CLK6_MULTIPLY_BY=,CLK6_PHASE_SHIFT=,CLK7_DIVIDE_BY=,CLK7_DUTY_CYCLE=,CLK7_MULTIPLY_BY=,CLK7_PHASE_SHIFT=,CLK8_DIVIDE_BY=,CLK8_DUTY_CYCLE=,CLK8_MULTIPLY_BY=,CLK8_PHASE_SHIFT=,CLK9_DIVIDE_BY=,CLK9_DUTY_CYCLE=,CLK9_MULTIPLY_BY=,CLK9_PHASE_SHIFT=,COMPENSATE_CLOCK=CLK0,DOWN_SPREAD=,DPA_DIVIDER=,DPA_DIVIDE_BY=,DPA_MULTIPLY_BY=,ENABLE_SWITCH_OVER_COUNTER=,EXTCLK0_DIVIDE_BY=,EXTCLK0_DUTY_CYCLE=,EXTCLK0_MULTIPLY_BY=,EXTCLK0_PHASE_SHIFT=,EXTCLK1_DIVIDE_BY=,EXTCLK1_DUTY_CYCLE=,EXTCLK1_MULTIPLY_BY=,EXTCLK1_PHASE_SHIFT=,EXTCLK2_DIVIDE_BY=,EXTCLK2_DUTY_CYCLE=,EXTCLK2_MULTIPLY_BY=,EXTCLK2_PHASE_SHIFT=,EXTCLK3_DIVIDE_BY=,EXTCLK3_DUTY_CYCLE=,EXTCLK3_MULTIPLY_BY=,EXTCLK3_PHASE_SHIFT=,FEEDBACK_SOURCE=,GATE_LOCK_COUNTER=,GATE_LOCK_SIGNAL=,HIDDEN_CONSTANTS=CT#PORT_clk5 PORT_UNUSED CT#PORT_clk4 PORT_UNUSED CT#PORT_clk3 PORT_UNUSED CT#PORT_clk2 PORT_UNUSED CT#PORT_clk1 PORT_UNUSED CT#PORT_clk0 PORT_USED CT#CLK0_MULTIPLY_BY 27 CT#PORT_SCANWRITE PORT_UNUSED CT#PORT_SCANACLR PORT_UNUSED CT#PORT_PFDENA PORT_UNUSED CT#PORT_PLLENA PORT_UNUSED CT#PORT_SCANDATA PORT_UNUSED CT#PORT_SCANCLKENA PORT_UNUSED CT#WIDTH_CLOCK 5 CT#PORT_SCANDATAOUT PORT_UNUSED CT#LPM_TYPE altpll CT#PLL_TYPE AUTO CT#CLK0_PHASE_SHIFT 0 CT#PORT_PHASEDONE PORT_UNUSED CT#OPERATION_MODE NORMAL CT#PORT_CONFIGUPDATE PORT_UNUSED CT#COMPENSATE_CLOCK CLK0 CT#PORT_CLKSWITCH PORT_UNUSED CT#INCLK0_INPUT_FREQUENCY 20000 CT#PORT_SCANDONE PORT_UNUSED CT#PORT_CLKLOSS PORT_UNUSED CT#PORT_INCLK1 PORT_UNUSED CT#AVALON_USE_SEPARATE_SYSCLK NO CT#PORT_INCLK0 PORT_USED CT#PORT_clkena5 PORT_UNUSED CT#PORT_clkena4 PORT_UNUSED CT#PORT_clkena3 PORT_UNUSED CT#PORT_clkena2 PORT_UNUSED CT#PORT_clkena1 PORT_UNUSED CT#PORT_clkena0 PORT_UNUSED CT#PORT_ARESET PORT_USED CT#BANDWIDTH_TYPE AUTO CT#INTENDED_DEVICE_FAMILY {Cyclone IV E} CT#PORT_SCANREAD PORT_UNUSED CT#PORT_PHASESTEP PORT_UNUSED CT#PORT_SCANCLK PORT_UNUSED CT#PORT_CLKBAD1 PORT_UNUSED CT#PORT_CLKBAD0 PORT_UNUSED CT#PORT_FBIN PORT_UNUSED CT#PORT_PHASEUPDOWN PORT_UNUSED CT#PORT_extclk3 PORT_UNUSED CT#PORT_extclk2 PORT_UNUSED CT#PORT_extclk1 PORT_UNUSED CT#PORT_PHASECOUNTERSELECT PORT_UNUSED CT#PORT_extclk0 PORT_UNUSED CT#PORT_ACTIVECLOCK PORT_UNUSED CT#CLK0_DUTY_CYCLE 50 CT#CLK0_DIVIDE_BY 50 CT#PORT_LOCKED PORT_USED,HIDDEN_CUSTOM_ELABORATION=altpll_avalon_elaboration,HIDDEN_CUSTOM_POST_EDIT=altpll_avalon_post_edit,HIDDEN_IF_PORTS=IF#locked {output 0} IF#reset {input 0} IF#clk {input 0} IF#readdata {output 32} IF#write {input 0} IF#phasedone {output 0} IF#address {input 2} IF#c0 {output 0} IF#writedata {input 32} IF#read {input 0} IF#areset {input 0},HIDDEN_IS_FIRST_EDIT=0,HIDDEN_IS_NUMERIC=IN#WIDTH_CLOCK 1 IN#CLK0_DUTY_CYCLE 1 IN#PLL_TARGET_HARCOPY_CHECK 1 IN#SWITCHOVER_COUNT_EDIT 1 IN#INCLK0_INPUT_FREQUENCY 1 IN#PLL_LVDS_PLL_CHECK 1 IN#PLL_AUTOPLL_CHECK 1 IN#PLL_FASTPLL_CHECK 1 IN#PLL_ENHPLL_CHECK 1 IN#DIV_FACTOR0 1 IN#LVDS_MODE_DATA_RATE_DIRTY 1 IN#GLOCK_COUNTER_EDIT 1 IN#CLK0_DIVIDE_BY 1 IN#MULT_FACTOR0 1 IN#CLK0_MULTIPLY_BY 1 IN#USE_MIL_SPEED_GRADE 1,HIDDEN_MF_PORTS=MF#areset 1 MF#clk 1 MF#locked 1 MF#inclk 1,HIDDEN_PRIVATES=PT#GLOCKED_FEATURE_ENABLED 0 PT#SPREAD_FEATURE_ENABLED 0 PT#BANDWIDTH_FREQ_UNIT MHz PT#CUR_DEDICATED_CLK c0 PT#INCLK0_FREQ_EDIT 50.000 PT#BANDWIDTH_PRESET Low PT#PLL_LVDS_PLL_CHECK 0 PT#BANDWIDTH_USE_PRESET 0 PT#AVALON_USE_SEPARATE_SYSCLK NO PT#PLL_ENHPLL_CHECK 0 PT#OUTPUT_FREQ_UNIT0 MHz PT#PHASE_RECONFIG_FEATURE_ENABLED 1 PT#CREATE_CLKBAD_CHECK 0 PT#CLKSWITCH_CHECK 0 PT#INCLK1_FREQ_EDIT 100.000 PT#NORMAL_MODE_RADIO 1 PT#SRC_SYNCH_COMP_RADIO 0 PT#PLL_ARESET_CHECK 1 PT#LONG_SCAN_RADIO 1 PT#SCAN_FEATURE_ENABLED 1 PT#PHASE_RECONFIG_INPUTS_CHECK 0 PT#USE_CLK0 1 PT#PRIMARY_CLK_COMBO inclk0 PT#BANDWIDTH 1.000 PT#GLOCKED_COUNTER_EDIT_CHANGED 1 PT#PLL_FASTPLL_CHECK 0 PT#SPREAD_FREQ_UNIT KHz PT#PLL_AUTOPLL_CHECK 1 PT#LVDS_PHASE_SHIFT_UNIT0 deg PT#SWITCHOVER_FEATURE_ENABLED 0 PT#MIG_DEVICE_SPEED_GRADE Any PT#OUTPUT_FREQ_MODE0 1 PT#BANDWIDTH_FEATURE_ENABLED 1 PT#INCLK0_FREQ_UNIT_COMBO MHz PT#ZERO_DELAY_RADIO 0 PT#OUTPUT_FREQ0 27.00000000 PT#SHORT_SCAN_RADIO 0 PT#LVDS_MODE_DATA_RATE_DIRTY 0 PT#CUR_FBIN_CLK c0 PT#PLL_ADVANCED_PARAM_CHECK 0 PT#CLKBAD_SWITCHOVER_CHECK 0 PT#PHASE_SHIFT_STEP_ENABLED_CHECK 0 PT#DEVICE_SPEED_GRADE 7 PT#PLL_FBMIMIC_CHECK 0 PT#LVDS_MODE_DATA_RATE {Not Available} PT#LOCKED_OUTPUT_CHECK 1 PT#SPREAD_PERCENT 0.500 PT#PHASE_SHIFT0 0.00000000 PT#DIV_FACTOR0 1 PT#CNX_NO_COMPENSATE_RADIO 0 PT#USE_CLKENA0 0 PT#CREATE_INCLK1_CHECK 0 PT#GLOCK_COUNTER_EDIT 1048575 PT#INCLK1_FREQ_UNIT_COMBO MHz PT#EFF_OUTPUT_FREQ_VALUE0 27.000000 PT#SPREAD_FREQ 50.000 PT#USE_MIL_SPEED_GRADE 0 PT#EXPLICIT_SWITCHOVER_COUNTER 0 PT#STICKY_CLK0 1 PT#EXT_FEEDBACK_RADIO 0 PT#MIRROR_CLK0 0 PT#SWITCHOVER_COUNT_EDIT 1 PT#SELF_RESET_LOCK_LOSS 0 PT#PLL_PFDENA_CHECK 0 PT#INT_FEEDBACK__MODE_RADIO 1 PT#INCLK1_FREQ_EDIT_CHANGED 1 PT#CLKLOSS_CHECK 0 PT#SYNTH_WRAPPER_GEN_POSTFIX 0 PT#PHASE_SHIFT_UNIT0 deg PT#BANDWIDTH_USE_AUTO 1 PT#HAS_MANUAL_SWITCHOVER 1 PT#MULT_FACTOR0 1 PT#SPREAD_USE 0 PT#GLOCKED_MODE_CHECK 0 PT#SACN_INPUTS_CHECK 0 PT#DUTY_CYCLE0 50.00000000 PT#INTENDED_DEVICE_FAMILY {Cyclone IV E} PT#PLL_TARGET_HARCOPY_CHECK 0 PT#INCLK1_FREQ_UNIT_CHANGED 1 PT#RECONFIG_FILE ALTPLL1479419156891349.mif PT#ACTIVECLK_CHECK 0,HIDDEN_USED_PORTS=UP#locked used UP#c0 used UP#areset used UP#inclk0 used,INCLK0_INPUT_FREQUENCY=20000,INCLK1_INPUT_FREQUENCY=,INTENDED_DEVICE_FAMILY=Cyclone IV E,INVALID_LOCK_MULTIPLIER=,LOCK_HIGH=,LOCK_LOW=,OPERATION_MODE=NORMAL,PLL_TYPE=AUTO,PORT_ACTIVECLOCK=PORT_UNUSED,PORT_ARESET=PORT_USED,PORT_CLKBAD0=PORT_UNUSED,PORT_CLKBAD1=PORT_UNUSED,PORT_CLKLOSS=PORT_UNUSED,PORT_CLKSWITCH=PORT_UNUSED,PORT_CONFIGUPDATE=PORT_UNUSED,PORT_ENABLE0=,PORT_ENABLE1=,PORT_FBIN=PORT_UNUSED,PORT_FBOUT=,PORT_INCLK0=PORT_USED,PORT_INCLK1=PORT_UNUSED,PORT_LOCKED=PORT_USED,PORT_PFDENA=PORT_UNUSED,PORT_PHASECOUNTERSELECT=PORT_UNUSED,PORT_PHASEDONE=PORT_UNUSED,PORT_PHASESTEP=PORT_UNUSED,PORT_PHASEUPDOWN=PORT_UNUSED,PORT_PLLENA=PORT_UNUSED,PORT_SCANACLR=PORT_UNUSED,PORT_SCANCLK=PORT_UNUSED,PORT_SCANCLKENA=PORT_UNUSED,PORT_SCANDATA=PORT_UNUSED,PORT_SCANDATAOUT=PORT_UNUSED,PORT_SCANDONE=PORT_UNUSED,PORT_SCANREAD=PORT_UNUSED,PORT_SCANWRITE=PORT_UNUSED,PORT_SCLKOUT0=,PORT_SCLKOUT1=,PORT_VCOOVERRANGE=,PORT_VCOUNDERRANGE=,PORT_clk0=PORT_USED,PORT_clk1=PORT_UNUSED,PORT_clk2=PORT_UNUSED,PORT_clk3=PORT_UNUSED,PORT_clk4=PORT_UNUSED,PORT_clk5=PORT_UNUSED,PORT_clk6=,PORT_clk7=,PORT_clk8=,PORT_clk9=,PORT_clkena0=PORT_UNUSED,PORT_clkena1=PORT_UNUSED,PORT_clkena2=PORT_UNUSED,PORT_clkena3=PORT_UNUSED,PORT_clkena4=PORT_UNUSED,PORT_clkena5=PORT_UNUSED,PORT_extclk0=PORT_UNUSED,PORT_extclk1=PORT_UNUSED,PORT_extclk2=PORT_UNUSED,PORT_extclk3=PORT_UNUSED,PORT_extclkena0=,PORT_extclkena1=,PORT_extclkena2=,PORT_extclkena3=,PRIMARY_CLOCK=,QUALIFY_CONF_DONE=,SCAN_CHAIN=,SCAN_CHAIN_MIF_FILE=,SCLKOUT0_PHASE_SHIFT=,SCLKOUT1_PHASE_SHIFT=,SELF_RESET_ON_GATED_LOSS_LOCK=,SELF_RESET_ON_LOSS_LOCK=,SKIP_VCO=,SPREAD_FREQUENCY=,SWITCH_OVER_COUNTER=,SWITCH_OVER_ON_GATED_LOCK=,SWITCH_OVER_ON_LOSSCLK=,SWITCH_OVER_TYPE=,USING_FBMIMICBIDIR_PORT=,VALID_LOCK_MULTIPLIER=,VCO_DIVIDE_BY=,VCO_FREQUENCY_CONTROL=,VCO_MULTIPLY_BY=,VCO_PHASE_SHIFT_STEP=,WIDTH_CLOCK=5,WIDTH_PHASECOUNTERSELECT=)(clock_source:15.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_up_avalon_video_chroma_resampler:15.0:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone IV E,input_bits=8,input_planes=3,input_type=YCrCb 444,output_bits=8,output_planes=1,output_type=Y only)(clock:15.0:)(clock:15.0:)(reset:15.0:)(reset:15.0:)"
    instancePathKey="nois"
    kind="nois"
    version="1.0"
    name="nois">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1479425666" />
+  <parameter name="AUTO_GENERATION_ID" value="1479450255" />
   <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -88,32 +134,37 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
   <generatedFiles>
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/nois.v"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/nois.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/nois_altpll_0.v"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/nois_altpll_0.v"
        type="VERILOG" />
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.v"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/nois_video_chroma_resampler_0.v"
+       type="VERILOG" />
+   <file
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/altera_reset_synchronizer.v"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/altera_reset_synchronizer.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.sdc"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.sdc"
        type="SDC"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
-   <file path="C:/Users/ychu26/final-project/DE2_CCD/nois.qsys" />
+   <file path="C:/Users/ychu26/ece385-final/DE2_CCD/nois.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
        path="C:/altera/15.0/ip/altera/sopc_builder_ip/altera_avalon_altpll/altera_avalon_altpll_hw.tcl" />
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_chroma_resampler/altera_up_avalon_video_chroma_resampler_hw.tcl" />
    <file
        path="C:/altera/15.0/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
   </childSourceFiles>
@@ -126,7 +177,7 @@
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
-   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>3</b> modules, <b>4</b> connections]]></message>
    <message level="Debug">Transform: MMTransform</message>
    <message level="Debug">Transform: InterruptMapperTransform</message>
    <message level="Debug">Transform: InterruptSyncTransform</message>
@@ -138,14 +189,18 @@
    <message level="Progress" culprit="current"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Progress" culprit="current"></message>
-   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>3</b> modules, <b>4</b> connections]]></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>4</b> modules, <b>6</b> connections]]></message>
    <message level="Debug" culprit="nois"><![CDATA["<b>nois</b>" reuses <b>altpll</b> "<b>submodules/nois_altpll_0</b>"]]></message>
+   <message level="Debug" culprit="nois"><![CDATA["<b>nois</b>" reuses <b>altera_up_avalon_video_chroma_resampler</b> "<b>submodules/nois_video_chroma_resampler_0</b>"]]></message>
    <message level="Debug" culprit="nois"><![CDATA["<b>nois</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
-   <message level="Debug" culprit="nois">queue size: 1 starting:altpll "submodules/nois_altpll_0"</message>
+   <message level="Debug" culprit="nois">queue size: 2 starting:altpll "submodules/nois_altpll_0"</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: C:/altera/15.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/ychu26/AppData/Local/Temp/alt7122_8606400057780571090.dir/0001_sopcgen/nois_altpll_0.v --source=C:/Users/ychu26/AppData/Local/Temp/alt7122_8606400057780571090.dir/0001_sopcgen/nois_altpll_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/ychu26/AppData/Local/Temp/alt7122_8606400057780571090.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 1.922s</message>
+   <message level="Debug">Command: C:/altera/15.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/ychu26/AppData/Local/Temp/alt7123_7825446377343009809.dir/0001_sopcgen/nois_altpll_0.v --source=C:/Users/ychu26/AppData/Local/Temp/alt7123_7825446377343009809.dir/0001_sopcgen/nois_altpll_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/ychu26/AppData/Local/Temp/alt7123_7825446377343009809.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 1.883s</message>
    <message level="Info" culprit="altpll_0"><![CDATA["<b>nois</b>" instantiated <b>altpll</b> "<b>altpll_0</b>"]]></message>
+   <message level="Debug" culprit="nois">queue size: 1 starting:altera_up_avalon_video_chroma_resampler "submodules/nois_video_chroma_resampler_0"</message>
+   <message level="Info" culprit="video_chroma_resampler_0">Starting Generation of Chroma Resampler</message>
+   <message level="Info" culprit="video_chroma_resampler_0"><![CDATA["<b>nois</b>" instantiated <b>altera_up_avalon_video_chroma_resampler</b> "<b>video_chroma_resampler_0</b>"]]></message>
    <message level="Debug" culprit="nois">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
    <message level="Info" culprit="rst_controller"><![CDATA["<b>nois</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
   </messages>
@@ -336,7 +391,7 @@
   <parameter name="PORT_extclk1" value="PORT_UNUSED" />
   <generatedFiles>
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/nois_altpll_0.v"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/nois_altpll_0.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles/>
@@ -347,11 +402,44 @@
   <childSourceFiles/>
   <instantiator instantiator="nois" as="altpll_0" />
   <messages>
-   <message level="Debug" culprit="nois">queue size: 1 starting:altpll "submodules/nois_altpll_0"</message>
+   <message level="Debug" culprit="nois">queue size: 2 starting:altpll "submodules/nois_altpll_0"</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: C:/altera/15.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/ychu26/AppData/Local/Temp/alt7122_8606400057780571090.dir/0001_sopcgen/nois_altpll_0.v --source=C:/Users/ychu26/AppData/Local/Temp/alt7122_8606400057780571090.dir/0001_sopcgen/nois_altpll_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/ychu26/AppData/Local/Temp/alt7122_8606400057780571090.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 1.922s</message>
+   <message level="Debug">Command: C:/altera/15.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/ychu26/AppData/Local/Temp/alt7123_7825446377343009809.dir/0001_sopcgen/nois_altpll_0.v --source=C:/Users/ychu26/AppData/Local/Temp/alt7123_7825446377343009809.dir/0001_sopcgen/nois_altpll_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/ychu26/AppData/Local/Temp/alt7123_7825446377343009809.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 1.883s</message>
    <message level="Info" culprit="altpll_0"><![CDATA["<b>nois</b>" instantiated <b>altpll</b> "<b>altpll_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_video_chroma_resampler:15.0:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone IV E,input_bits=8,input_planes=3,input_type=YCrCb 444,output_bits=8,output_planes=1,output_type=Y only"
+   instancePathKey="nois:.:video_chroma_resampler_0"
+   kind="altera_up_avalon_video_chroma_resampler"
+   version="15.0"
+   name="nois_video_chroma_resampler_0">
+  <parameter name="output_bits" value="8" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="output_type" value="Y only" />
+  <parameter name="input_bits" value="8" />
+  <parameter name="output_planes" value="1" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="input_type" value="YCrCb 444" />
+  <parameter name="input_planes" value="3" />
+  <generatedFiles>
+   <file
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/nois_video_chroma_resampler_0.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/15.0/ip/altera/university_program/audio_video/video/altera_up_avalon_video_chroma_resampler/altera_up_avalon_video_chroma_resampler_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="nois" as="video_chroma_resampler_0" />
+  <messages>
+   <message level="Debug" culprit="nois">queue size: 1 starting:altera_up_avalon_video_chroma_resampler "submodules/nois_video_chroma_resampler_0"</message>
+   <message level="Info" culprit="video_chroma_resampler_0">Starting Generation of Chroma Resampler</message>
+   <message level="Info" culprit="video_chroma_resampler_0"><![CDATA["<b>nois</b>" instantiated <b>altera_up_avalon_video_chroma_resampler</b> "<b>video_chroma_resampler_0</b>"]]></message>
   </messages>
  </entity>
  <entity
@@ -363,15 +451,15 @@
    name="altera_reset_controller">
   <generatedFiles>
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.v"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/altera_reset_synchronizer.v"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/altera_reset_synchronizer.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="C:/Users/ychu26/final-project/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.sdc"
+       path="C:/Users/ychu26/ece385-final/DE2_CCD/db/ip/nois/submodules/altera_reset_controller.sdc"
        type="SDC"
        attributes="" />
   </generatedFiles>

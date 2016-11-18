@@ -1,11 +1,11 @@
-Fitter Status : Successful - Thu Nov 17 17:14:41 2016
+Fitter Status : Successful - Fri Nov 18 00:24:45 2016
 Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
 Revision Name : DE2_CCD
 Top-level Entity Name : DE2_CCD
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 1,402 / 114,480 ( 1 % )
+Total logic elements : 1,413 / 114,480 ( 1 % )
     Total combinational functions : 1,120 / 114,480 ( < 1 % )
     Dedicated logic registers : 957 / 114,480 ( < 1 % )
 Total registers : 969

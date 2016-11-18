@@ -1,5 +1,5 @@
 Assembler report for DE2_CCD
-Thu Nov 17 17:14:49 2016
+Fri Nov 18 00:24:52 2016
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/ychu26/final-project/DE2_CCD/DE2_CCD.sof
-  6. Assembler Device Options: C:/Users/ychu26/final-project/DE2_CCD/DE2_CCD.pof
+  5. Assembler Device Options: C:/Users/ychu26/ece385-final/DE2_CCD/DE2_CCD.sof
+  6. Assembler Device Options: C:/Users/ychu26/ece385-final/DE2_CCD/DE2_CCD.pof
   7. Assembler Messages
 
 
@@ -39,7 +39,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Nov 17 17:14:49 2016 ;
+; Assembler Status      ; Successful - Fri Nov 18 00:24:52 2016 ;
 ; Revision Name         ; DE2_CCD                               ;
 ; Top-level Entity Name ; DE2_CCD                               ;
 ; Family                ; Cyclone IV E                          ;
@@ -54,37 +54,37 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------+
-; Assembler Generated Files                         ;
-+---------------------------------------------------+
-; File Name                                         ;
-+---------------------------------------------------+
-; C:/Users/ychu26/final-project/DE2_CCD/DE2_CCD.sof ;
-; C:/Users/ychu26/final-project/DE2_CCD/DE2_CCD.pof ;
-+---------------------------------------------------+
++--------------------------------------------------+
+; Assembler Generated Files                        ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; C:/Users/ychu26/ece385-final/DE2_CCD/DE2_CCD.sof ;
+; C:/Users/ychu26/ece385-final/DE2_CCD/DE2_CCD.pof ;
++--------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/ychu26/final-project/DE2_CCD/DE2_CCD.sof ;
-+----------------+------------------------------------------------------------+
-; Option         ; Setting                                                    ;
-+----------------+------------------------------------------------------------+
-; Device         ; EP4CE115F29C7                                              ;
-; JTAG usercode  ; 0x00654652                                                 ;
-; Checksum       ; 0x00654652                                                 ;
-+----------------+------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/ychu26/ece385-final/DE2_CCD/DE2_CCD.sof ;
++----------------+-----------------------------------------------------------+
+; Option         ; Setting                                                   ;
++----------------+-----------------------------------------------------------+
+; Device         ; EP4CE115F29C7                                             ;
+; JTAG usercode  ; 0x00647EF6                                                ;
+; Checksum       ; 0x00647EF6                                                ;
++----------------+-----------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/ychu26/final-project/DE2_CCD/DE2_CCD.pof ;
-+--------------------+--------------------------------------------------------+
-; Option             ; Setting                                                ;
-+--------------------+--------------------------------------------------------+
-; Device             ; EPCS64                                                 ;
-; JTAG usercode      ; 0x00000000                                             ;
-; Checksum           ; 0x711335DA                                             ;
-; Compression Ratio  ; 3                                                      ;
-+--------------------+--------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/ychu26/ece385-final/DE2_CCD/DE2_CCD.pof ;
++--------------------+-------------------------------------------------------+
+; Option             ; Setting                                               ;
++--------------------+-------------------------------------------------------+
+; Device             ; EPCS64                                                ;
+; JTAG usercode      ; 0x00000000                                            ;
+; Checksum           ; 0x71142334                                            ;
+; Compression Ratio  ; 3                                                     ;
++--------------------+-------------------------------------------------------+
 
 
 +--------------------+
@@ -93,13 +93,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Thu Nov 17 17:14:44 2016
+    Info: Processing started: Fri Nov 18 00:24:47 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE2_CCD -c DE2_CCD
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 624 megabytes
-    Info: Processing ended: Thu Nov 17 17:14:49 2016
+    Info: Peak virtual memory: 619 megabytes
+    Info: Processing ended: Fri Nov 18 00:24:52 2016
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 

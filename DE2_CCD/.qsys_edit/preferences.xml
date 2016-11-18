@@ -3,11 +3,11 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="79" />
+   <connections preferredWidth="95" />
    <irq preferredWidth="34" />
+   <inputclock preferredWidth="250" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Basic Functions,Library/Basic Functions/Clocks; PLLs and Resets/PLL,Library,Project,Library/Basic Functions/Clocks; PLLs and Resets" />
- <window width="1100" height="800" x="309" y="132" />
+ <library expandedCategories="Project,Library" />
+ <window width="1818" height="859" x="25" y="52" />
 </preferences>

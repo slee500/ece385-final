@@ -362,8 +362,10 @@ assign	CCD_DATA[7]	=	GPIO_1[7];
 assign	CCD_DATA[8]	=	GPIO_1[8];
 assign	CCD_DATA[9]	=	GPIO_1[9];
 assign	GPIO_1[11]	=	CCD_MCLK;
+//
 //assign	GPIO_1[15]	=	CCD_SDAT;
 //assign	GPIO_1[14]	=	CCD_SCLK;
+//
 assign	CCD_FVAL	=	GPIO_1[13];
 assign	CCD_LVAL	=	GPIO_1[12];
 assign	CCD_PIXCLK	=	GPIO_1[10];

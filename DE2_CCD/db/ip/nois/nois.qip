@@ -2,7 +2,7 @@ set_global_assignment -entity "nois" -library "nois" -name IP_TOOL_NAME "Qsys"
 set_global_assignment -entity "nois" -library "nois" -name IP_TOOL_VERSION "15.0"
 set_global_assignment -entity "nois" -library "nois" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "nois" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../nois.sopcinfo"]
-set_global_assignment -entity "nois" -library "nois" -name SLD_INFO "QSYS_NAME nois HAS_SOPCINFO 1 GENERATION_ID 1479425666"
+set_global_assignment -entity "nois" -library "nois" -name SLD_INFO "QSYS_NAME nois HAS_SOPCINFO 1 GENERATION_ID 1479450255"
 set_global_assignment -library "nois" -name SLD_FILE [file join $::quartus(qip_path) "nois.debuginfo"]
 set_global_assignment -entity "nois" -library "nois" -name IP_TARGETED_DEVICE_FAMILY "Cyclone IV E"
 set_global_assignment -entity "nois" -library "nois" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV E}"
@@ -14,7 +14,7 @@ set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_DISPLAY_
 set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTQ3OTQyNTY2Ng==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTQ3OTQ1MDI1NQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::RVA0Q0UxMTVGMjlDNw==::QXV0byBERVZJQ0U="
 set_global_assignment -entity "nois" -library "nois" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -53,6 +53,17 @@ set_global_assignment -entity "altera_reset_controller" -library "nois" -name IP
 set_global_assignment -entity "altera_reset_controller" -library "nois" -name IP_COMPONENT_PARAMETER "VVNFX1JFU0VUX1JFUVVFU1RfSU4xNQ==::MA==::RW5hYmxlIHJlc2V0X3JlcSBmb3IgcG9ydCByZXNldF9pbjE1"
 set_global_assignment -entity "altera_reset_controller" -library "nois" -name IP_COMPONENT_PARAMETER "VVNFX1JFU0VUX1JFUVVFU1RfSU5QVVQ=::MA==::RW5hYmxlIHJlc2V0X3JlcSBmb3IgcmVzZXRfaW5wdXRz"
 set_global_assignment -entity "altera_reset_controller" -library "nois" -name IP_COMPONENT_PARAMETER "QURBUFRfUkVTRVRfUkVRVUVTVA==::MA==::T25seSBhZGFwdCBvbmx5IHJlc2V0IHJlcXVlc3Q="
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_NAME "bm9pc192aWRlb19jaHJvbWFfcmVzYW1wbGVyXzA="
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_DISPLAY_NAME "Q2hyb21hIFJlc2FtcGxlcg=="
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIFVuaXZlcnNpdHkgUHJvZ3JhbQ=="
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_VERSION "MTUuMA=="
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_DESCRIPTION "Q2hyb21hIFJlc2FtcGxlciBmb3IgREUtc2VyaWVzIEJvYXJkcw=="
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_PARAMETER "aW5wdXRfdHlwZQ==::WUNyQ2IgNDQ0::SW5jb21pbmcgRm9ybWF0"
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_PARAMETER "b3V0cHV0X3R5cGU=::WSBvbmx5::T3V0Z29pbmcgRm9ybWF0"
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "nois_video_chroma_resampler_0" -library "nois" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::NTAwMDAwMDA=::QXV0byBDTE9DS19SQVRF"
 set_global_assignment -entity "nois_altpll_0" -library "nois" -name IP_COMPONENT_NAME "bm9pc19hbHRwbGxfMA=="
 set_global_assignment -entity "nois_altpll_0" -library "nois" -name IP_COMPONENT_DISPLAY_NAME "QXZhbG9uIEFMVFBMTA=="
 set_global_assignment -entity "nois_altpll_0" -library "nois" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
@@ -129,6 +140,7 @@ set_global_assignment -library "nois" -name VERILOG_FILE [file join $::quartus(q
 set_global_assignment -library "nois" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
 set_global_assignment -library "nois" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
 set_global_assignment -library "nois" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "nois" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nois_video_chroma_resampler_0.v"]
 set_global_assignment -library "nois" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nois_altpll_0.v"]
 
 set_global_assignment -entity "altera_reset_controller" -library "nois" -name IP_TOOL_NAME "altera_reset_controller"

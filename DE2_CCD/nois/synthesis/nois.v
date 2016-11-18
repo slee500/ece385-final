@@ -4,12 +4,22 @@
 
 `timescale 1 ps / 1 ps
 module nois (
-		input  wire  clk_clk,       //    clk.clk
-		output wire  clk_27_clk,    // clk_27.clk
-		input  wire  reset_reset_n  //  reset.reset_n
+		input  wire        clk_clk,           //    clk.clk
+		output wire        clk_27_clk,        // clk_27.clk
+		input  wire        reset_reset_n,     //  reset.reset_n
+		input  wire        rgb_startofpacket, //    rgb.startofpacket
+		input  wire        rgb_endofpacket,   //       .endofpacket
+		input  wire        rgb_valid,         //       .valid
+		output wire        rgb_ready,         //       .ready
+		input  wire [23:0] rgb_data,          //       .data
+		input  wire        y_ready,           //      y.ready
+		output wire        y_startofpacket,   //       .startofpacket
+		output wire        y_endofpacket,     //       .endofpacket
+		output wire        y_valid,           //       .valid
+		output wire [7:0]  y_data             //       .data
 	);
 
-	wire    rst_controller_reset_out_reset; // rst_controller:reset_out -> altpll_0:reset
+	wire    rst_controller_reset_out_reset; // rst_controller:reset_out -> [altpll_0:reset, video_chroma_resampler_0:reset]
 
 	nois_altpll_0 altpll_0 (
 		.clk       (clk_clk),                        //       inclk_interface.clk
@@ -23,6 +33,21 @@ module nois (
 		.areset    (),                               //        areset_conduit.export
 		.locked    (),                               //        locked_conduit.export
 		.phasedone ()                                //     phasedone_conduit.export
+	);
+
+	nois_video_chroma_resampler_0 video_chroma_resampler_0 (
+		.clk                      (clk_clk),                        //                  clk.clk
+		.reset                    (rst_controller_reset_out_reset), //                reset.reset
+		.stream_in_startofpacket  (rgb_startofpacket),              //   avalon_chroma_sink.startofpacket
+		.stream_in_endofpacket    (rgb_endofpacket),                //                     .endofpacket
+		.stream_in_valid          (rgb_valid),                      //                     .valid
+		.stream_in_ready          (rgb_ready),                      //                     .ready
+		.stream_in_data           (rgb_data),                       //                     .data
+		.stream_out_ready         (y_ready),                        // avalon_chroma_source.ready
+		.stream_out_startofpacket (y_startofpacket),                //                     .startofpacket
+		.stream_out_endofpacket   (y_endofpacket),                  //                     .endofpacket
+		.stream_out_valid         (y_valid),                        //                     .valid
+		.stream_out_data          (y_data)                          //                     .data
 	);
 
 	altera_reset_controller #(
