@@ -1,0 +1,77 @@
+module color_out (input clk,
+						//input reset_n,
+						input logic [3:0] KEY,
+						input logic [9:0] temp_R,
+						input logic [9:0] temp_G,
+						input logic [9:0] temp_B,
+						output logic [7:0] VGA_R,
+						output logic [7:0] VGA_G,
+						output logic [7:0] VGA_B);
+						
+logic [11:0] temp_gray;
+logic [9:0] gray;
+logic [7:0] binary;
+assign temp_gray = temp_R + tmep_temp_G + temp_B;
+assign gray = temp_gray >> 2;
+assign binary = (gray - 9'h80)? 8'hff : 8'h0;
+						
+	enum logic [2:0] {RESET, STREAMING, RGB, GRAY, BINARY} State, Next_State;
+	
+	always_ff @ (posedge clk or negedge KEY[0])
+	begin	
+			if (~reset_n)
+				State <= RESET;
+			else
+				State <= Next_State;
+	end
+	
+	//next state logic
+	always_comb
+	begin 
+			Next_State = State;
+			unique case(State)
+				
+				RESET	:	
+					if (~KEY[3])
+						Next_State = STREAMING;
+				STREAMING	:
+					if (~KEY[2])
+						Next_State = RGB;
+				RGB :
+					if (~KEY[2])
+						Next_State = GRAY;
+				GRAY :
+					if (~KEY[2])
+						Next_State = BINARY;
+				BINARY :
+					if (~KEY[2])
+						Next_State = RGB;
+			endcase
+			
+	end
+	
+	always_comb
+	begin
+			VGA_R = temp_R[9:2];
+			VGA_G = temp_G[9:2];
+			VGA_B = temp_B[9:2];
+			case (State)
+			
+				GRAY :
+				begin	
+					VGA_R = gray[9:2];
+					VGA_G = gray[9:2];
+					VGA_B = gray[9:2];
+				end
+				
+				BINARY:
+				begin
+					VGA_R = binary;
+					VGA_G = binary;
+					VGA_B = binary;
+				end
+				default ;
+				
+			endcase
+		end
+endmodule

@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="51efa6057f2bb981cdf4"/>
+    <hash md5_digest_80b="e8f06fe92eddb0267415"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="DE2_CCD.sof" usercode="0xFFFFFFFF"/>
@@ -8,7 +8,7 @@
   <sld_infos>
     <sld_info hpath="nois:pll_clk" name="pll_clk">
       <assignment_values>
-        <assignment_value text="QSYS_NAME nois HAS_SOPCINFO 1 GENERATION_ID 1479450255"/>
+        <assignment_value text="QSYS_NAME nois HAS_SOPCINFO 1 GENERATION_ID 1479597902"/>
       </assignment_values>
       <parameters/>
     </sld_info>

@@ -72,8 +72,8 @@ set_input_delay -clock {clk} -min 2 [all_inputs]
 # Set Output Delay
 #**************************************************************
 
-set_output_delay -clock {clk} -max 3 [all_inputs]
-set_output_delay -clock {clk} -min 2 [all_inputs]
+set_output_delay -clock {clk} -max 3 [all_outputs]
+set_output_delay -clock {clk} -min 2 [all_outputs]
 
 #**************************************************************
 # Set Clock Groups

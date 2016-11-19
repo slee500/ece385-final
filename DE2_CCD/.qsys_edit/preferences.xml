@@ -8,6 +8,7 @@
    <inputclock preferredWidth="250" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="1818" height="859" x="25" y="52" />
+ <library
+   expandedCategories="Library,Library/Interface Protocols,Library/Processors and Peripherals,Library/Memory Interfaces and Controllers/SDRAM,Library/Memory Interfaces and Controllers,Project" />
+ <window width="1818" height="859" x="23" y="31" />
 </preferences>

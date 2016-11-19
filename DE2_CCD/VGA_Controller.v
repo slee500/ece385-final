@@ -24,9 +24,9 @@ input		[9:0]	iGreen;
 input		[9:0]	iBlue;
 output	reg			oRequest;
 //	VGA Side
-output		[7:0]	oVGA_R;
-output		[7:0]	oVGA_G;
-output		[7:0]	oVGA_B;
+output		[9:0]	oVGA_R;
+output		[9:0]	oVGA_G;
+output		[9:0]	oVGA_B;
 output	reg			oVGA_H_SYNC;
 output	reg			oVGA_V_SYNC;
 output				oVGA_SYNC;
@@ -42,40 +42,49 @@ reg		[9:0]		V_Cont;
 reg		[9:0]		Cur_Color_R;
 reg		[9:0]		Cur_Color_G;
 reg		[9:0]		Cur_Color_B;
+wire     [9:0]		color_gray;
 wire				mCursor_EN;
 wire				mRed_EN;
 wire				mGreen_EN;
 wire				mBlue_EN;
-wire 	[9:0]		temp_R;
-wire 	[9:0]		temp_G;
-wire 	[9:0]		temp_B;
+//wire 	[9:0]		temp_R;
+//wire 	[9:0]		temp_G;
+//wire 	[9:0]		temp_B;
+//wire	[11:0] 	temp_gray;
 assign	oVGA_BLANK	=	oVGA_H_SYNC & oVGA_V_SYNC;
 assign	oVGA_SYNC	=	1'b0;
 assign	oVGA_CLOCK	=	iCLK;
 
-//assign	oVGA_R	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
-//						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
-//						?	iRed	:	0;
-//assign	oVGA_G	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
-//						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
-//						?	iGreen	:	0;
-//assign	oVGA_B	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
-//						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
-//						?	iBlue	:	0;
-
-assign	temp_R	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
+assign	oVGA_R	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
 						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
 						?	iRed	:	0;
-assign	temp_G	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
+assign	oVGA_G	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
 						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
 						?	iGreen	:	0;
-assign	temp_B	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
+assign	oVGA_B	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
 						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
 						?	iBlue	:	0;
-						
-assign 	oVGA_R  	=	temp_R[9:2];
-assign 	oVGA_G 	= 	temp_G[9:2];
-assign 	oVGA_B 	= 	temp_B[9:2];
+
+//assign	temp_R	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
+//						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
+//						?	iRed	:	0;
+//assign	temp_G	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
+//						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
+//						?	iGreen	:	0;
+//assign	temp_B	=	(	H_Cont>=X_START 	&& H_Cont<X_START+H_SYNC_ACT &&
+//						V_Cont>=Y_START 	&& V_Cont<Y_START+V_SYNC_ACT )
+//						?	iBlue	:	0;
+//						
+//assign 	oVGA_R  	=	temp_R[9:2];
+//assign 	oVGA_G 	= 	temp_G[9:2];
+//assign 	oVGA_B 	= 	temp_B[9:2];
+//
+//assign 	temp_gray = temp_R[9:0] + temp_G[9:0] + temp_G[9:0] + temp_B[9:0];
+//assign 	color_gray = temp_gray >> 2;
+//assign 	oVGA_R  	=	color_gray[9:2];
+//assign 	oVGA_G 	= 	color_gray[9:2];
+//assign 	oVGA_B 	= 	color_gray[9:2];
+
 
 //	Pixel LUT Address Generator
 always@(posedge iCLK or negedge iRST_N)

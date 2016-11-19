@@ -314,9 +314,18 @@ assign	AUD_ADCLRCK	=	1'bz;
 assign	AUD_DACLRCK	=	1'bz;
 assign	AUD_BCLK	=	1'bz;
 
-//	CCD
+//	CCD   
+/*yc: 
+* CCD means charge-couple device
+* SDAT means serial data, disabled here
+* SCLK means serial clock, disabled here
+* FVAL means FRAME_VALID
+* LVAL means LINE_VALID
+*
+* refer to data sheet of MT9M011
+*/
 wire	[9:0]	CCD_DATA;
-wire			CCD_SDAT;
+wire			CCD_SDAT; 
 wire			CCD_SCLK;
 wire			CCD_FLASH;
 wire			CCD_FVAL;
@@ -338,6 +347,11 @@ wire	[31:0]	Frame_Cont;
 wire	[9:0]	mCCD_R;
 wire	[9:0]	mCCD_G;
 wire	[9:0]	mCCD_B;
+//yc:
+wire	[9:0]	mVGA_R;
+wire	[9:0]	mVGA_G;
+wire	[9:0]	mVGA_B;
+
 wire			DLY_RST_0;
 wire			DLY_RST_1;
 wire			DLY_RST_2;
@@ -349,6 +363,10 @@ wire	[9:0]	sCCD_R;
 wire	[9:0]	sCCD_G;
 wire	[9:0]	sCCD_B;
 wire			sCCD_DVAL;
+
+
+wire [31:0] hexDis;
+//assign hexDis[1:0] = key_ctr;
 
 //	For Sensor 1
 assign	CCD_DATA[0]	=	GPIO_1[0];
@@ -414,9 +432,9 @@ VGA_Controller		u1	(	//	Host Side
 							.iGreen({Read_DATA1[14:10],Read_DATA2[14:10]}),
 							.iBlue(Read_DATA1[9:0]),
 							//	VGA Side
-							.oVGA_R(VGA_R),
-							.oVGA_G(VGA_G),
-							.oVGA_B(VGA_B),
+							.oVGA_R(mVGA_R),
+							.oVGA_G(mVGA_G),
+							.oVGA_B(mVGA_B),
 							.oVGA_H_SYNC(VGA_HS),
 							.oVGA_V_SYNC(VGA_VS),
 							.oVGA_SYNC(VGA_SYNC),
@@ -425,6 +443,22 @@ VGA_Controller		u1	(	//	Host Side
 							.iCLK(VGA_CTRL_CLK),
 							.iRST_N(DLY_RST_2)	);
 
+							
+color_out 			u1_1 (
+								.clk(VGA_VS),
+								.key(KEY),
+								.temp_R(mVGA_R),
+								.temp_G(mVGA_G),
+								.temp_B(mVGA_B),
+								.VGA_R(VGA_R),
+								.VGA_G(VGA_G),
+								.VGA_B(VGA_B),
+								.key_ctr(hexDis[1:0]));							
+							
+							
+							
+							
+							
 Reset_Delay			u2	(	.iCLK(CLOCK_50),
 							.iRST(KEY[0]),
 							.oRST_0(DLY_RST_0),
@@ -459,7 +493,8 @@ SEG7_LUT_8 			u5	(	.oSEG0(HEX0),.oSEG1(HEX1),
 							.oSEG2(HEX2),.oSEG3(HEX3),
 							.oSEG4(HEX4),.oSEG5(HEX5),
 							.oSEG6(HEX6),.oSEG7(HEX7),
-							.iDIG(Frame_Cont) );
+							//.iDIG(Frame_Cont) 
+							.iDIG(hexDis));
 
 Sdram_Control_4Port	u6	(	//	HOST Side
 						    .REF_CLK(CLOCK_50),
@@ -469,8 +504,9 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 										 sCCD_B[9:0]}),
 							.WR1(sCCD_DVAL),
 							.WR1_ADDR(0),
-							.WR1_MAX_ADDR(640*512),
-							.WR1_LENGTH(9'h100),
+							.WR1_MAX_ADDR(640*512),  	//yc: the original size is 1280*1024, the sampling can be done by setting the skipping mode
+																//		for more details, refer to reg0x04 in MT9M011
+							.WR1_LENGTH(9'h100),			//yc: what does the length stand for?
 							.WR1_LOAD(!DLY_RST_0),
 							.WR1_CLK(CCD_PIXCLK),
 							//	FIFO Write Side 2
@@ -485,7 +521,7 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							//	FIFO Read Side 1
 						    .RD1_DATA(Read_DATA1),
 				        	.RD1(Read),
-				        	.RD1_ADDR(640*16),
+				        	.RD1_ADDR(640*16),			//yc: row[15:0] is clipped to fit for VGA
 							.RD1_MAX_ADDR(640*496),
 							.RD1_LENGTH(9'h100),
 				        	.RD1_LOAD(!DLY_RST_0),
@@ -517,7 +553,7 @@ I2C_CCD_Config 		u7	(	//	Host Side
 							//	I2C Side
 							.I2C_SCLK(GPIO_1[14]),
 							.I2C_SDAT(GPIO_1[15])	);
-
+//yc: what does mirror column do?
 Mirror_Col			u8	(	//	Input Side
 							.iCCD_R(mCCD_R),
 							.iCCD_G(mCCD_G),
