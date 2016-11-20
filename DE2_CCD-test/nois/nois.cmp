@@ -1,0 +1,18 @@
+	component nois is
+		port (
+			clk_clk           : in  std_logic                     := 'X';             -- clk
+			clk_27_clk        : out std_logic;                                        -- clk
+			reset_reset_n     : in  std_logic                     := 'X';             -- reset_n
+			rgb_startofpacket : in  std_logic                     := 'X';             -- startofpacket
+			rgb_endofpacket   : in  std_logic                     := 'X';             -- endofpacket
+			rgb_valid         : in  std_logic                     := 'X';             -- valid
+			rgb_ready         : out std_logic;                                        -- ready
+			rgb_data          : in  std_logic_vector(23 downto 0) := (others => 'X'); -- data
+			y_ready           : in  std_logic                     := 'X';             -- ready
+			y_startofpacket   : out std_logic;                                        -- startofpacket
+			y_endofpacket     : out std_logic;                                        -- endofpacket
+			y_valid           : out std_logic;                                        -- valid
+			y_data            : out std_logic_vector(7 downto 0)                      -- data
+		);
+	end component nois;
+
