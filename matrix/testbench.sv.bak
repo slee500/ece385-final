@@ -1,0 +1,29 @@
+module testbench();
+
+timeunit 10ns;
+timeprecision 1ns;
+
+logic [7:0] userData, LCD_DATA;
+logic clk, reset_n, LCD_EN, LCD_RS, LCD_RW, LCD_ON, done;
+
+
+always begin: CLOCK_GENERATION
+	#1 clk = ~clk;
+end
+
+initial begin: CLOCK_INITIALIZATION
+	clk = 0;
+end
+
+
+LCD LCD0(.*);
+
+initial begin: TEST
+#1 reset_n = 0;
+#1 reset_n = 1;
+
+end
+
+
+
+endmodule

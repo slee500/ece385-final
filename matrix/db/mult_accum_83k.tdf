@@ -1,0 +1,152 @@
+--altmult_accum CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone IV E" DSP_BLOCK_BALANCING="Auto" clock0 coefsel0 coefsel1 coefsel2 coefsel3 dataa datab datac result CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 15.0 cbx_alt_ded_mult_y 2015:04:22:18:04:07:SJ cbx_alt_zaccum 2015:04:22:18:04:07:SJ cbx_altaccumulate 2015:04:22:18:04:07:SJ cbx_altera_mult_add 2015:04:22:18:04:07:SJ cbx_altera_mult_add_rtl 2015:04:22:18:04:07:SJ cbx_altmult_accum 2015:04:22:18:04:07:SJ cbx_altmult_add 2015:04:22:18:04:07:SJ cbx_cycloneii 2015:04:22:18:04:07:SJ cbx_lpm_add_sub 2015:04:22:18:04:07:SJ cbx_lpm_mult 2015:04:22:18:04:08:SJ cbx_mgl 2015:04:22:18:06:50:SJ cbx_padd 2015:04:22:18:04:08:SJ cbx_parallel_add 2015:04:22:18:04:08:SJ cbx_stratix 2015:04:22:18:04:08:SJ cbx_stratixii 2015:04:22:18:04:08:SJ cbx_util_mgl 2015:04:22:18:04:08:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, the Altera Quartus II License Agreement,
+--  the Altera MegaCore Function License Agreement, or other 
+--  applicable license agreement, including, without limitation, 
+--  that your use is for the sole purpose of programming logic 
+--  devices manufactured by Altera and sold by Altera or its 
+--  authorized distributors.  Please refer to the applicable 
+--  agreement for further details.
+
+
+
+--synthesis_resources = 
+SUBDESIGN mult_accum_83k
+( 
+	clock0	:	input;
+	coefsel0[2..0]	:	input;
+	coefsel1[2..0]	:	input;
+	coefsel2[2..0]	:	input;
+	coefsel3[2..0]	:	input;
+	dataa	:	input;
+	datab	:	input;
+	datac[21..0]	:	input;
+	result	:	output;
+) 
+
+BEGIN 
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "Parameter error:  In altmult_accum megafunction, parameter WIDTH_A has illegal value -1 -- value must be greater than 0"
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "Parameter error:  In altmult_accum megafunction, parameter WIDTH_B has illegal value -1 -- value must be greater than 0"
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "Parameter error:  In altmult_accum megafunction, parameter WIDTH_RESULT has illegal value -1 -- value must be greater than 0"
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter WIDTH_A is used to specify the width of port altmult_accum|dataa. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter WIDTH_B is used to specify the width of port altmult_accum|datab. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_RESULT has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter WIDTH_RESULT is used to specify the width of port altmult_accum|result. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter WIDTH_A is used to specify the width of port altmult_accum|scanina. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter WIDTH_B is used to specify the width of port altmult_accum|scaninb. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_A has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter WIDTH_A is used to specify the width of port altmult_accum|scanouta. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter altmult_accum|WIDTH_B has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter WIDTH_B is used to specify the width of port altmult_accum|scanoutb. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+END;
+--ERROR FILE
