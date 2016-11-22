@@ -1,0 +1,63 @@
+# Reading C:/altera/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do matrix_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/slee500/Desktop/matrix {C:/Users/slee500/Desktop/matrix/toplevel.sv}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 19:38:42 on Nov 21,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/slee500/Desktop/matrix" C:/Users/slee500/Desktop/matrix/toplevel.sv 
+# -- Compiling module toplevel
+# 
+# Top level modules:
+# 	toplevel
+# End time: 19:38:42 on Nov 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/slee500/Desktop/matrix {C:/Users/slee500/Desktop/matrix/mult_add.sv}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 19:38:42 on Nov 21,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/slee500/Desktop/matrix" C:/Users/slee500/Desktop/matrix/mult_add.sv 
+# -- Compiling module mult_add
+# -- Compiling module mult_add1
+# 
+# Top level modules:
+# 	mult_add
+# 	mult_add1
+# End time: 19:38:42 on Nov 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/slee500/Desktop/matrix {C:/Users/slee500/Desktop/matrix/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 19:38:42 on Nov 21,2016
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/slee500/Desktop/matrix" C:/Users/slee500/Desktop/matrix/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 19:38:42 on Nov 21,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 19:38:42 on Nov 21,2016
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.mult_add1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+restart
+run
+# End time: 19:40:40 on Nov 21,2016, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 0

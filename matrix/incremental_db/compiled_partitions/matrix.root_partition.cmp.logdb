@@ -1,0 +1,3 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mult_acc:mult_acc0|altmult_accum:altmult_accum_component|mult_accum_gl22:auto_generated|ded_mult_o981:ded_mult1|mac_out4,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,mult_acc:mult_acc0|altmult_accum:altmult_accum_component|mult_accum_gl22:auto_generated|ded_mult_o981:ded_mult1|mac_mult3,

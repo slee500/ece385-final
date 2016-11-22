@@ -1,0 +1,3 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mult_add:multadd|mult_add_p2:part2|lpm_mult:Mult8|mult_f4t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mult_add:multadd|mult_add_p2:part2|lpm_mult:Mult2|mult_f4t:auto_generated|mac_out2,

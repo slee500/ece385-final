@@ -1,0 +1,25 @@
+
+
+C:/Users/slee500/Desktop/matrix/mac.v
+
+Nov 17 10PM:23:16>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+mac.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
+
+C:/Users/slee500/Desktop/matrix/mac.v
+
+Nov 17 10PM:24:11>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+mac.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
