@@ -23,8 +23,9 @@ int main() {
         count++;
         
         if (count%28 == 0) {
-            printf("\n");
+            printf("\nTransmitted one number. Press enter to continue. ");
             getchar();
+            printf("\n");
         }
     }
 
