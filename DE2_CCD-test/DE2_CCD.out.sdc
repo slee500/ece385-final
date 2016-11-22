@@ -39,15 +39,16 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {clk} -period 20.000 -waveform { 0.000 10.000 } 
-create_clock -name {clkx2} -period 10.000 -waveform { 0.000 6.000 } 
-
+#create_clock -name {clk} -period 20.000 -waveform { 0.000 10.000 } 
+#create_clock -name {clkx2} -period 10.000 -waveform { 0.000 6.000 } 
+#create_clock -period 20 [get_ports CLOCK_50]
+create_clock -period 10 [get_ports clk]
 
 #**************************************************************
 # Create Generated Clock
 #**************************************************************
 
-
+derive_pll_clocks
 
 #**************************************************************
 # Set Clock Latency
@@ -65,15 +66,15 @@ create_clock -name {clkx2} -period 10.000 -waveform { 0.000 6.000 }
 # Set Input Delay
 #**************************************************************
 
-set_input_delay -clock {clk} -max 3 [all_inputs]
-set_input_delay -clock {clk} -min 2 [all_inputs]
+set_input_delay -clock clk -max 3 [all_inputs]
+set_input_delay -clock clk -min 2 [all_inputs]
 
 #**************************************************************
 # Set Output Delay
 #**************************************************************
 
-set_output_delay -clock {clk} -max 3 [all_outputs]
-set_output_delay -clock {clk} -min 2 [all_outputs]
+set_output_delay -clock clk -max 3 [all_outputs]
+set_output_delay -clock clk -min 2 [all_outputs]
 
 #**************************************************************
 # Set Clock Groups
@@ -85,8 +86,8 @@ set_output_delay -clock {clk} -min 2 [all_outputs]
 # Set False Path
 #**************************************************************
 
-set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_qe9:dffpipe16|dffe17a*}]
-set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_pe9:dffpipe13|dffe14a*}]
+#set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_qe9:dffpipe16|dffe17a*}]
+#set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_pe9:dffpipe13|dffe14a*}]
 
 
 #**************************************************************

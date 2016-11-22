@@ -46,9 +46,9 @@
 module DE2_CCD
 	(
 		////////////////////	Clock Input	 	////////////////////	 
-		CLOCK_27,						//	27 MHz
+		//CLOCK_27,						//	27 MHz
 		CLOCK_50,						//	50 MHz
-		EXT_CLOCK,						//	External Clock
+		//EXT_CLOCK,						//	External Clock
 		////////////////////	Push Button		////////////////////
 		KEY,							//	Pushbutton[3:0]
 		////////////////////	DPDT Switch		////////////////////
@@ -173,9 +173,9 @@ module DE2_CCD
 	);
 
 ////////////////////////	Clock Input	 	////////////////////////
-input			CLOCK_27;				//	27 MHz
+//input			CLOCK_27;				//	27 MHz
 input			CLOCK_50;				//	50 MHz
-input			EXT_CLOCK;				//	External Clock
+//input			EXT_CLOCK;				//	External Clock
 ////////////////////////	Push Button		////////////////////////
 input	[3:0]	KEY;					//	Pushbutton[3:0]
 ////////////////////////	DPDT Switch		////////////////////////
@@ -435,7 +435,7 @@ end
 
 
 
-nois pll_clk(.clk_clk(CLK_50), .clk_27_clk(CLK_27), .reset_reset_n(KEY[0]));
+//nois pll_clk(.clk_clk(CLK_50), .clk_27_clk(CLK_27), .reset_reset_n(KEY[0]));
 
 
 
@@ -499,17 +499,17 @@ RAW2RGB				u4	(	.oRed(mCCD_R),
 							.iCLK(CCD_PIXCLK),
 							.iRST(DLY_RST_1)	);
 							
-RAW2RGB_4X		u4_1	(	.oRed(mmCCD_R),
-							.oGreen(mmCCD_G),
-							.oBlue(mmCCD_B),
-							.oDVAL(mmCCD_DVAL_d),
-							.iX_Cont(X_Cont),
-							.iY_Cont(Y_Cont),
-							.iDATA(mCCD_DATA),
-							.iDVAL(mCCD_DVAL),
-							.iCLK(CCD_PIXCLK),
-							.iRST(DLY_RST_1)	);
-							
+//RAW2RGB_4X		u4_1	(	.oRed(mmCCD_R),
+//							.oGreen(mmCCD_G),
+//							.oBlue(mmCCD_B),
+//							.oDVAL(mmCCD_DVAL_d),
+//							.iX_Cont(X_Cont),
+//							.iY_Cont(Y_Cont),
+//							.iDATA(mCCD_DATA),
+//							.iDVAL(mCCD_DVAL),
+//							.iCLK(CCD_PIXCLK),
+//							.iRST(DLY_RST_1)	);
+//							
 							
 SEG7_LUT_8 			u5	(	.oSEG0(HEX0),.oSEG1(HEX1),
 							.oSEG2(HEX2),.oSEG3(HEX3),
@@ -541,21 +541,21 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							.WR2_LOAD(!DLY_RST_0),
 							.WR2_CLK(CCD_PIXCLK),
 							//	FIFO Write Side 3
-						    .WR3_DATA(	{smCCD_G[9:5],
-										 smCCD_B[9:0]}),
-							.WR3(smCCD_DVAL),
+						    .WR3_DATA(	{sCCD_G[9:5],
+										 sCCD_B[9:0]}),
+							.WR3(sCCD_DVAL),
 							.WR3_ADDR(22'h200000),
-							.WR3_MAX_ADDR(22'h200000+320*256),  	//yc: the original size is 1280*1024, the sampling can be done by setting the skipping mode
+							.WR3_MAX_ADDR(22'h200000+640*512),  	//yc: the original size is 1280*1024, the sampling can be done by setting the skipping mode
 																//		for more details, refer to reg0x04 in MT9M011
 							.WR3_LENGTH(9'h100),			//yc: what does the length stand for?
 							.WR3_LOAD(!DLY_RST_0),
 							.WR3_CLK(CCD_PIXCLK),
 							//	FIFO Write Side 4
-						    .WR4_DATA(	{smCCD_G[4:0],
-										 smCCD_R[9:0]}),
-							.WR4(smCCD_DVAL),
-							.WR4_ADDR(22'h280000),
-							.WR4_MAX_ADDR(22'h280000+320*256),
+						    .WR4_DATA(	{sCCD_G[4:0],
+										 sCCD_R[9:0]}),
+							.WR4(sCCD_DVAL),
+							.WR4_ADDR(22'h300000),
+							.WR4_MAX_ADDR(22'h300000+640*512),
 							.WR4_LENGTH(9'h100),
 							.WR4_LOAD(!DLY_RST_0),
 							.WR4_CLK(CCD_PIXCLK),
@@ -564,34 +564,30 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 				        	.RD1(Read),
 				        	.RD1_ADDR(640*16),			//yc: row[15:0] is clipped to fit for VGA
 							.RD1_MAX_ADDR(640*496),
-							//.RD1_ADDR(22'h200000),
-							//.RD1_MAX_ADDR(22'h200000+640*480),
 							.RD1_LENGTH(9'h100),
 				        	.RD1_LOAD(!DLY_RST_0),
 							.RD1_CLK(VGA_CTRL_CLK),
 							//	FIFO Read Side 2
 						    .RD2_DATA(Read_DATA2),
 				        	.RD2(Read),
-				        	.RD2_ADDR(22'h100000+640*16),
-							.RD2_MAX_ADDR(22'h100000+640*496),
-							//.RD2_ADDR(22'h280000),
-							//.RD2_MAX_ADDR(22'h100000+640*480),
+				        	.RD2_ADDR(22'h100000+640*16),          //640*16
+							.RD2_MAX_ADDR(23'h100000+640*496),    //640*496
 							.RD2_LENGTH(9'h100),
 				        	.RD2_LOAD(!DLY_RST_0),
 							.RD2_CLK(VGA_CTRL_CLK),
 							//	FIFO Read Side 3
 						    .RD3_DATA(Read_DATA3),
-				        	.RD3(mRead),
-				        	.RD3_ADDR(22'h200000),			//modify this
-							.RD3_MAX_ADDR(22'h200000+320*240),  //modify this
+				        	.RD3(Read),
+				        	.RD3_ADDR(22'h200000+640*16),			//modify this
+							.RD3_MAX_ADDR(22'h200000+640*496),  //modify this
 							.RD3_LENGTH(9'h100),  
 				        	.RD3_LOAD(!DLY_RST_0),
 							.RD3_CLK(VGA_CTRL_CLK),  //modify this
 							//	FIFO Read Side 4
 						    .RD4_DATA(Read_DATA4),
-				        	.RD4(mRead),
-				        	.RD4_ADDR(22'h280000),   //modify this
-							.RD4_MAX_ADDR(22'h280000+320*240),  //modify this
+				        	.RD4(Read),
+				        	.RD4_ADDR(22'h300000+640*16),   //modify this
+							.RD4_MAX_ADDR(22'h300000+640*496),  //modify this
 							.RD4_LENGTH(9'h100),
 				        	.RD4_LOAD(!DLY_RST_0),
 							.RD4_CLK(VGA_CTRL_CLK),  //modify this
@@ -628,18 +624,18 @@ Mirror_Col			u8	(	//	Input Side
 							.oCCD_B(sCCD_B),
 							.oCCD_DVAL(sCCD_DVAL));
 
-Mirror_Col_4X	u8_1	(	//	Input Side
-							.iCCD_R(mmCCD_R),
-							.iCCD_G(mmCCD_G),
-							.iCCD_B(mmCCD_B),
-							.iCCD_DVAL(mmCCD_DVAL_d),
-							.iCCD_PIXCLK(CCD_PIXCLK),
-							.iRST_N(DLY_RST_1),
-							//	Output Side
-							.oCCD_R(smCCD_R),
-							.oCCD_G(smCCD_G),
-							.oCCD_B(smCCD_B),
-							.oCCD_DVAL(smCCD_DVAL));							
+//Mirror_Col_4X	u8_1	(	//	Input Side
+//							.iCCD_R(mmCCD_R),
+//							.iCCD_G(mmCCD_G),
+//							.iCCD_B(mmCCD_B),
+//							.iCCD_DVAL(mmCCD_DVAL_d),
+//							.iCCD_PIXCLK(CCD_PIXCLK),
+//							.iRST_N(DLY_RST_1),
+//							//	Output Side
+//							.oCCD_R(smCCD_R),
+//							.oCCD_G(smCCD_G),
+//							.oCCD_B(smCCD_B),
+//							.oCCD_DVAL(smCCD_DVAL));							
 							
 endmodule
 						

@@ -396,13 +396,13 @@ Sdram_FIFO 	write_fifo4(
 				.rdusedw(write_side_fifo_rusedw4)
 				);
 				
-assign	mDATAIN	=	(WR_MASK[0])	?	mDATAIN1	:
-										mDATAIN2	;
-
 //assign	mDATAIN	=	(WR_MASK[0])	?	mDATAIN1	:
-//					(WR_MASK[1])	?	mDATAIN2	:
-//					(WR_MASK[2])	?	mDATAIN3	:
-//										mDATAIN4	;										
+//										mDATAIN2	;
+
+assign	mDATAIN	=	(WR_MASK[0])	?	mDATAIN1	:
+					(WR_MASK[1])	?	mDATAIN2	:
+					(WR_MASK[2])	?	mDATAIN3	:
+										mDATAIN4	;										
 										
 Sdram_FIFO 	read_fifo1(
 				.data(mDATAOUT),
@@ -519,7 +519,7 @@ begin
 			end
 		default:	
 			begin	
-				if(ST!=SC_CL+SC_RCD+mLENGTH+1)
+				if(ST!=SC_CL+SC_RCD+mLENGTH+2)
 				ST<=ST+1;
 				else
 				ST<=0;
@@ -528,9 +528,9 @@ begin
 	
 		if(Read)
 		begin
-			if(ST==SC_CL+SC_RCD+1)
+			if(ST==SC_CL+SC_RCD+2)
 			OUT_VALID	<=	1;
-			else if(ST==SC_CL+SC_RCD+mLENGTH+1)
+			else if(ST==SC_CL+SC_RCD+mLENGTH+2)
 			begin
 				OUT_VALID	<=	0;
 				Read		<=	0;
@@ -562,18 +562,54 @@ always@(posedge CLK or negedge RESET_N)
 begin
 	if(!RESET_N)
 	begin
-		rWR1_ADDR		<=	0;
-		rWR2_ADDR		<=	22'h100000;
-		rRD1_ADDR		<=	640*16;
-		rRD2_ADDR		<=	22'h100000+640*16;
-		rWR1_MAX_ADDR	<=	640*512;
-		rWR2_MAX_ADDR	<=	22'h100000+640*512;
-		rRD1_MAX_ADDR	<=	640*496;
-		rRD2_MAX_ADDR	<=	22'h100000+640*496;
+//		rWR1_ADDR		<=	0;
+//		rWR2_ADDR		<=	22'h100000;
+//		rRD1_ADDR		<=	640*16;
+//		rRD2_ADDR		<=	22'h100000+640*16;
+//		rWR1_MAX_ADDR	<=	640*512;
+//		rWR2_MAX_ADDR	<=	22'h100000+640*512;
+//		rRD1_MAX_ADDR	<=	640*496;
+//		rRD2_MAX_ADDR	<=	22'h100000+640*496;
+//		rWR1_LENGTH		<=	256;
+//		rWR2_LENGTH		<=	256;
+//		rRD1_LENGTH		<=	256;
+//		rRD2_LENGTH		<=	256;
+//		rWR3_ADDR		<=	22'h200000;
+//		rWR4_ADDR		<=	22'h300000;
+//		rRD3_ADDR		<=	22'h200000+640*16;
+//		rRD4_ADDR		<=	22'h300000+640*16;
+//		rWR3_MAX_ADDR	<=	22'h200000+640*512;
+//		rWR4_MAX_ADDR	<=	22'h300000+640*512;
+//		rRD3_MAX_ADDR	<=	22'h200000+640*496;
+//		rRD4_MAX_ADDR	<=	22'h300000+640*496;
+//		rWR3_LENGTH		<=	256;
+//		rWR4_LENGTH		<=	256;
+//		rRD3_LENGTH		<=	256;
+//		rRD4_LENGTH		<=	256;
+		rWR1_ADDR		<=	WR1_ADDR;
+		rWR1_MAX_ADDR	<=	WR1_MAX_ADDR;
+		rWR2_ADDR		<=	WR2_ADDR;
+		rWR2_MAX_ADDR	<=	WR2_MAX_ADDR;
+		rWR3_ADDR		<=	WR3_ADDR;
+		rWR3_MAX_ADDR	<=	WR3_MAX_ADDR;
+		rWR4_ADDR		<=	WR4_ADDR;
+		rWR4_MAX_ADDR	<=	WR4_MAX_ADDR;
+		rRD1_ADDR		<=	RD1_ADDR;
+		rRD1_MAX_ADDR	<=	RD1_MAX_ADDR;
+		rRD2_ADDR		<=	RD2_ADDR;
+		rRD2_MAX_ADDR	<=	RD2_MAX_ADDR;
+		rRD3_ADDR		<=	RD3_ADDR;
+		rRD3_MAX_ADDR	<=	RD3_MAX_ADDR;
+		rRD4_ADDR		<=	RD4_ADDR;
+		rRD4_MAX_ADDR	<=	RD4_MAX_ADDR;
 		rWR1_LENGTH		<=	256;
 		rWR2_LENGTH		<=	256;
+		rWR3_LENGTH		<=	256;
+		rWR4_LENGTH		<=	256;
 		rRD1_LENGTH		<=	256;
 		rRD2_LENGTH		<=	256;
+		rRD3_LENGTH		<=	256;
+		rRD4_LENGTH		<=	256;
 	end
 	else
 	begin
@@ -603,6 +639,32 @@ begin
 			else
 			rWR2_ADDR	<=	WR2_ADDR;
 		end
+		//	Write Side 3
+		if(WR3_LOAD)
+		begin
+			rWR3_ADDR	<=	WR3_ADDR;
+			rWR3_LENGTH	<=	WR3_LENGTH;
+		end
+		else if(mWR_DONE&WR_MASK[2])
+		begin
+			if(rWR3_ADDR<rWR3_MAX_ADDR-rWR3_LENGTH)
+			rWR3_ADDR	<=	rWR3_ADDR+rWR3_LENGTH;
+			else
+			rWR3_ADDR	<=	WR3_ADDR;
+		end
+		//	Write Side 4
+		if(WR4_LOAD)
+		begin
+			rWR4_ADDR	<=	WR4_ADDR;
+			rWR4_LENGTH	<=	WR4_LENGTH;
+		end
+		else if(mWR_DONE&WR_MASK[3])
+		begin
+			if(rWR4_ADDR<rWR4_MAX_ADDR-rWR4_LENGTH)
+			rWR4_ADDR	<=	rWR4_ADDR+rWR4_LENGTH;
+			else
+			rWR4_ADDR	<=	WR4_ADDR;
+		end
 		//	Read Side 1
 		if(RD1_LOAD)
 		begin
@@ -629,6 +691,32 @@ begin
 			else
 			rRD2_ADDR	<=	RD2_ADDR;
 		end
+		//	Read Side 3
+		if(RD3_LOAD)
+		begin
+			rRD3_ADDR	<=	RD3_ADDR;
+			rRD3_LENGTH	<=	RD3_LENGTH;
+		end
+		else if(mRD_DONE&RD_MASK[2])
+		begin
+			if(rRD3_ADDR<rRD3_MAX_ADDR-rRD3_LENGTH)
+			rRD3_ADDR	<=	rRD3_ADDR+rRD3_LENGTH;
+			else
+			rRD3_ADDR	<=	RD3_ADDR;
+		end
+		//	Read Side 4
+		if(RD4_LOAD)
+		begin
+			rRD4_ADDR	<=	RD4_ADDR;
+			rRD4_LENGTH	<=	RD4_LENGTH;
+		end
+		else if(mRD_DONE&RD_MASK[3])
+		begin
+			if(rRD4_ADDR<rRD4_MAX_ADDR-rRD4_LENGTH)
+			rRD4_ADDR	<=	rRD4_ADDR+rRD4_LENGTH;
+			else
+			rRD4_ADDR	<=	RD4_ADDR;
+		end
 	end
 end
 //	Auto Read/Write Control
@@ -646,15 +734,37 @@ begin
 		if( (mWR==0) && (mRD==0) && (ST==0) &&
 			(WR_MASK==0)	&&	(RD_MASK==0) &&
 			(WR1_LOAD==0)	&&	(RD1_LOAD==0) &&
-			(WR2_LOAD==0)	&&	(RD2_LOAD==0) )
+			(WR2_LOAD==0)	&&	(RD2_LOAD==0) &&
+			(WR3_LOAD==0) 	&&	(WR4_LOAD==0)	&&
+			(RD3_LOAD==0)	&&	(RD4_LOAD==0)     )
 		begin
+//			//	Write Side 1
+//			if( (write_side_fifo_rusedw1 >= rWR1_LENGTH) && (rWR1_LENGTH!=0) )
+//			begin
+//				mADDR	<=	rWR1_ADDR;
+//				mLENGTH	<=	rWR1_LENGTH;
+//				WR_MASK	<=	2'b01;
+//				RD_MASK	<=	2'b00;
+//				mWR		<=	1;
+//				mRD		<=	0;
+//			end
+//			//	Write Side 2
+//			else if( (write_side_fifo_rusedw2 >= rWR2_LENGTH) && (rWR2_LENGTH!=0) )
+//			begin
+//				mADDR	<=	rWR2_ADDR;
+//				mLENGTH	<=	rWR2_LENGTH;
+//				WR_MASK	<=	2'b10;
+//				RD_MASK	<=	2'b00;
+//				mWR		<=	1;
+//				mRD		<=	0;
+//			end
 			//	Write Side 1
 			if( (write_side_fifo_rusedw1 >= rWR1_LENGTH) && (rWR1_LENGTH!=0) )
 			begin
 				mADDR	<=	rWR1_ADDR;
 				mLENGTH	<=	rWR1_LENGTH;
-				WR_MASK	<=	2'b01;
-				RD_MASK	<=	2'b00;
+				WR_MASK	<=	4'b0001;
+				RD_MASK	<=	4'b0000;
 				mWR		<=	1;
 				mRD		<=	0;
 			end
@@ -663,18 +773,58 @@ begin
 			begin
 				mADDR	<=	rWR2_ADDR;
 				mLENGTH	<=	rWR2_LENGTH;
-				WR_MASK	<=	2'b10;
-				RD_MASK	<=	2'b00;
+				WR_MASK	<=	4'b0010;
+				RD_MASK	<=	4'b0000;
 				mWR		<=	1;
 				mRD		<=	0;
 			end
+			//	Write Side 3
+			else if( (write_side_fifo_rusedw3 >= rWR3_LENGTH) && (rWR3_LENGTH!=0) )
+			begin
+				mADDR	<=	rWR3_ADDR;
+				mLENGTH	<=	rWR3_LENGTH;
+				WR_MASK	<=	4'b0100;
+				RD_MASK	<=	4'b0000;
+				mWR		<=	1;
+				mRD		<=	0;
+			end
+			//	Write Side 2
+			else if( (write_side_fifo_rusedw4 >= rWR4_LENGTH) && (rWR4_LENGTH!=0) )
+			begin
+				mADDR	<=	rWR4_ADDR;
+				mLENGTH	<=	rWR4_LENGTH;
+				WR_MASK	<=	4'b1000;
+				RD_MASK	<=	4'b0000;
+				mWR		<=	1;
+				mRD		<=	0;
+			end
+//			//	Read Side 1
+//			else if( (read_side_fifo_wusedw1 < rRD1_LENGTH) )
+//			begin
+//				mADDR	<=	rRD1_ADDR;
+//				mLENGTH	<=	rRD1_LENGTH;
+//				WR_MASK	<=	2'b00;
+//				RD_MASK	<=	2'b01;
+//				mWR		<=	0;
+//				mRD		<=	1;				
+//			end
+//			//	Read Side 2
+//			else if( (read_side_fifo_wusedw2 < rRD2_LENGTH) )
+//			begin
+//				mADDR	<=	rRD2_ADDR;
+//				mLENGTH	<=	rRD2_LENGTH;
+//				WR_MASK	<=	2'b00;
+//				RD_MASK	<=	2'b10;
+//				mWR		<=	0;
+//				mRD		<=	1;
+//			end
 			//	Read Side 1
 			else if( (read_side_fifo_wusedw1 < rRD1_LENGTH) )
 			begin
 				mADDR	<=	rRD1_ADDR;
 				mLENGTH	<=	rRD1_LENGTH;
-				WR_MASK	<=	2'b00;
-				RD_MASK	<=	2'b01;
+				WR_MASK	<=	4'b0000;
+				RD_MASK	<=	4'b0001;
 				mWR		<=	0;
 				mRD		<=	1;				
 			end
@@ -683,8 +833,28 @@ begin
 			begin
 				mADDR	<=	rRD2_ADDR;
 				mLENGTH	<=	rRD2_LENGTH;
-				WR_MASK	<=	2'b00;
-				RD_MASK	<=	2'b10;
+				WR_MASK	<=	4'b0000;
+				RD_MASK	<=	4'b0010;
+				mWR		<=	0;
+				mRD		<=	1;
+			end
+			//	Read Side 3
+			else if( (read_side_fifo_wusedw3 < rRD3_LENGTH) )
+			begin
+				mADDR	<=	rRD3_ADDR;
+				mLENGTH	<=	rRD3_LENGTH;
+				WR_MASK	<=	4'b0000;
+				RD_MASK	<=	4'b0100;
+				mWR		<=	0;
+				mRD		<=	1;
+			end
+			//	Read Side 4
+			else if( (read_side_fifo_wusedw4 < rRD4_LENGTH) )
+			begin
+				mADDR	<=	rRD4_ADDR;
+				mLENGTH	<=	rRD4_LENGTH;
+				WR_MASK	<=	4'b0000;
+				RD_MASK	<=	4'b1000;
 				mWR		<=	0;
 				mRD		<=	1;
 			end

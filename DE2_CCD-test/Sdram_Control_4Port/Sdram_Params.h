@@ -1,9 +1,9 @@
 // Address Space Parameters
 
-`define ROWSTART        8          
-`define ROWSIZE         12
+`define ROWSTART        10          
+`define ROWSIZE         13
 `define COLSTART        0
-`define COLSIZE         8
+`define COLSIZE         10
 `define BANKSTART       20
 `define BANKSIZE        2
 
