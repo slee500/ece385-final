@@ -33,7 +33,7 @@ assign	oGreen	=	mCCD_G[10:1];
 assign	oBlue	=	mCCD_B[9:0];
 assign	oDVAL	=	mDVAL;
 
-Line_Buffer 	u0	(	.clken(iDVAL),
+my_Line_Buffer 	u0	(	.clken(iDVAL),
 						.clock(iCLK),
 						.shiftin(iDATA),
 						.taps0x(mDATA_1),

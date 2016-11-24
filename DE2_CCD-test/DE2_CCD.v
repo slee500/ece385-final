@@ -168,7 +168,7 @@ module DE2_CCD
 		TD_VS,							//	TV Decoder V_SYNC
 		TD_RESET,						//	TV Decoder Reset
 		////////////////////	GPIO	////////////////////////////
-		GPIO_0,							//	GPIO Connection 0
+		//GPIO_0,							//	GPIO Connection 0
 		GPIO_1							//	GPIO Connection 1
 	);
 
@@ -295,7 +295,7 @@ input			TD_HS;					//	TV Decoder H_SYNC
 input			TD_VS;					//	TV Decoder V_SYNC
 output			TD_RESET;				//	TV Decoder Reset
 ////////////////////////	GPIO	////////////////////////////////
-inout	[35:0]	GPIO_0;					//	GPIO Connection 0
+//inout	[35:0]	GPIO_0;					//	GPIO Connection 0
 inout	[35:0]	GPIO_1;					//	GPIO Connection 1
 
 assign	LCD_ON		=	1'b1;
@@ -332,13 +332,13 @@ wire			CCD_FVAL;
 wire			CCD_LVAL;
 wire			CCD_PIXCLK;
 reg				CCD_MCLK;	//	CCD Master Clock
-
 wire	[15:0]	Read_DATA1;
 wire	[15:0]	Read_DATA2;
 wire	[15:0]	Read_DATA3;
 wire	[15:0]	Read_DATA4;
 wire			VGA_CTRL_CLK;
 wire			AUD_CTRL_CLK;
+wire 			CLOCK_25;
 wire	[9:0]	mCCD_DATA;
 wire			mCCD_DVAL;
 wire			mCCD_DVAL_d;
@@ -376,7 +376,9 @@ wire	[9:0]	smCCD_R;
 wire	[9:0]	smCCD_G;
 wire	[9:0]	smCCD_B;
 wire			smCCD_DVAL;
-
+//test
+wire	[3:0]	Full;
+wire	[3:0]	Empty;
 
 wire [31:0] hexDis;
 //assign hexDis[1:0] = key_ctr;
@@ -420,11 +422,15 @@ assign	CCD_LVAL	=	GPIO_1[12+20];
 assign	CCD_PIXCLK	=	GPIO_1[10+20];
 */
 assign	LEDR		=	SW;
-assign	LEDG		=	Y_Cont;
+//assign	LEDG		=	Y_Cont;
+assign	LEDG		=	{Full,Empty};
 assign	VGA_CTRL_CLK=	CCD_MCLK;
 assign	VGA_CLK		=	~CCD_MCLK;
+assign CLOCK_25 = VGA_CTRL_CLK;
 
 always@(posedge CLOCK_50)	CCD_MCLK	<=	~CCD_MCLK;
+
+
 
 always@(posedge CCD_PIXCLK)
 begin
@@ -435,7 +441,7 @@ end
 
 
 
-//nois pll_clk(.clk_clk(CLK_50), .clk_27_clk(CLK_27), .reset_reset_n(KEY[0]));
+
 
 
 
@@ -526,11 +532,12 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 										 sCCD_B[9:0]}),
 							.WR1(sCCD_DVAL),
 							.WR1_ADDR(0),
-							.WR1_MAX_ADDR(640*512),  	//yc: the original size is 1280*1024, the sampling can be done by setting the skipping mode
-																//		for more details, refer to reg0x04 in MT9M011
-							.WR1_LENGTH(9'h100),			//yc: what does the length stand for?
+							.WR1_MAX_ADDR(640*512),  	
+																
+							.WR1_LENGTH(9'h100),			
 							.WR1_LOAD(!DLY_RST_0),
 							.WR1_CLK(CCD_PIXCLK),
+							.WR1_FULL(Full[0]),
 							//	FIFO Write Side 2
 						    .WR2_DATA(	{sCCD_G[4:0],
 										 sCCD_R[9:0]}),
@@ -540,25 +547,28 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							.WR2_LENGTH(9'h100),
 							.WR2_LOAD(!DLY_RST_0),
 							.WR2_CLK(CCD_PIXCLK),
-							//	FIFO Write Side 3
-						    .WR3_DATA(	{sCCD_G[9:5],
-										 sCCD_B[9:0]}),
-							.WR3(sCCD_DVAL),
-							.WR3_ADDR(22'h200000),
-							.WR3_MAX_ADDR(22'h200000+640*512),  	//yc: the original size is 1280*1024, the sampling can be done by setting the skipping mode
-																//		for more details, refer to reg0x04 in MT9M011
-							.WR3_LENGTH(9'h100),			//yc: what does the length stand for?
-							.WR3_LOAD(!DLY_RST_0),
-							.WR3_CLK(CCD_PIXCLK),
-							//	FIFO Write Side 4
-						    .WR4_DATA(	{sCCD_G[4:0],
-										 sCCD_R[9:0]}),
-							.WR4(sCCD_DVAL),
-							.WR4_ADDR(22'h300000),
-							.WR4_MAX_ADDR(22'h300000+640*512),
-							.WR4_LENGTH(9'h100),
-							.WR4_LOAD(!DLY_RST_0),
-							.WR4_CLK(CCD_PIXCLK),
+							.WR2_FULL(Full[1]),
+//							//	FIFO Write Side 3
+//						    .WR3_DATA(	{sCCD_G[9:5],
+//										 sCCD_B[9:0]}),
+//							.WR3(sCCD_DVAL),
+//							.WR3_ADDR(22'h200000),
+//							.WR3_MAX_ADDR(22'h200000+640*512),  	
+//																
+//							.WR3_LENGTH(9'h100),			
+//							.WR3_LOAD(!DLY_RST_0),
+//							.WR3_CLK(CCD_PIXCLK),
+//							.WR3_FULL(Full[2]),
+//							//	FIFO Write Side 4
+//						    .WR4_DATA(	{sCCD_G[4:0],
+//										 sCCD_R[9:0]}),
+//							.WR4(sCCD_DVAL),
+//							.WR4_ADDR(22'h300000),
+//							.WR4_MAX_ADDR(22'h300000+640*512),
+//							.WR4_LENGTH(9'h100),
+//							.WR4_LOAD(!DLY_RST_0),
+//							.WR4_CLK(CCD_PIXCLK),
+//							.WR4_FULL(Full[3]),
 							//	FIFO Read Side 1
 						    .RD1_DATA(Read_DATA1),
 				        	.RD1(Read),
@@ -567,30 +577,34 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							.RD1_LENGTH(9'h100),
 				        	.RD1_LOAD(!DLY_RST_0),
 							.RD1_CLK(VGA_CTRL_CLK),
+							.RD1_EMPTY(Empty[0]),
 							//	FIFO Read Side 2
 						    .RD2_DATA(Read_DATA2),
 				        	.RD2(Read),
-				        	.RD2_ADDR(22'h100000+640*16),          //640*16
-							.RD2_MAX_ADDR(23'h100000+640*496),    //640*496
+				        	.RD2_ADDR(22'h100000+640*16),          
+							.RD2_MAX_ADDR(23'h100000+640*496),    
 							.RD2_LENGTH(9'h100),
 				        	.RD2_LOAD(!DLY_RST_0),
 							.RD2_CLK(VGA_CTRL_CLK),
+							.RD2_EMPTY(Empty[1]),
 							//	FIFO Read Side 3
 						    .RD3_DATA(Read_DATA3),
-				        	.RD3(Read),
-				        	.RD3_ADDR(22'h200000+640*16),			//modify this
-							.RD3_MAX_ADDR(22'h200000+640*496),  //modify this
+				        	.RD3(mRead),
+				        	.RD3_ADDR(640*32),			
+							.RD3_MAX_ADDR(640*480),  
 							.RD3_LENGTH(9'h100),  
 				        	.RD3_LOAD(!DLY_RST_0),
-							.RD3_CLK(VGA_CTRL_CLK),  //modify this
+							.RD3_CLK(CLOCK_25),  
+							.RD3_EMPTY(Empty[2]),
 							//	FIFO Read Side 4
 						    .RD4_DATA(Read_DATA4),
-				        	.RD4(Read),
-				        	.RD4_ADDR(22'h300000+640*16),   //modify this
-							.RD4_MAX_ADDR(22'h300000+640*496),  //modify this
+				        	.RD4(mRead),
+				        	.RD4_ADDR(22'h100000+640*32),   
+							.RD4_MAX_ADDR(22'h100000+640*480),  
 							.RD4_LENGTH(9'h100),
 				        	.RD4_LOAD(!DLY_RST_0),
-							.RD4_CLK(VGA_CTRL_CLK),  //modify this
+							.RD4_CLK(CLOCK_25),  
+							.RD4_EMPTY(Empty[3]),
 							//	SDRAM Side
 						    .SA(DRAM_ADDR),
 						    .BA({DRAM_BA_1,DRAM_BA_0}),
@@ -603,6 +617,12 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 				            .DQM({DRAM_UDQM,DRAM_LDQM}),
 							.SDR_CLK(DRAM_CLK)	);
 
+							
+							
+							
+							
+							
+							
 I2C_CCD_Config 		u7	(	//	Host Side
 							.iCLK(CLOCK_50),
 							.iRST_N(KEY[1]),
@@ -619,9 +639,14 @@ Mirror_Col			u8	(	//	Input Side
 							.iCCD_PIXCLK(CCD_PIXCLK),
 							.iRST_N(DLY_RST_1),
 							//	Output Side
-							.oCCD_R(sCCD_R),
-							.oCCD_G(sCCD_G),
-							.oCCD_B(sCCD_B),
+//							.oCCD_R(sCCD_R),
+//							.oCCD_G(sCCD_G),
+//							.oCCD_B(sCCD_B),
+//							.oCCD_DVAL(sCCD_DVAL));
+					     	//	Output Side
+							.dCCD_R(sCCD_R),
+							.dCCD_G(sCCD_G),
+							.dCCD_B(sCCD_B),
 							.oCCD_DVAL(sCCD_DVAL));
 
 //Mirror_Col_4X	u8_1	(	//	Input Side
