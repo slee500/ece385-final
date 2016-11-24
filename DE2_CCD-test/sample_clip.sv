@@ -4,6 +4,7 @@ module sample_clip (input clk,
 						  output logic pixl_bw,
 						  output logic rd_req,
 						  output logic [9:0] pixl_cont,
+						  output logic [9:0] pixl_gray,
 						  output wren,
 						  //output logic opixel,
 						  //for debug
@@ -25,7 +26,7 @@ module sample_clip (input clk,
 	logic  [4:0] scol_cont;
 	logic  [3:0] counter;
 	logic  clk_divide_16;
-	logic [9:0] pixl_gray;
+	//logic [9:0] pixl_gray;
 	
 	assign clk_divide_16 = ~counter[3];
 	assign sample_area = (icol_cont < 544 && icol_cont >= 96)? 1 : 0;

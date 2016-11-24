@@ -9,12 +9,13 @@ module Mirror_Col(	//	Input Side
 					oCCD_R,
 					oCCD_G,
 					oCCD_B,
-					oCCD_DVAL);
+					oCCD_DVAL
+					);
 					//debug
 //					dCCD_R,
 //					dCCD_G,
 //					dCCD_B);
-					
+//					
 //	Input Side					
 input	[9:0]	iCCD_R;
 input	[9:0]	iCCD_G;
@@ -38,7 +39,7 @@ assign	oCCD_DVAL	=	mCCD_DVAL;
 
 
 //wire [9:0] gray;
-
+//
 //assign gray = (oCCD_G > 512) ?  10'h3ff : 10'h0;
 //assign dCCD_B = gray;
 //assign dCCD_G = gray;

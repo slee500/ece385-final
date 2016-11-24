@@ -200,7 +200,7 @@ output			IRDA_TXD;				//	IRDA Transmitter
 input			IRDA_RXD;				//	IRDA Receiver
 ///////////////////////		SDRAM Interface	////////////////////////
 inout	[15:0]	DRAM_DQ;				//	SDRAM Data bus 16 Bits
-output	[11:0]	DRAM_ADDR;				//	SDRAM Address bus 12 Bits
+output	[12:0]	DRAM_ADDR;				//	SDRAM Address bus 12 Bits
 output			DRAM_LDQM;				//	SDRAM Low-byte Data Mask 
 output			DRAM_UDQM;				//	SDRAM High-byte Data Mask
 output			DRAM_WE_N;				//	SDRAM Write Enable
@@ -220,7 +220,7 @@ output			FL_OE_N;				//	FLASH Output Enable
 output			FL_CE_N;				//	FLASH Chip Enable
 ////////////////////////	SRAM Interface	////////////////////////
 inout	[15:0]	SRAM_DQ;				//	SRAM Data bus 16 Bits
-output	[17:0]	SRAM_ADDR;				//	SRAM Address bus 18 Bits
+output	[19:0]	SRAM_ADDR;				//	SRAM Address bus 18 Bits
 output			SRAM_UB_N;				//	SRAM High-byte Data Mask 
 output			SRAM_LB_N;				//	SRAM Low-byte Data Mask 
 output			SRAM_WE_N;				//	SRAM Write Enable
@@ -304,7 +304,7 @@ assign	TD_RESET	=	1'b1;
 
 //	All inout port turn to tri-state
 assign	FL_DQ		=	8'hzz;
-assign	SRAM_DQ		=	16'hzzzz;
+//assign	SRAM_DQ		=	16'hzzzz;
 assign	OTG_DATA	=	16'hzzzz;
 assign	LCD_DATA	=	8'hzz;
 assign	SD_DAT		=	1'bz;
@@ -386,8 +386,8 @@ wire	[3:0]	Empty;
 
 wire [31:0] hexDis;
 wire slow_clk;
-
-
+wire [9:0] pixl_gray;
+wire [15:0] wraddr;
 //assign hexDis[1:0] = key_ctr;
 
 //	For Sensor 1
@@ -430,19 +430,34 @@ assign	CCD_PIXCLK	=	GPIO_1[10+20];
 */
 //assign	LEDR		=	SW;
 //assign	LEDG		=	Y_Cont;
-assign	LEDG		=	{Full,Empty};
+//assign	LEDG		=	{Full,Empty};
 assign	VGA_CTRL_CLK=	CCD_MCLK;
 assign	VGA_CLK		=	~CCD_MCLK;
 assign CLOCK_25 = VGA_CTRL_CLK;
 
-assign LEDR[0] = rd_bw;
-assign LEDR[1] = wr_bw;
-assign LEDR[2] = bw_wren;
-assign LEDR[3] = mRead;
-assign LEDR[13:4] = bw_wraddr;
+//assign LEDR[0] = rd_bw;
+//assign LEDR[1] = wr_bw;
+//assign LEDR[2] = bw_wren;
+//assign LEDR[3] = mRead;
+//assign LEDR[13:4] = bw_wraddr;
 //assign LEDR[17] = 
 //assign hexDis[9:0] = bw_rdaddr;
-assign hexDis[9:0] = bw_rdaddr;
+//assign hexDis[9:0] = bw_rdaddr;
+assign LEDR[7:0] = Read_DATA1[9:2]; 
+assign LEDR[15:8] = pixl_gray[9:2];
+assign LEDG[0] = rd_bw;
+assign LEDG[1] = wr_bw;
+
+//
+//
+assign SRAM_UB_N = 1'b0;
+assign SRAM_LB_N = 1'b0;
+assign SRAM_WE_N = ~CLOCK_25;
+assign SRAM_CE_N = ~CLOCK_25;
+assign SRAM_ADDR = {4'h00, sram_wraddr};
+//assign SRAM_ADDR = 18'h0;
+assign SRAM_OE_N = 1'b1;
+
 always@(posedge CLOCK_50)	CCD_MCLK	<=	~CCD_MCLK;
 
 
@@ -456,9 +471,21 @@ end
 
 
 
+sram_wraddress  u15 (.clk(CLOCK_25),
+							.ctr_en(mRead),
+							.reset_n(DLY_RST_0),
+							.wraddress(sram_wraddr) );
+							
 
 
 
+tristate u14(.Clk(CLOCK_25), 
+				 .OE(1'b1), 
+				 .In(Read_DATA3), 
+				 .Data(SRAM_DQ) );
+
+
+//read_ram u15 (.data(rd_bw));
 
 VGA_Controller		u1	(	//	Host Side
 							.oRequest(Read),
@@ -546,9 +573,8 @@ SEG7_LUT_8 			u5	(	.oSEG0(HEX0),.oSEG1(HEX1),
 Bw_Pixl   			u11(
 							 .data(wr_bw),
 							 .rdaddress(bw_rdaddr),
-							 .rdclock(slow_clk),
+							 .clock(CLOCK_25),
 							 .wraddress(bw_wraddr),
-							 .wrclock(slow_clk),
 							 .wren(bw_wren),
 							 .q(rd_bw)    );
 
@@ -557,16 +583,17 @@ special_clock u12 (.CLOCK_25(CLOCK_25),
 						 .reset_n(DLY_RST_2),
 						 .slow_clock(slow_clk) );
 
-rdbw u13 (.clk(slow_clk), .bw_rdaddr(bw_rdaddr), .reset_n(DLY_RST_2));
+rdbw u13 (.clk(CLOCK_25), .bw_rdaddr(bw_rdaddr), .reset_n(DLY_RST_2));
 
 							
 sample_clip       u10 (  
-								.clk(slow_clk),
+								.clk(CLOCK_25),
 								.rd_req(mRead),
 								.reset_n(DLY_RST_2),
 								.pixl_R(Read_DATA4[9:0]),
 								.pixl_G({Read_DATA3[14:10],Read_DATA4[14:10]}),
 								.pixl_B(Read_DATA3[9:0]),
+								.pixl_gray(pixl_gray),
 								.pixl_bw(wr_bw),
 								.wren(bw_wren),
 								.pixl_cont(bw_wraddr)   );							
@@ -642,7 +669,7 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							.RD3_MAX_ADDR(640*480),  
 							.RD3_LENGTH(9'h100),  
 				        	.RD3_LOAD(!DLY_RST_0),
-							.RD3_CLK(slow_clk),  
+							.RD3_CLK(CLOCK_25),  
 							.RD3_EMPTY(Empty[2]),
 							//	FIFO Read Side 4
 						    .RD4_DATA(Read_DATA4),
@@ -651,7 +678,7 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							.RD4_MAX_ADDR(22'h100000+640*480),  
 							.RD4_LENGTH(9'h100),
 				        	.RD4_LOAD(!DLY_RST_0),
-							.RD4_CLK(slow_clk),  
+							.RD4_CLK(CLOCK_25),  
 							.RD4_EMPTY(Empty[3]),
 							//	SDRAM Side
 						    .SA(DRAM_ADDR),

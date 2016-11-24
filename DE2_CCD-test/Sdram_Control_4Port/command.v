@@ -42,7 +42,7 @@ input							PM_DONE;				// Page mode done
 output                          REF_ACK;                // Refresh request acknowledge
 output                          CM_ACK;                 // Command acknowledge
 output                          OE;                     // OE signal for data path module
-output  [11:0]                  SA;                     // SDRAM address
+output  [12:0]                  SA;                     // SDRAM address
 output  [1:0]                   BA;                     // SDRAM bank address
 output  [1:0]                   CS_N;                   // SDRAM chip selects
 output                          CKE;                    // SDRAM clock enable
@@ -54,7 +54,7 @@ output                          WE_N;                   // SDRAM WE_N
 reg                             CM_ACK;
 reg                             REF_ACK;
 reg                             OE;
-reg     [11:0]                  SA;
+reg     [12:0]                  SA;
 reg     [1:0]                   BA;
 reg     [1:0]                   CS_N;
 reg                             CKE;

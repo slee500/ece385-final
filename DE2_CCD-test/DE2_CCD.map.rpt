@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_CCD
-Thu Nov 24 00:34:17 2016
+Thu Nov 24 15:13:58 2016
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -23,7 +23,7 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
  15. Inverted Register Statistics
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
  17. Source assignments for RAW2RGB:u4|my_Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_1uv:auto_generated|altsyncram_jma1:altsyncram2
- 18. Source assignments for Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_uhj1:auto_generated
+ 18. Source assignments for Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_ein1:auto_generated
  19. Source assignments for Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component
  20. Source assignments for Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated
  21. Source assignments for Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p
@@ -131,52 +131,57 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 123. Source assignments for Mirror_Col:u8|my_Stack_RAM:comb_62|altsyncram:altsyncram_component|altsyncram_pgp1:auto_generated
 124. Source assignments for Mirror_Col:u8|my_Stack_RAM:comb_96|altsyncram:altsyncram_component|altsyncram_pgp1:auto_generated
 125. Source assignments for Mirror_Col:u8|my_Stack_RAM:comb_130|altsyncram:altsyncram_component|altsyncram_pgp1:auto_generated
-126. Parameter Settings for User Entity Instance: VGA_Controller:u1
-127. Parameter Settings for User Entity Instance: RAW2RGB:u4|my_Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component
-128. Parameter Settings for User Entity Instance: Bw_Pixl:u11|altsyncram:altsyncram_component
-129. Parameter Settings for User Entity Instance: sample_clip:u10
-130. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6
-131. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_PLL:sdram_pll1|altpll:altpll_component
-132. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|control_interface:control1
-133. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|command:command1
-134. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|sdr_data_path:data_path1
-135. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component
-136. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component
-137. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component
-138. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component
-139. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component
-140. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component
-141. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component
-142. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component
-143. Parameter Settings for User Entity Instance: I2C_CCD_Config:u7
-144. Parameter Settings for User Entity Instance: Mirror_Col:u8|my_Stack_RAM:comb_62|altsyncram:altsyncram_component
-145. Parameter Settings for User Entity Instance: Mirror_Col:u8|my_Stack_RAM:comb_96|altsyncram:altsyncram_component
-146. Parameter Settings for User Entity Instance: Mirror_Col:u8|my_Stack_RAM:comb_130|altsyncram:altsyncram_component
-147. altshift_taps Parameter Settings by Entity Instance
-148. altsyncram Parameter Settings by Entity Instance
-149. altpll Parameter Settings by Entity Instance
-150. dcfifo Parameter Settings by Entity Instance
-151. Port Connectivity Checks: "Mirror_Col:u8|my_Stack_RAM:comb_130"
-152. Port Connectivity Checks: "Mirror_Col:u8|my_Stack_RAM:comb_96"
-153. Port Connectivity Checks: "Mirror_Col:u8|my_Stack_RAM:comb_62"
-154. Port Connectivity Checks: "I2C_CCD_Config:u7|I2C_Controller:u0"
-155. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4"
-156. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3"
-157. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2"
-158. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1"
-159. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4"
-160. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3"
-161. Port Connectivity Checks: "Sdram_Control_4Port:u6|sdr_data_path:data_path1"
-162. Port Connectivity Checks: "Sdram_Control_4Port:u6|control_interface:control1"
-163. Port Connectivity Checks: "Sdram_Control_4Port:u6"
-164. Port Connectivity Checks: "sample_clip:u10"
-165. Port Connectivity Checks: "RAW2RGB:u4|my_Line_Buffer:u0"
-166. Port Connectivity Checks: "CCD_Capture:u3"
-167. Port Connectivity Checks: "vga_color_out:u1_1"
-168. Port Connectivity Checks: "VGA_Controller:u1"
-169. Post-Synthesis Netlist Statistics for Top Partition
-170. Elapsed Time Per Partition
-171. Analysis & Synthesis Messages
+126. Parameter Settings for User Entity Instance: tristate:u14
+127. Parameter Settings for User Entity Instance: VGA_Controller:u1
+128. Parameter Settings for User Entity Instance: RAW2RGB:u4|my_Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component
+129. Parameter Settings for User Entity Instance: Bw_Pixl:u11|altsyncram:altsyncram_component
+130. Parameter Settings for User Entity Instance: sample_clip:u10
+131. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6
+132. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_PLL:sdram_pll1|altpll:altpll_component
+133. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|control_interface:control1
+134. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|command:command1
+135. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|sdr_data_path:data_path1
+136. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component
+137. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component
+138. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component
+139. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component
+140. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component
+141. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component
+142. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component
+143. Parameter Settings for User Entity Instance: Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component
+144. Parameter Settings for User Entity Instance: I2C_CCD_Config:u7
+145. Parameter Settings for User Entity Instance: Mirror_Col:u8|my_Stack_RAM:comb_62|altsyncram:altsyncram_component
+146. Parameter Settings for User Entity Instance: Mirror_Col:u8|my_Stack_RAM:comb_96|altsyncram:altsyncram_component
+147. Parameter Settings for User Entity Instance: Mirror_Col:u8|my_Stack_RAM:comb_130|altsyncram:altsyncram_component
+148. altshift_taps Parameter Settings by Entity Instance
+149. altsyncram Parameter Settings by Entity Instance
+150. altpll Parameter Settings by Entity Instance
+151. dcfifo Parameter Settings by Entity Instance
+152. Port Connectivity Checks: "Mirror_Col:u8|my_Stack_RAM:comb_130"
+153. Port Connectivity Checks: "Mirror_Col:u8|my_Stack_RAM:comb_96"
+154. Port Connectivity Checks: "Mirror_Col:u8|my_Stack_RAM:comb_62"
+155. Port Connectivity Checks: "I2C_CCD_Config:u7|I2C_Controller:u0"
+156. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4"
+157. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3"
+158. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2"
+159. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1"
+160. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4"
+161. Port Connectivity Checks: "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3"
+162. Port Connectivity Checks: "Sdram_Control_4Port:u6|sdr_data_path:data_path1"
+163. Port Connectivity Checks: "Sdram_Control_4Port:u6|command:command1"
+164. Port Connectivity Checks: "Sdram_Control_4Port:u6|control_interface:control1"
+165. Port Connectivity Checks: "Sdram_Control_4Port:u6"
+166. Port Connectivity Checks: "sample_clip:u10"
+167. Port Connectivity Checks: "special_clock:u12"
+168. Port Connectivity Checks: "RAW2RGB:u4|my_Line_Buffer:u0"
+169. Port Connectivity Checks: "CCD_Capture:u3"
+170. Port Connectivity Checks: "vga_color_out:u1_1"
+171. Port Connectivity Checks: "VGA_Controller:u1"
+172. Port Connectivity Checks: "tristate:u14"
+173. Port Connectivity Checks: "sram_wraddress:u15"
+174. Post-Synthesis Netlist Statistics for Top Partition
+175. Elapsed Time Per Partition
+176. Analysis & Synthesis Messages
 
 
 
@@ -203,18 +208,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 24 00:34:17 2016       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 24 15:13:58 2016       ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                      ; DE2_CCD                                     ;
 ; Top-level Entity Name              ; DE2_CCD                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,099                                       ;
-;     Total combinational functions  ; 1,565                                       ;
-;     Dedicated logic registers      ; 1,292                                       ;
-; Total registers                    ; 1292                                        ;
-; Total pins                         ; 381                                         ;
+; Total logic elements               ; 2,075                                       ;
+;     Total combinational functions  ; 1,524                                       ;
+;     Dedicated logic registers      ; 1,289                                       ;
+; Total registers                    ; 1289                                        ;
+; Total pins                         ; 384                                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 123,400                                     ;
+; Total memory bits                  ; 124,424                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
@@ -357,6 +362,8 @@ agreement for further details.
 ; gray2bw.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/DE2_CCD-test/gray2bw.sv                                ;         ;
 ; speck_clock.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/DE2_CCD-test/speck_clock.sv                            ;         ;
 ; rdbw.sv                                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/DE2_CCD-test/rdbw.sv                                   ;         ;
+; tristate.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/DE2_CCD-test/tristate.sv                               ;         ;
+; sram_wraddress.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/DE2_CCD-test/sram_wraddress.sv                         ;         ;
 ; altshift_taps.tdf                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altshift_taps.tdf                    ;         ;
 ; altdpram.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
 ; lpm_counter.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_counter.inc                      ;         ;
@@ -374,7 +381,7 @@ agreement for further details.
 ; a_rdenreg.inc                             ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
 ; altrom.inc                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altrom.inc                           ;         ;
 ; altram.inc                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altram.inc                           ;         ;
-; db/altsyncram_uhj1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/DE2_CCD-test/db/altsyncram_uhj1.tdf                    ;         ;
+; db/altsyncram_ein1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/DE2_CCD-test/db/altsyncram_ein1.tdf                    ;         ;
 ; altpll.tdf                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf                           ;         ;
 ; stratix_pll.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc                      ;         ;
 ; stratixii_pll.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratixii_pll.inc                    ;         ;
@@ -419,24 +426,24 @@ agreement for further details.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 2,099                 ;
+; Estimated Total logic elements              ; 2,075                 ;
 ;                                             ;                       ;
-; Total combinational functions               ; 1565                  ;
+; Total combinational functions               ; 1524                  ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 655                   ;
-;     -- 3 input functions                    ; 401                   ;
-;     -- <=2 input functions                  ; 509                   ;
+;     -- 4 input functions                    ; 642                   ;
+;     -- 3 input functions                    ; 390                   ;
+;     -- <=2 input functions                  ; 492                   ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 1161                  ;
-;     -- arithmetic mode                      ; 404                   ;
+;     -- normal mode                          ; 1139                  ;
+;     -- arithmetic mode                      ; 385                   ;
 ;                                             ;                       ;
-; Total registers                             ; 1292                  ;
-;     -- Dedicated logic registers            ; 1292                  ;
+; Total registers                             ; 1289                  ;
+;     -- Dedicated logic registers            ; 1289                  ;
 ;     -- I/O registers                        ; 0                     ;
 ;                                             ;                       ;
-; I/O pins                                    ; 381                   ;
-; Total memory bits                           ; 123400                ;
+; I/O pins                                    ; 384                   ;
+; Total memory bits                           ; 124424                ;
 ;                                             ;                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                     ;
 ;                                             ;                       ;
@@ -444,8 +451,8 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                     ;
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; Reset_Delay:u2|oRST_0 ;
-; Maximum fan-out                             ; 838                   ;
-; Total fan-out                               ; 13055                 ;
+; Maximum fan-out                             ; 840                   ;
+; Total fan-out                               ; 12940                 ;
 ; Average fan-out                             ; 3.35                  ;
 +---------------------------------------------+-----------------------+
 
@@ -455,13 +462,13 @@ agreement for further details.
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                             ; Library Name ;
 +--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE2_CCD                                         ; 1565 (2)          ; 1292 (13)    ; 123400      ; 0            ; 0       ; 0         ; 381  ; 0            ; |DE2_CCD                                                                                                                                                        ; work         ;
+; |DE2_CCD                                         ; 1524 (2)          ; 1289 (13)    ; 124424      ; 0            ; 0       ; 0         ; 384  ; 0            ; |DE2_CCD                                                                                                                                                        ; work         ;
 ;    |Bw_Pixl:u11|                                 ; 0 (0)             ; 0 (0)        ; 784         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Bw_Pixl:u11                                                                                                                                            ; work         ;
 ;       |altsyncram:altsyncram_component|          ; 0 (0)             ; 0 (0)        ; 784         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Bw_Pixl:u11|altsyncram:altsyncram_component                                                                                                            ; work         ;
-;          |altsyncram_uhj1:auto_generated|        ; 0 (0)             ; 0 (0)        ; 784         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_uhj1:auto_generated                                                                             ; work         ;
+;          |altsyncram_ein1:auto_generated|        ; 0 (0)             ; 0 (0)        ; 784         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_ein1:auto_generated                                                                             ; work         ;
 ;    |CCD_Capture:u3|                              ; 22 (22)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|CCD_Capture:u3                                                                                                                                         ; work         ;
-;    |I2C_CCD_Config:u7|                           ; 117 (72)          ; 67 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|I2C_CCD_Config:u7                                                                                                                                      ; work         ;
-;       |I2C_Controller:u0|                        ; 45 (45)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|I2C_CCD_Config:u7|I2C_Controller:u0                                                                                                                    ; work         ;
+;    |I2C_CCD_Config:u7|                           ; 118 (72)          ; 67 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|I2C_CCD_Config:u7                                                                                                                                      ; work         ;
+;       |I2C_Controller:u0|                        ; 46 (46)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|I2C_CCD_Config:u7|I2C_Controller:u0                                                                                                                    ; work         ;
 ;    |Mirror_Col:u8|                               ; 20 (20)           ; 11 (11)      ; 19200       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Mirror_Col:u8                                                                                                                                          ; work         ;
 ;       |my_Stack_RAM:comb_130|                    ; 0 (0)             ; 0 (0)        ; 6400        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Mirror_Col:u8|my_Stack_RAM:comb_130                                                                                                                    ; work         ;
 ;          |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 6400        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Mirror_Col:u8|my_Stack_RAM:comb_130|altsyncram:altsyncram_component                                                                                    ; work         ;
@@ -480,83 +487,79 @@ agreement for further details.
 ;                |cntr_lvf:cntr1|                  ; 16 (13)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|RAW2RGB:u4|my_Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_1uv:auto_generated|cntr_lvf:cntr1                                        ; work         ;
 ;                   |cmpr_8ic:cmpr4|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|RAW2RGB:u4|my_Line_Buffer:u0|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_1uv:auto_generated|cntr_lvf:cntr1|cmpr_8ic:cmpr4                         ; work         ;
 ;    |Reset_Delay:u2|                              ; 34 (34)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Reset_Delay:u2                                                                                                                                         ; work         ;
-;    |SEG7_LUT_8:u5|                               ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|SEG7_LUT_8:u5                                                                                                                                          ; work         ;
-;       |SEG7_LUT:u0|                              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|SEG7_LUT_8:u5|SEG7_LUT:u0                                                                                                                              ; work         ;
-;       |SEG7_LUT:u1|                              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|SEG7_LUT_8:u5|SEG7_LUT:u1                                                                                                                              ; work         ;
-;       |SEG7_LUT:u2|                              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|SEG7_LUT_8:u5|SEG7_LUT:u2                                                                                                                              ; work         ;
-;    |Sdram_Control_4Port:u6|                      ; 944 (288)         ; 1004 (169)   ; 77856       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6                                                                                                                                 ; work         ;
+;    |Sdram_Control_4Port:u6|                      ; 938 (288)         ; 1005 (170)   ; 78880       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6                                                                                                                                 ; work         ;
 ;       |command:command1|                         ; 60 (60)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1                                                                                                                ; work         ;
 ;       |control_interface:control1|               ; 64 (64)           ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|control_interface:control1                                                                                                      ; work         ;
 ;       |my_Sdram_PLL:sdram_pll1|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_PLL:sdram_pll1                                                                                                         ; work         ;
 ;          |altpll:altpll_component|               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_PLL:sdram_pll1|altpll:altpll_component                                                                                 ; work         ;
 ;             |my_Sdram_PLL_altpll:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_PLL:sdram_pll1|altpll:altpll_component|my_Sdram_PLL_altpll:auto_generated                                              ; work         ;
-;       |my_Sdram_RD_FIFO:read_fifo1|              ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1                                                                                                     ; work         ;
-;          |dcfifo:dcfifo_component|               ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
-;             |dcfifo_ssp1:auto_generated|         ; 91 (15)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
+;       |my_Sdram_RD_FIFO:read_fifo1|              ; 90 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1                                                                                                     ; work         ;
+;          |dcfifo:dcfifo_component|               ; 90 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component                                                                             ; work         ;
+;             |dcfifo_ssp1:auto_generated|         ; 90 (14)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
 ;                |a_gray2bin_7ib:wrptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                  ; work         ;
 ;                |a_gray2bin_7ib:ws_dgrp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                  ; work         ;
 ;                |a_graycounter_2lc:wrptr_g1p|     ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p                      ; work         ;
-;                |a_graycounter_677:rdptr_g1p|     ; 22 (22)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
+;                |a_graycounter_677:rdptr_g1p|     ; 23 (23)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
 ;                |alt_synch_pipe_0md:rs_dgwp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp                       ; work         ;
 ;                   |dffpipe_0f9:dffpipe13|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp|dffpipe_0f9:dffpipe13 ; work         ;
 ;                |alt_synch_pipe_1md:ws_dgrp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp                       ; work         ;
 ;                   |dffpipe_1f9:dffpipe16|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp|dffpipe_1f9:dffpipe16 ; work         ;
 ;                |altsyncram_bi51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram                         ; work         ;
-;                |cmpr_o76:rdempty_eq_comp|        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
+;                |cmpr_o76:rdempty_eq_comp|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
 ;                |cmpr_o76:wrfull_eq_comp|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:wrfull_eq_comp                          ; work         ;
 ;                |dffpipe_ve9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_brp                               ; work         ;
 ;                |dffpipe_ve9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_bwp                               ; work         ;
-;       |my_Sdram_RD_FIFO:read_fifo2|              ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2                                                                                                     ; work         ;
-;          |dcfifo:dcfifo_component|               ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component                                                                             ; work         ;
-;             |dcfifo_ssp1:auto_generated|         ; 91 (15)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
+;       |my_Sdram_RD_FIFO:read_fifo2|              ; 90 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2                                                                                                     ; work         ;
+;          |dcfifo:dcfifo_component|               ; 90 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component                                                                             ; work         ;
+;             |dcfifo_ssp1:auto_generated|         ; 90 (14)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
 ;                |a_gray2bin_7ib:wrptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                  ; work         ;
 ;                |a_gray2bin_7ib:ws_dgrp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                  ; work         ;
 ;                |a_graycounter_2lc:wrptr_g1p|     ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p                      ; work         ;
-;                |a_graycounter_677:rdptr_g1p|     ; 22 (22)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
+;                |a_graycounter_677:rdptr_g1p|     ; 23 (23)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
 ;                |alt_synch_pipe_0md:rs_dgwp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp                       ; work         ;
 ;                   |dffpipe_0f9:dffpipe13|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp|dffpipe_0f9:dffpipe13 ; work         ;
 ;                |alt_synch_pipe_1md:ws_dgrp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp                       ; work         ;
 ;                   |dffpipe_1f9:dffpipe16|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp|dffpipe_1f9:dffpipe16 ; work         ;
 ;                |altsyncram_bi51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram                         ; work         ;
-;                |cmpr_o76:rdempty_eq_comp|        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
+;                |cmpr_o76:rdempty_eq_comp|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
 ;                |cmpr_o76:wrfull_eq_comp|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:wrfull_eq_comp                          ; work         ;
 ;                |dffpipe_ve9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_brp                               ; work         ;
 ;                |dffpipe_ve9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_bwp                               ; work         ;
-;       |my_Sdram_RD_FIFO:read_fifo3|              ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3                                                                                                     ; work         ;
-;          |dcfifo:dcfifo_component|               ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component                                                                             ; work         ;
-;             |dcfifo_ssp1:auto_generated|         ; 91 (15)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
+;       |my_Sdram_RD_FIFO:read_fifo3|              ; 90 (0)            ; 125 (0)      ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3                                                                                                     ; work         ;
+;          |dcfifo:dcfifo_component|               ; 90 (0)            ; 125 (0)      ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component                                                                             ; work         ;
+;             |dcfifo_ssp1:auto_generated|         ; 90 (14)           ; 125 (33)     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
 ;                |a_gray2bin_7ib:wrptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                  ; work         ;
 ;                |a_gray2bin_7ib:ws_dgrp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                  ; work         ;
 ;                |a_graycounter_2lc:wrptr_g1p|     ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p                      ; work         ;
-;                |a_graycounter_677:rdptr_g1p|     ; 22 (22)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
+;                |a_graycounter_677:rdptr_g1p|     ; 23 (23)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
 ;                |alt_synch_pipe_0md:rs_dgwp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp                       ; work         ;
 ;                   |dffpipe_0f9:dffpipe13|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp|dffpipe_0f9:dffpipe13 ; work         ;
 ;                |alt_synch_pipe_1md:ws_dgrp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp                       ; work         ;
 ;                   |dffpipe_1f9:dffpipe16|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp|dffpipe_1f9:dffpipe16 ; work         ;
-;                |altsyncram_bi51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram                         ; work         ;
-;                |cmpr_o76:rdempty_eq_comp|        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
+;                |altsyncram_bi51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram                         ; work         ;
+;                |cmpr_o76:rdempty_eq_comp|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
 ;                |cmpr_o76:wrfull_eq_comp|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:wrfull_eq_comp                          ; work         ;
 ;                |dffpipe_ve9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_brp                               ; work         ;
 ;                |dffpipe_ve9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_bwp                               ; work         ;
-;       |my_Sdram_RD_FIFO:read_fifo4|              ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4                                                                                                     ; work         ;
-;          |dcfifo:dcfifo_component|               ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component                                                                             ; work         ;
-;             |dcfifo_ssp1:auto_generated|         ; 91 (15)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
+;       |my_Sdram_RD_FIFO:read_fifo4|              ; 90 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4                                                                                                     ; work         ;
+;          |dcfifo:dcfifo_component|               ; 90 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component                                                                             ; work         ;
+;             |dcfifo_ssp1:auto_generated|         ; 90 (14)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                  ; work         ;
 ;                |a_gray2bin_7ib:wrptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                  ; work         ;
 ;                |a_gray2bin_7ib:ws_dgrp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                  ; work         ;
 ;                |a_graycounter_2lc:wrptr_g1p|     ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p                      ; work         ;
-;                |a_graycounter_677:rdptr_g1p|     ; 22 (22)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
+;                |a_graycounter_677:rdptr_g1p|     ; 23 (23)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p                      ; work         ;
 ;                |alt_synch_pipe_0md:rs_dgwp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp                       ; work         ;
 ;                   |dffpipe_0f9:dffpipe13|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_0md:rs_dgwp|dffpipe_0f9:dffpipe13 ; work         ;
 ;                |alt_synch_pipe_1md:ws_dgrp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp                       ; work         ;
 ;                   |dffpipe_1f9:dffpipe16|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp|dffpipe_1f9:dffpipe16 ; work         ;
 ;                |altsyncram_bi51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram                         ; work         ;
-;                |cmpr_o76:rdempty_eq_comp|        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
+;                |cmpr_o76:rdempty_eq_comp|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
 ;                |cmpr_o76:wrfull_eq_comp|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:wrfull_eq_comp                          ; work         ;
 ;                |dffpipe_ve9:ws_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_brp                               ; work         ;
 ;                |dffpipe_ve9:ws_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_bwp                               ; work         ;
-;       |my_Sdram_WR_FIFO:write_fifo1|             ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1                                                                                                    ; work         ;
-;          |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                            ; work         ;
-;             |dcfifo_klp1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated                                                 ; work         ;
+;       |my_Sdram_WR_FIFO:write_fifo1|             ; 83 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1                                                                                                    ; work         ;
+;          |dcfifo:dcfifo_component|               ; 83 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component                                                                            ; work         ;
+;             |dcfifo_klp1:auto_generated|         ; 83 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated                                                 ; work         ;
 ;                |a_gray2bin_6ib:rdptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_gray2bin_6ib:rdptr_g_gray2bin                 ; work         ;
 ;                |a_gray2bin_6ib:rs_dgwp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_gray2bin_6ib:rs_dgwp_gray2bin                 ; work         ;
 ;                |a_graycounter_1lc:wrptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p                     ; work         ;
@@ -567,12 +570,12 @@ agreement for further details.
 ;                   |dffpipe_se9:dffpipe9|         ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9 ; work         ;
 ;                |altsyncram_rf51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram                        ; work         ;
 ;                |cmpr_n76:rdempty_eq_comp|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|cmpr_n76:rdempty_eq_comp                        ; work         ;
-;                |cmpr_n76:wrfull_eq_comp|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|cmpr_n76:wrfull_eq_comp                         ; work         ;
+;                |cmpr_n76:wrfull_eq_comp|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|cmpr_n76:wrfull_eq_comp                         ; work         ;
 ;                |dffpipe_oe9:rs_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|dffpipe_oe9:rs_brp                              ; work         ;
 ;                |dffpipe_oe9:rs_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|dffpipe_oe9:rs_bwp                              ; work         ;
-;       |my_Sdram_WR_FIFO:write_fifo2|             ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2                                                                                                    ; work         ;
-;          |dcfifo:dcfifo_component|               ; 84 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component                                                                            ; work         ;
-;             |dcfifo_klp1:auto_generated|         ; 84 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated                                                 ; work         ;
+;       |my_Sdram_WR_FIFO:write_fifo2|             ; 83 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2                                                                                                    ; work         ;
+;          |dcfifo:dcfifo_component|               ; 83 (0)            ; 116 (0)      ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component                                                                            ; work         ;
+;             |dcfifo_klp1:auto_generated|         ; 83 (15)           ; 116 (30)     ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated                                                 ; work         ;
 ;                |a_gray2bin_6ib:rdptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_gray2bin_6ib:rdptr_g_gray2bin                 ; work         ;
 ;                |a_gray2bin_6ib:rs_dgwp_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_gray2bin_6ib:rs_dgwp_gray2bin                 ; work         ;
 ;                |a_graycounter_1lc:wrptr_g1p|     ; 19 (19)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p                     ; work         ;
@@ -583,7 +586,7 @@ agreement for further details.
 ;                   |dffpipe_se9:dffpipe9|         ; 0 (0)             ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9 ; work         ;
 ;                |altsyncram_rf51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram                        ; work         ;
 ;                |cmpr_n76:rdempty_eq_comp|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|cmpr_n76:rdempty_eq_comp                        ; work         ;
-;                |cmpr_n76:wrfull_eq_comp|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|cmpr_n76:wrfull_eq_comp                         ; work         ;
+;                |cmpr_n76:wrfull_eq_comp|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|cmpr_n76:wrfull_eq_comp                         ; work         ;
 ;                |dffpipe_oe9:rs_brp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|dffpipe_oe9:rs_brp                              ; work         ;
 ;                |dffpipe_oe9:rs_bwp|              ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|dffpipe_oe9:rs_bwp                              ; work         ;
 ;       |my_Sdram_WR_FIFO:write_fifo4|             ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4                                                                                                    ; work         ;
@@ -592,10 +595,11 @@ agreement for further details.
 ;                |altsyncram_rf51:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram                        ; work         ;
 ;    |VGA_Controller:u1|                           ; 72 (72)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|VGA_Controller:u1                                                                                                                                      ; work         ;
 ;    |rdbw:u13|                                    ; 12 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|rdbw:u13                                                                                                                                               ; work         ;
-;    |sample_clip:u10|                             ; 115 (78)          ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sample_clip:u10                                                                                                                                        ; work         ;
+;    |sample_clip:u10|                             ; 116 (79)          ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sample_clip:u10                                                                                                                                        ; work         ;
 ;       |gray2bw:u2|                               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sample_clip:u10|gray2bw:u2                                                                                                                             ; work         ;
 ;       |rgb2gray:u1|                              ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sample_clip:u10|rgb2gray:u1                                                                                                                            ; work         ;
-;    |special_clock:u12|                           ; 21 (21)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|special_clock:u12                                                                                                                                      ; work         ;
+;    |sram_wraddress:u15|                          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sram_wraddress:u15                                                                                                                                     ; work         ;
+;    |tristate:u14|                                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|tristate:u14                                                                                                                                           ; work         ;
 ;    |vga_color_out:u1_1|                          ; 101 (65)          ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|vga_color_out:u1_1                                                                                                                                     ; work         ;
 ;       |gray2bw:u2|                               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|vga_color_out:u1_1|gray2bw:u2                                                                                                                          ; work         ;
 ;       |rgb2gray:u1|                              ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|vga_color_out:u1_1|rgb2gray:u1                                                                                                                         ; work         ;
@@ -608,7 +612,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 ; Name                                                                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
 +--------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_uhj1:auto_generated|ALTSYNCRAM                                                      ; AUTO ; Simple Dual Port ; 784          ; 1            ; 784          ; 1            ; 784   ; None ;
+; Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_ein1:auto_generated|ALTSYNCRAM                                                      ; AUTO ; Simple Dual Port ; 784          ; 1            ; 784          ; 1            ; 784   ; None ;
 ; Mirror_Col:u8|my_Stack_RAM:comb_130|altsyncram:altsyncram_component|altsyncram_pgp1:auto_generated|ALTSYNCRAM                              ; M9K  ; Simple Dual Port ; 640          ; 10           ; 640          ; 10           ; 6400  ; None ;
 ; Mirror_Col:u8|my_Stack_RAM:comb_62|altsyncram:altsyncram_component|altsyncram_pgp1:auto_generated|ALTSYNCRAM                               ; M9K  ; Simple Dual Port ; 640          ; 10           ; 640          ; 10           ; 6400  ; None ;
 ; Mirror_Col:u8|my_Stack_RAM:comb_96|altsyncram:altsyncram_component|altsyncram_pgp1:auto_generated|ALTSYNCRAM                               ; M9K  ; Simple Dual Port ; 640          ; 10           ; 640          ; 10           ; 6400  ; None ;
@@ -688,7 +692,6 @@ Encoding Type:  One-Hot
 ; Sdram_Control_4Port:u6|rRD3_LENGTH[0..7]                                                                                                                            ; Stuck at GND due to stuck port data_in                                 ;
 ; Sdram_Control_4Port:u6|rRD4_LENGTH[8]                                                                                                                               ; Stuck at VCC due to stuck port data_in                                 ;
 ; Sdram_Control_4Port:u6|rRD4_LENGTH[0..7]                                                                                                                            ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u6|mDATAOUT[15]                                                                                                                                 ; Lost fanout                                                            ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[0]   ; Lost fanout                                                            ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[0]   ; Lost fanout                                                            ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[1]   ; Lost fanout                                                            ;
@@ -855,12 +858,13 @@ Encoding Type:  One-Hot
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|parity6                          ; Lost fanout                                                            ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|counter5a0                       ; Lost fanout                                                            ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|parity6                          ; Lost fanout                                                            ;
+; sram_wraddress:u15|wraddress[1..15]                                                                                                                                 ; Lost fanout                                                            ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|counter5a0                       ; Stuck at VCC due to stuck port data_in                                 ;
 ; Sdram_Control_4Port:u6|mLENGTH[8]                                                                                                                                   ; Stuck at VCC due to stuck port data_in                                 ;
 ; I2C_CCD_Config:u7|mSetup_ST~9                                                                                                                                       ; Lost fanout                                                            ;
 ; I2C_CCD_Config:u7|mSetup_ST~10                                                                                                                                      ; Lost fanout                                                            ;
 ; CCD_Capture:u3|Y_Cont[1..10]                                                                                                                                        ; Lost fanout                                                            ;
-; Total Number of Removed Registers = 484                                                                                                                             ;                                                                        ;
+; Total Number of Removed Registers = 498                                                                                                                             ;                                                                        ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
 
 
@@ -982,6 +986,9 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                   ;                                ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|dffpipe_oe9:rs_bwp|dffe12a[0],                             ;
 ;                                                                                                                                                                   ;                                ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|counter5a2,                    ;
 ;                                                                                                                                                                   ;                                ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|sub_parity7a[1]                ;
+; sram_wraddress:u15|wraddress[15]                                                                                                                                  ; Lost Fanouts                   ; sram_wraddress:u15|wraddress[5], sram_wraddress:u15|wraddress[4],                                                                                                 ;
+;                                                                                                                                                                   ;                                ; sram_wraddress:u15|wraddress[3], sram_wraddress:u15|wraddress[2],                                                                                                 ;
+;                                                                                                                                                                   ;                                ; sram_wraddress:u15|wraddress[1]                                                                                                                                   ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[5]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[5], ;
 ;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[5], ;
 ;                                                                                                                                                                   ;                                ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|sub_parity7a[2],               ;
@@ -994,6 +1001,8 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[8]  ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[6]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[6], ;
 ;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[6]  ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[1]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[1], ;
+;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[1]  ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[4]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[4], ;
 ;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[4]  ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[3]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[3], ;
@@ -1014,15 +1023,12 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[3]  ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[2]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[2], ;
 ;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[2]  ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[1]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[1], ;
-;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[1]  ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|delayed_wrptr_g[0]                                         ; Stuck at GND                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe7a[0], ;
 ;                                                                                                                                                                   ; due to stuck port clock        ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_sld:rs_dgwp|dffpipe_re9:dffpipe6|dffe8a[0]  ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[9] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[9] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[0] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[0] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[1] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[1] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[2] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[2] ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[3] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[3] ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[3] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[3] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[4] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[4] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[5] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[5] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[6] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[6] ;
@@ -1036,20 +1042,19 @@ Encoding Type:  One-Hot
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[0] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[0] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[1] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[1] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[2] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[2] ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[3] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[3] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[4] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[4] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[5] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[5] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[6] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[6] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[7] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[7] ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[8] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[8] ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[9] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[9] ;
 ; Sdram_Control_4Port:u6|command:command1|CKE                                                                                                                       ; Stuck at VCC                   ; Sdram_Control_4Port:u6|CKE                                                                                                                                        ;
 ;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
 ; I2C_CCD_Config:u7|mI2C_DATA[23]                                                                                                                                   ; Stuck at VCC                   ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[23]                                                                                                                        ;
 ;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
 ; I2C_CCD_Config:u7|mI2C_DATA[22]                                                                                                                                   ; Stuck at GND                   ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[22]                                                                                                                        ;
 ;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
-; I2C_CCD_Config:u7|mI2C_DATA[21]                                                                                                                                   ; Stuck at VCC                   ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[21]                                                                                                                        ;
-;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe11a[3] ; Lost Fanouts                   ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|alt_synch_pipe_tld:ws_dgrp|dffpipe_se9:dffpipe9|dffe10a[3] ;
 ; I2C_CCD_Config:u7|mI2C_DATA[20]                                                                                                                                   ; Stuck at VCC                   ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[20]                                                                                                                        ;
 ;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
 ; I2C_CCD_Config:u7|mI2C_DATA[19]                                                                                                                                   ; Stuck at VCC                   ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[19]                                                                                                                        ;
@@ -1060,6 +1065,8 @@ Encoding Type:  One-Hot
 ;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
 ; I2C_CCD_Config:u7|mI2C_DATA[16]                                                                                                                                   ; Stuck at GND                   ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[16]                                                                                                                        ;
 ;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
+; I2C_CCD_Config:u7|mI2C_DATA[21]                                                                                                                                   ; Stuck at VCC                   ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[21]                                                                                                                        ;
+;                                                                                                                                                                   ; due to stuck port data_in      ;                                                                                                                                                                   ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1068,12 +1075,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1292  ;
-; Number of registers using Synchronous Clear  ; 94    ;
+; Total registers                              ; 1289  ;
+; Number of registers using Synchronous Clear  ; 97    ;
 ; Number of registers using Synchronous Load   ; 141   ;
-; Number of registers using Asynchronous Clear ; 968   ;
+; Number of registers using Asynchronous Clear ; 948   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 426   ;
+; Number of registers using Clock Enable       ; 428   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1083,73 +1090,74 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                             ; Fan out ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[0]                                                                                             ; 20      ;
-; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[2]                                                                                             ; 15      ;
-; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[3]                                                                                             ; 20      ;
+; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[0]                                                                                             ; 19      ;
+; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[2]                                                                                             ; 16      ;
+; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[3]                                                                                             ; 19      ;
 ; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[1]                                                                                             ; 15      ;
 ; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[4]                                                                                             ; 12      ;
 ; I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[5]                                                                                             ; 11      ;
 ; vga_color_out:u1_1|key_ctr[0]                                                                                                                 ; 38      ;
 ; vga_color_out:u1_1|key_ctr[1]                                                                                                                 ; 37      ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|counter8a0 ; 6       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|counter8a0 ; 6       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|parity9    ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|parity9    ; 4       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|counter8a0  ; 6       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|counter8a0  ; 6       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|counter8a0  ; 6       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|counter8a0  ; 6       ;
-; I2C_CCD_Config:u7|I2C_Controller:u0|SCLK                                                                                                      ; 2       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|counter8a0  ; 6       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
+; I2C_CCD_Config:u7|I2C_Controller:u0|SCLK                                                                                                      ; 3       ;
 ; I2C_CCD_Config:u7|I2C_Controller:u0|SDO                                                                                                       ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|counter5a0 ; 7       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|counter5a0 ; 7       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|parity9     ; 4       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|parity9     ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|parity9     ; 4       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|parity9     ; 4       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|parity6    ; 4       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p|parity9     ; 4       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|counter5a0 ; 7       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|counter5a0 ; 7       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|counter8a0 ; 6       ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|parity6    ; 4       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|counter8a0 ; 6       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_577:rdptr_g1p|parity6    ; 4       ;
 ; I2C_CCD_Config:u7|I2C_Controller:u0|END                                                                                                       ; 5       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|parity9    ; 4       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|parity9    ; 4       ;
 ; Total number of inverted registers = 35                                                                                                       ;         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|SA[3]               ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|control_interface:control1|timer[14] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|command_done        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE2_CCD|sample_clip:u10|srow_cont[3]                                ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DE2_CCD|CCD_Capture:u3|X_Cont[9]                                    ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DE2_CCD|CCD_Capture:u3|Y_Cont[9]                                    ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD4_ADDR[22]                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD3_ADDR[21]                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD2_ADDR[8]                         ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD1_ADDR[9]                         ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR2_ADDR[10]                        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR1_ADDR[20]                        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|rp_done             ;
-; 64:1               ; 8 bits    ; 336 LEs       ; 80 LEs               ; 256 LEs                ; Yes        ; |DE2_CCD|I2C_CCD_Config:u7|mI2C_DATA[4]                              ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|CMD[1]                               ;
-; 7:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mADDR[15]                            ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|ST[9]                                ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mRD                                  ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|WR_MASK[0]                           ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_CCD|I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[2]           ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|Sdram_Control_4Port:u6|mDATAIN[3]                           ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|vga_color_out:u1_1|Selector20                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|SA[0]              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|SA[8]              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|control_interface:control1|timer[8] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|command_delay[0]   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE2_CCD|sample_clip:u10|srow_cont[2]                               ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DE2_CCD|CCD_Capture:u3|X_Cont[6]                                   ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DE2_CCD|CCD_Capture:u3|Y_Cont[6]                                   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD4_ADDR[12]                       ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD3_ADDR[11]                       ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD2_ADDR[11]                       ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD1_ADDR[14]                       ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR2_ADDR[13]                       ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR1_ADDR[10]                       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|rp_done            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 80 LEs               ; 256 LEs                ; Yes        ; |DE2_CCD|I2C_CCD_Config:u7|mI2C_DATA[2]                             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|CMD[0]                              ;
+; 7:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mADDR[14]                           ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|ST[6]                               ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mRD                                 ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mWR                                 ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_CCD|I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[0]          ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|Sdram_Control_4Port:u6|mDATAIN[7]                          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|vga_color_out:u1_1|Selector19                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1162,7 +1170,7 @@ Encoding Type:  One-Hot
 
 
 +---------------------------------------------------------------------------------------------------+
-; Source assignments for Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_uhj1:auto_generated ;
+; Source assignments for Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_ein1:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                  ;
 +---------------------------------+--------------------+------+-------------------------------------+
@@ -2197,6 +2205,16 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+-------------------------------------------------------------+
 
 
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: tristate:u14 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: VGA_Controller:u1 ;
 +----------------+-------+---------------------------------------+
@@ -2260,8 +2278,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
 ; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
-; OUTDATA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                      ;
+; OUTDATA_REG_B                      ; CLOCK0               ; Untyped                      ;
 ; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
 ; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
 ; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
@@ -2289,7 +2307,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                      ;
-; CBXI_PARAMETER                     ; altsyncram_uhj1      ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_ein1      ; Untyped                      ;
 +------------------------------------+----------------------+------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -3242,8 +3260,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                        ;
 ;     -- WIDTH_B                            ; 1                                                                   ;
 ;     -- NUMWORDS_B                         ; 784                                                                 ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                              ;
-;     -- OUTDATA_REG_B                      ; CLOCK1                                                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                              ;
+;     -- OUTDATA_REG_B                      ; CLOCK0                                                              ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                           ;
 ; Entity Instance                           ; Mirror_Col:u8|my_Stack_RAM:comb_62|altsyncram:altsyncram_component  ;
@@ -3462,6 +3480,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sdram_Control_4Port:u6|command:command1"                                                                                  ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; SA   ; Output ; Warning  ; Output or bidir port (13 bits) is wider than the port expression (12 bits) it drives; bit(s) "SA[12..12]" have no fanouts ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Sdram_Control_4Port:u6|control_interface:control1"                                                                                              ;
 +----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -3489,6 +3516,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WR1_MAX_ADDR[16]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
 ; WR1_LENGTH[7..0]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; WR1_LENGTH[8]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; WR1_FULL             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; WR2_DATA             ; Input  ; Warning  ; Input port expression (15 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "WR2_DATA[15..15]" will be connected to GND.                               ;
 ; WR2_ADDR             ; Input  ; Warning  ; Input port expression (22 bits) is smaller than the input port (23 bits) it drives.  Extra input bit(s) "WR2_ADDR[22..22]" will be connected to GND.                               ;
 ; WR2_ADDR[19..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
@@ -3504,6 +3532,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WR2_MAX_ADDR[16]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
 ; WR2_LENGTH[7..0]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; WR2_LENGTH[8]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; WR2_FULL             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; RD1_DATA[15]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; RD1_ADDR             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (23 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; RD1_ADDR[22..14]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
@@ -3521,6 +3550,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; RD1_MAX_ADDR[13]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD1_LENGTH[7..0]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD1_LENGTH[8]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; RD1_EMPTY            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; RD2_DATA[15]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; RD2_ADDR             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (23 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; RD2_ADDR[22..21]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
@@ -3542,7 +3572,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; RD2_MAX_ADDR[13]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD2_LENGTH[7..0]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD2_LENGTH[8]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; RD3_DATA[15]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; RD2_EMPTY            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; RD3_ADDR             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (23 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; RD3_ADDR[22..15]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD3_ADDR[11..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
@@ -3559,6 +3589,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; RD3_MAX_ADDR[14]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD3_LENGTH[7..0]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD3_LENGTH[8]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; RD3_EMPTY            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; RD4_DATA[15]         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
 ; RD4_ADDR             ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (23 bits) it drives.  The 9 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 ; RD4_ADDR[22..21]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
@@ -3580,6 +3611,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; RD4_MAX_ADDR[14]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD4_LENGTH[7..0]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
 ; RD4_LENGTH[8]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; RD4_EMPTY            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; SA                   ; Output ; Warning  ; Output or bidir port (12 bits) is smaller than the port expression (13 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
 ; CS_N                 ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "CS_N[1..1]" have no fanouts                                                            ;
 ; WR1_USE              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
 ; WR2_USE              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
@@ -3608,16 +3641,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "sample_clip:u10"                                                                                                ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                  ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; d_icol_cont ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; d_irow_cont ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; d_srow_cont ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; d_scol_cont ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sample_clip:u10"                                                                                                    ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                  ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; pixl_gray[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; d_icol_cont     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; d_irow_cont     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; d_srow_cont     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; d_scol_cont     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "special_clock:u12"                                                                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slow_clock ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -3656,40 +3699,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tristate:u14"                                                                                            ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; OE   ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; Out  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sram_wraddress:u15"                                                                                                                 ;
++-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                        ;
++-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; wraddress ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "wraddress[15..1]" have no fanouts ;
++-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 381                         ;
-; cycloneiii_ff         ; 1292                        ;
-;     CLR               ; 659                         ;
+; boundary_port         ; 384                         ;
+; cycloneiii_ff         ; 1289                        ;
+;     CLR               ; 637                         ;
 ;     CLR SCLR          ; 46                          ;
 ;     CLR SLD           ; 10                          ;
 ;     ENA               ; 53                          ;
-;     ENA CLR           ; 220                         ;
+;     ENA CLR           ; 222                         ;
 ;     ENA CLR SCLR      ; 22                          ;
 ;     ENA CLR SLD       ; 11                          ;
 ;     ENA SCLR          ; 16                          ;
 ;     ENA SCLR SLD      ; 3                           ;
 ;     ENA SLD           ; 101                         ;
-;     SCLR              ; 7                           ;
+;     SCLR              ; 10                          ;
 ;     SLD               ; 16                          ;
-;     plain             ; 128                         ;
+;     plain             ; 142                         ;
 ; cycloneiii_io_obuf    ; 123                         ;
-; cycloneiii_lcell_comb ; 1576                        ;
-;     arith             ; 404                         ;
+; cycloneiii_lcell_comb ; 1526                        ;
+;     arith             ; 385                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 267                         ;
-;         3 data inputs ; 136                         ;
-;     normal            ; 1172                        ;
+;         2 data inputs ; 249                         ;
+;         3 data inputs ; 135                         ;
+;     normal            ; 1141                        ;
 ;         0 data inputs ; 10                          ;
-;         1 data inputs ; 64                          ;
+;         1 data inputs ; 56                          ;
 ;         2 data inputs ; 178                         ;
-;         3 data inputs ; 265                         ;
-;         4 data inputs ; 655                         ;
+;         3 data inputs ; 255                         ;
+;         4 data inputs ; 642                         ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 159                         ;
+; cycloneiii_ram_block  ; 160                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.70                        ;
 ; Average LUT depth     ; 3.36                        ;
@@ -3711,7 +3773,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Thu Nov 24 00:34:02 2016
+    Info: Processing started: Thu Nov 24 15:13:44 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_CCD -c DE2_CCD
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file vga_color_out.sv
@@ -3726,7 +3788,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file stack_r
     Info (12023): Found entity 1: Stack_RAM
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.v
     Info (12023): Found entity 1: VGA_Controller
-Warning (10275): Verilog HDL Module Instantiation warning at DE2_CCD.v(491): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at DE2_CCD.v(518): ignored dangling comma in List of Port Connections
 Info (12021): Found 1 design units, including 1 entities, in source file de2_ccd.v
     Info (12023): Found entity 1: DE2_CCD
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_ccd_config.v
@@ -3782,19 +3844,25 @@ Info (12021): Found 1 design units, including 1 entities, in source file speck_c
     Info (12023): Found entity 1: special_clock
 Info (12021): Found 1 design units, including 1 entities, in source file rdbw.sv
     Info (12023): Found entity 1: rdbw
-Warning (10236): Verilog HDL Implicit Net warning at DE2_CCD.v(552): created implicit net for "bw_wren"
-Warning (10236): Verilog HDL Implicit Net warning at sample_clip.sv(31): created implicit net for "sample_area"
+Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
+    Info (12023): Found entity 1: tristate
+Info (12021): Found 1 design units, including 1 entities, in source file read_ram.sv
+    Info (12023): Found entity 1: read_ram
+Info (12021): Found 1 design units, including 1 entities, in source file sram_wraddress.sv
+    Info (12023): Found entity 1: sram_wraddress
+Warning (10236): Verilog HDL Implicit Net warning at DE2_CCD.v(477): created implicit net for "sram_wraddr"
+Warning (10236): Verilog HDL Implicit Net warning at DE2_CCD.v(578): created implicit net for "bw_wren"
+Warning (10236): Verilog HDL Implicit Net warning at sample_clip.sv(32): created implicit net for "sample_area"
 Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col_4X.v(56): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col_4X.v(63): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col_4X.v(70): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col.v(75): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col.v(83): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col.v(91): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col.v(76): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col.v(84): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Mirror_Col.v(92): instance has no name
 Info (12127): Elaborating entity "DE2_CCD" for the top level hierarchy
-Warning (10030): Net "Full[3..2]" at DE2_CCD.v(384) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "LEDR[17..14]" at DE2_CCD.v(194) has no driver
+Warning (10034): Output port "LEDG[8..2]" at DE2_CCD.v(193) has no driver
+Warning (10034): Output port "LEDR[17..16]" at DE2_CCD.v(194) has no driver
 Warning (10034): Output port "FL_ADDR" at DE2_CCD.v(216) has no driver
-Warning (10034): Output port "SRAM_ADDR" at DE2_CCD.v(223) has no driver
 Warning (10034): Output port "OTG_ADDR" at DE2_CCD.v(231) has no driver
 Warning (10034): Output port "UART_TXD" at DE2_CCD.v(196) has no driver
 Warning (10034): Output port "IRDA_TXD" at DE2_CCD.v(199) has no driver
@@ -3802,11 +3870,6 @@ Warning (10034): Output port "FL_WE_N" at DE2_CCD.v(217) has no driver
 Warning (10034): Output port "FL_RST_N" at DE2_CCD.v(218) has no driver
 Warning (10034): Output port "FL_OE_N" at DE2_CCD.v(219) has no driver
 Warning (10034): Output port "FL_CE_N" at DE2_CCD.v(220) has no driver
-Warning (10034): Output port "SRAM_UB_N" at DE2_CCD.v(224) has no driver
-Warning (10034): Output port "SRAM_LB_N" at DE2_CCD.v(225) has no driver
-Warning (10034): Output port "SRAM_WE_N" at DE2_CCD.v(226) has no driver
-Warning (10034): Output port "SRAM_CE_N" at DE2_CCD.v(227) has no driver
-Warning (10034): Output port "SRAM_OE_N" at DE2_CCD.v(228) has no driver
 Warning (10034): Output port "OTG_CS_N" at DE2_CCD.v(232) has no driver
 Warning (10034): Output port "OTG_RD_N" at DE2_CCD.v(233) has no driver
 Warning (10034): Output port "OTG_WR_N" at DE2_CCD.v(234) has no driver
@@ -3829,6 +3892,9 @@ Warning (10034): Output port "ENET_RST_N" at DE2_CCD.v(282) has no driver
 Warning (10034): Output port "ENET_CLK" at DE2_CCD.v(284) has no driver
 Warning (10034): Output port "AUD_DACDAT" at DE2_CCD.v(289) has no driver
 Warning (10034): Output port "AUD_XCK" at DE2_CCD.v(291) has no driver
+Info (12128): Elaborating entity "sram_wraddress" for hierarchy "sram_wraddress:u15"
+Warning (10230): Verilog HDL assignment warning at sram_wraddress.sv(13): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "tristate" for hierarchy "tristate:u14"
 Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:u1"
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.v(58): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at VGA_Controller.v(61): truncated value with size 32 to match size of target (10)
@@ -3876,7 +3942,7 @@ Info (12128): Elaborating entity "altsyncram" for hierarchy "Bw_Pixl:u11|altsync
 Info (12130): Elaborated megafunction instantiation "Bw_Pixl:u11|altsyncram:altsyncram_component"
 Info (12133): Instantiated megafunction "Bw_Pixl:u11|altsyncram:altsyncram_component" with the following parameter:
     Info (12134): Parameter "address_aclr_b" = "NONE"
-    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
@@ -3886,29 +3952,30 @@ Info (12133): Instantiated megafunction "Bw_Pixl:u11|altsyncram:altsyncram_compo
     Info (12134): Parameter "numwords_b" = "784"
     Info (12134): Parameter "operation_mode" = "DUAL_PORT"
     Info (12134): Parameter "outdata_aclr_b" = "NONE"
-    Info (12134): Parameter "outdata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK0"
     Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
     Info (12134): Parameter "widthad_a" = "10"
     Info (12134): Parameter "widthad_b" = "10"
     Info (12134): Parameter "width_a" = "1"
     Info (12134): Parameter "width_b" = "1"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uhj1.tdf
-    Info (12023): Found entity 1: altsyncram_uhj1
-Info (12128): Elaborating entity "altsyncram_uhj1" for hierarchy "Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_uhj1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ein1.tdf
+    Info (12023): Found entity 1: altsyncram_ein1
+Info (12128): Elaborating entity "altsyncram_ein1" for hierarchy "Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_ein1:auto_generated"
 Info (12128): Elaborating entity "special_clock" for hierarchy "special_clock:u12"
 Warning (10230): Verilog HDL assignment warning at speck_clock.sv(13): truncated value with size 32 to match size of target (21)
 Info (12128): Elaborating entity "rdbw" for hierarchy "rdbw:u13"
 Warning (10230): Verilog HDL assignment warning at rdbw.sv(11): truncated value with size 32 to match size of target (10)
 Info (12128): Elaborating entity "sample_clip" for hierarchy "sample_clip:u10"
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(31): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(33): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(64): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(75): truncated value with size 10 to match size of target (9)
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(81): truncated value with size 32 to match size of target (9)
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(94): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(108): truncated value with size 32 to match size of target (5)
-Warning (10230): Verilog HDL assignment warning at sample_clip.sv(127): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(32): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(34): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(65): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(76): truncated value with size 10 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(82): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(95): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(109): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at sample_clip.sv(128): truncated value with size 32 to match size of target (5)
 Info (12128): Elaborating entity "Sdram_Control_4Port" for hierarchy "Sdram_Control_4Port:u6"
 Warning (10230): Verilog HDL assignment warning at Sdram_Control_4Port.v(532): truncated value with size 32 to match size of target (10)
 Warning (10240): Verilog HDL Always Construct warning at Sdram_Control_4Port.v(570): inferring latch(es) for variable "rWR1_MAX_ADDR", which holds its previous value in one or more paths through the always construct
@@ -4318,7 +4385,6 @@ Info (12128): Elaborating entity "altsyncram_pgp1" for hierarchy "Mirror_Col:u8|
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram|q_b[15]"
-        Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram|q_b[15]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram|q_b[15]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram|q_b[15]"
 Warning (14284): Synthesized away the following node(s):
@@ -4357,7 +4423,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|q_b[13]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|q_b[14]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|q_b[15]"
-Warning (12241): 16 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 19 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[11]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[14]" and its non-tri-state driver.
@@ -4400,10 +4466,46 @@ Warning (13039): The following bidirectional pins have no drivers
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "tristate:u14|Data[0]~synth"
+    Warning (13010): Node "tristate:u14|Data[1]~synth"
+    Warning (13010): Node "tristate:u14|Data[2]~synth"
+    Warning (13010): Node "tristate:u14|Data[3]~synth"
+    Warning (13010): Node "tristate:u14|Data[4]~synth"
+    Warning (13010): Node "tristate:u14|Data[5]~synth"
+    Warning (13010): Node "tristate:u14|Data[6]~synth"
+    Warning (13010): Node "tristate:u14|Data[7]~synth"
+    Warning (13010): Node "tristate:u14|Data[8]~synth"
+    Warning (13010): Node "tristate:u14|Data[9]~synth"
+    Warning (13010): Node "tristate:u14|Data[10]~synth"
+    Warning (13010): Node "tristate:u14|Data[11]~synth"
+    Warning (13010): Node "tristate:u14|Data[12]~synth"
+    Warning (13010): Node "tristate:u14|Data[13]~synth"
+    Warning (13010): Node "tristate:u14|Data[14]~synth"
+    Warning (13010): Node "tristate:u14|Data[15]~synth"
     Warning (13010): Node "GPIO_1[11]~synth"
     Warning (13010): Node "GPIO_1[14]~synth"
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
     Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
     Warning (13410): Pin "HEX3[0]" is stuck at GND
     Warning (13410): Pin "HEX3[1]" is stuck at GND
     Warning (13410): Pin "HEX3[2]" is stuck at GND
@@ -4439,15 +4541,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[4]" is stuck at GND
     Warning (13410): Pin "HEX7[5]" is stuck at GND
     Warning (13410): Pin "HEX7[6]" is stuck at VCC
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
     Warning (13410): Pin "LEDG[6]" is stuck at GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND
     Warning (13410): Pin "LEDG[8]" is stuck at GND
-    Warning (13410): Pin "LEDR[14]" is stuck at GND
-    Warning (13410): Pin "LEDR[15]" is stuck at GND
     Warning (13410): Pin "LEDR[16]" is stuck at GND
     Warning (13410): Pin "LEDR[17]" is stuck at GND
     Warning (13410): Pin "UART_TXD" is stuck at GND
     Warning (13410): Pin "IRDA_TXD" is stuck at GND
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND
     Warning (13410): Pin "DRAM_CKE" is stuck at VCC
     Warning (13410): Pin "FL_ADDR[0]" is stuck at GND
     Warning (13410): Pin "FL_ADDR[1]" is stuck at GND
@@ -4475,7 +4580,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "FL_RST_N" is stuck at GND
     Warning (13410): Pin "FL_OE_N" is stuck at GND
     Warning (13410): Pin "FL_CE_N" is stuck at GND
-    Warning (13410): Pin "SRAM_ADDR[0]" is stuck at GND
     Warning (13410): Pin "SRAM_ADDR[1]" is stuck at GND
     Warning (13410): Pin "SRAM_ADDR[2]" is stuck at GND
     Warning (13410): Pin "SRAM_ADDR[3]" is stuck at GND
@@ -4493,11 +4597,11 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SRAM_ADDR[15]" is stuck at GND
     Warning (13410): Pin "SRAM_ADDR[16]" is stuck at GND
     Warning (13410): Pin "SRAM_ADDR[17]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[18]" is stuck at GND
+    Warning (13410): Pin "SRAM_ADDR[19]" is stuck at GND
     Warning (13410): Pin "SRAM_UB_N" is stuck at GND
     Warning (13410): Pin "SRAM_LB_N" is stuck at GND
-    Warning (13410): Pin "SRAM_WE_N" is stuck at GND
-    Warning (13410): Pin "SRAM_CE_N" is stuck at GND
-    Warning (13410): Pin "SRAM_OE_N" is stuck at GND
+    Warning (13410): Pin "SRAM_OE_N" is stuck at VCC
     Warning (13410): Pin "OTG_ADDR[0]" is stuck at GND
     Warning (13410): Pin "OTG_ADDR[1]" is stuck at GND
     Warning (13410): Pin "OTG_CS_N" is stuck at GND
@@ -4526,7 +4630,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "AUD_DACDAT" is stuck at GND
     Warning (13410): Pin "AUD_XCK" is stuck at GND
     Warning (13410): Pin "TD_RESET" is stuck at VCC
-Info (17049): 78 registers lost all their fanouts during netlist optimizations.
+Info (17049): 92 registers lost all their fanouts during netlist optimizations.
 Info (17036): Removed 8 MSB VCC or GND address nodes from RAM block "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|ALTSYNCRAM"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -4572,17 +4676,17 @@ Warning (21074): Design contains 25 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "TD_DATA[7]"
     Warning (15610): No output dependent on input pin "TD_HS"
     Warning (15610): No output dependent on input pin "TD_VS"
-Info (21057): Implemented 2679 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2659 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 46 input pins
-    Info (21059): Implemented 212 output pins
+    Info (21059): Implemented 215 output pins
     Info (21060): Implemented 123 bidirectional pins
-    Info (21061): Implemented 2138 logic cells
-    Info (21064): Implemented 159 RAM segments
+    Info (21061): Implemented 2114 logic cells
+    Info (21064): Implemented 160 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 340 warnings
-    Info: Peak virtual memory: 706 megabytes
-    Info: Processing ended: Thu Nov 24 00:34:17 2016
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 373 warnings
+    Info: Peak virtual memory: 703 megabytes
+    Info: Processing ended: Thu Nov 24 15:13:58 2016
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:27
 
 
