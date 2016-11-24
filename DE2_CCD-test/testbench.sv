@@ -12,7 +12,7 @@ logic [9:0] d_icol_cont;
 logic [9:0] d_irow_cont;
 logic [4:0] d_srow_cont;
 logic [4:0] d_scol_cont;
-
+logic rd_req;
 
 
 always begin : CLOCK_GENERATION
@@ -20,7 +20,7 @@ always begin : CLOCK_GENERATION
 end
 
 
-sample_clip u(.*);
+//sample_clip u(.*);
 
 initial begin : CLOCK_INITALIZATION
 	clk = 0;

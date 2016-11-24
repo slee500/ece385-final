@@ -12,29 +12,29 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test {C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv}
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 18:24:58 on Nov 23,2016
+# Start time: 21:16:45 on Nov 23,2016
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test" C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv 
 # -- Compiling module sample_clip
 # 
 # Top level modules:
 # 	sample_clip
-# End time: 18:24:58 on Nov 23,2016, Elapsed time: 0:00:00
+# End time: 21:16:45 on Nov 23,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test {C:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv}
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 18:24:58 on Nov 23,2016
+# Start time: 21:16:45 on Nov 23,2016
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test" C:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 18:24:58 on Nov 23,2016, Elapsed time: 0:00:00
+# End time: 21:16:45 on Nov 23,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 18:24:58 on Nov 23,2016
+# Start time: 21:16:45 on Nov 23,2016
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.sample_clip
@@ -47,5 +47,12 @@
 # run 2000 ns
 restart
 run
-# End time: 18:30:12 on Nov 23,2016, Elapsed time: 0:05:14
+run
+restart
+run
+add wave -position insertpoint  \
+sim:/testbench/u/wr_en
+restart
+run
+# End time: 21:23:41 on Nov 23,2016, Elapsed time: 0:06:56
 # Errors: 0, Warnings: 0

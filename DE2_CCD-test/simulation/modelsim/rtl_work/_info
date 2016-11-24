@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/ychu26/ece385-final/DE2_CCD-test/simulation/modelsim
 vsample_clip
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z2 !s110 1479947098
+Z2 !s110 1479957405
 !i10b 1
-!s100 XK@Y@=G=lnEE>I<UnK`kS0
-IdZ=1ZEo`Y6ZHB_Pf:j6Yz1
+!s100 Xdl96XWAe4P;1054^XCd<0
+I;9SSGXA5D572^80W80<4c3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 sample_clip_sv_unit
 S1
 R0
-w1479947063
+w1479957349
 8C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv
 FC:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv
 L0 1
@@ -26,7 +26,7 @@ Z4 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z5 !s108 1479947098.000000
+Z5 !s108 1479957405.000000
 !s107 C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test|C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv|
 !i113 1
@@ -36,13 +36,13 @@ vtestbench
 R1
 R2
 !i10b 1
-!s100 4A7;eaPm_6YCQ<mMSO9l91
-IGNzEJ7E6:fcWE@PekG@l72
+!s100 A=U>[4>j_Y?Y`@EkSf4>S3
+I0H;=OR=n6n[2KNaZEM2^Y3
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1479945915
+w1479955730
 8C:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv
 FC:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv
 L0 1

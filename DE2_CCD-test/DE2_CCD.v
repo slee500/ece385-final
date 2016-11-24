@@ -376,11 +376,18 @@ wire	[9:0]	smCCD_R;
 wire	[9:0]	smCCD_G;
 wire	[9:0]	smCCD_B;
 wire			smCCD_DVAL;
+
+wire wr_bw, rd_bw;
+wire [9:0] bw_wraddr;
+wire [9:0] bw_rdaddr;
 //test
 wire	[3:0]	Full;
 wire	[3:0]	Empty;
 
 wire [31:0] hexDis;
+wire slow_clk;
+
+
 //assign hexDis[1:0] = key_ctr;
 
 //	For Sensor 1
@@ -421,13 +428,21 @@ assign	CCD_FVAL	=	GPIO_1[13+20];
 assign	CCD_LVAL	=	GPIO_1[12+20];
 assign	CCD_PIXCLK	=	GPIO_1[10+20];
 */
-assign	LEDR		=	SW;
+//assign	LEDR		=	SW;
 //assign	LEDG		=	Y_Cont;
 assign	LEDG		=	{Full,Empty};
 assign	VGA_CTRL_CLK=	CCD_MCLK;
 assign	VGA_CLK		=	~CCD_MCLK;
 assign CLOCK_25 = VGA_CTRL_CLK;
 
+assign LEDR[0] = rd_bw;
+assign LEDR[1] = wr_bw;
+assign LEDR[2] = bw_wren;
+assign LEDR[3] = mRead;
+assign LEDR[13:4] = bw_wraddr;
+//assign LEDR[17] = 
+//assign hexDis[9:0] = bw_rdaddr;
+assign hexDis[9:0] = bw_rdaddr;
 always@(posedge CLOCK_50)	CCD_MCLK	<=	~CCD_MCLK;
 
 
@@ -463,7 +478,7 @@ VGA_Controller		u1	(	//	Host Side
 							.iRST_N(DLY_RST_2)	);
 
 							
-color_out 			u1_1 (
+vga_color_out 			u1_1 (
 								.clk(VGA_VS),
 								.key(KEY),
 								.temp_R(mVGA_R),
@@ -472,7 +487,8 @@ color_out 			u1_1 (
 								.VGA_R(VGA_R),
 								.VGA_G(VGA_G),
 								.VGA_B(VGA_B),
-								.key_ctr(hexDis[1:0]));							
+								//.key_ctr(hexDis[1:0])
+								);							
 							
 													
 Reset_Delay			u2	(	.iCLK(CLOCK_50),
@@ -524,6 +540,38 @@ SEG7_LUT_8 			u5	(	.oSEG0(HEX0),.oSEG1(HEX1),
 							//.iDIG(Frame_Cont) 
 							.iDIG(hexDis));
 
+
+
+							
+Bw_Pixl   			u11(
+							 .data(wr_bw),
+							 .rdaddress(bw_rdaddr),
+							 .rdclock(slow_clk),
+							 .wraddress(bw_wraddr),
+							 .wrclock(slow_clk),
+							 .wren(bw_wren),
+							 .q(rd_bw)    );
+
+
+special_clock u12 (.CLOCK_25(CLOCK_25),
+						 .reset_n(DLY_RST_2),
+						 .slow_clock(slow_clk) );
+
+rdbw u13 (.clk(slow_clk), .bw_rdaddr(bw_rdaddr), .reset_n(DLY_RST_2));
+
+							
+sample_clip       u10 (  
+								.clk(slow_clk),
+								.rd_req(mRead),
+								.reset_n(DLY_RST_2),
+								.pixl_R(Read_DATA4[9:0]),
+								.pixl_G({Read_DATA3[14:10],Read_DATA4[14:10]}),
+								.pixl_B(Read_DATA3[9:0]),
+								.pixl_bw(wr_bw),
+								.wren(bw_wren),
+								.pixl_cont(bw_wraddr)   );							
+							
+							
 Sdram_Control_4Port	u6	(	//	HOST Side
 						    .REF_CLK(CLOCK_50),
 						    .RESET_N(1'b1),
@@ -594,7 +642,7 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							.RD3_MAX_ADDR(640*480),  
 							.RD3_LENGTH(9'h100),  
 				        	.RD3_LOAD(!DLY_RST_0),
-							.RD3_CLK(CLOCK_25),  
+							.RD3_CLK(slow_clk),  
 							.RD3_EMPTY(Empty[2]),
 							//	FIFO Read Side 4
 						    .RD4_DATA(Read_DATA4),
@@ -603,7 +651,7 @@ Sdram_Control_4Port	u6	(	//	HOST Side
 							.RD4_MAX_ADDR(22'h100000+640*480),  
 							.RD4_LENGTH(9'h100),
 				        	.RD4_LOAD(!DLY_RST_0),
-							.RD4_CLK(CLOCK_25),  
+							.RD4_CLK(slow_clk),  
 							.RD4_EMPTY(Empty[3]),
 							//	SDRAM Side
 						    .SA(DRAM_ADDR),
@@ -639,15 +687,15 @@ Mirror_Col			u8	(	//	Input Side
 							.iCCD_PIXCLK(CCD_PIXCLK),
 							.iRST_N(DLY_RST_1),
 							//	Output Side
-//							.oCCD_R(sCCD_R),
-//							.oCCD_G(sCCD_G),
-//							.oCCD_B(sCCD_B),
-//							.oCCD_DVAL(sCCD_DVAL));
-					     	//	Output Side
-							.dCCD_R(sCCD_R),
-							.dCCD_G(sCCD_G),
-							.dCCD_B(sCCD_B),
+							.oCCD_R(sCCD_R),
+							.oCCD_G(sCCD_G),
+							.oCCD_B(sCCD_B),
 							.oCCD_DVAL(sCCD_DVAL));
+					     	//	Output Side
+//							.dCCD_R(sCCD_R),
+//							.dCCD_G(sCCD_G),
+//							.dCCD_B(sCCD_B),
+//							.oCCD_DVAL(sCCD_DVAL));
 
 //Mirror_Col_4X	u8_1	(	//	Input Side
 //							.iCCD_R(mmCCD_R),
