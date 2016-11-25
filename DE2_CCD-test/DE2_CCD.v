@@ -388,6 +388,10 @@ wire [31:0] hexDis;
 wire slow_clk;
 wire [9:0] pixl_gray;
 wire [15:0] wraddr;
+
+
+wire sram_addr_incre;
+wire sram_wren;
 //assign hexDis[1:0] = key_ctr;
 
 //	For Sensor 1
@@ -443,18 +447,18 @@ assign CLOCK_25 = VGA_CTRL_CLK;
 //assign LEDR[17] = 
 //assign hexDis[9:0] = bw_rdaddr;
 //assign hexDis[9:0] = bw_rdaddr;
-assign LEDR[7:0] = Read_DATA1[9:2]; 
-assign LEDR[15:8] = pixl_gray[9:2];
+
+
 assign LEDG[0] = rd_bw;
 assign LEDG[1] = wr_bw;
-
+assign LEDR[13:4] = bw_rdaddr;
 //
 //
 assign SRAM_UB_N = 1'b0;
 assign SRAM_LB_N = 1'b0;
-assign SRAM_WE_N = ~CLOCK_25;
-assign SRAM_CE_N = ~CLOCK_25;
-assign SRAM_ADDR = {4'h00, sram_wraddr};
+assign SRAM_WE_N = ~sram_wren;
+assign SRAM_CE_N = 1'b0;
+assign SRAM_ADDR = {4'h00, bw_rdaddr};
 //assign SRAM_ADDR = 18'h0;
 assign SRAM_OE_N = 1'b1;
 
@@ -470,18 +474,24 @@ begin
 end
 
 
-
-sram_wraddress  u15 (.clk(CLOCK_25),
-							.ctr_en(mRead),
+//
+//sram_wraddress  u15 (.clk(CLOCK_25),
+//							.ctr_en(mRead),
+//							.reset_n(DLY_RST_0),
+//							.wraddress(sram_wraddr) );
+//							
+sram_controller u16 (.clk(CLOCK_25),
 							.reset_n(DLY_RST_0),
-							.wraddress(sram_wraddr) );
+							.sram_wren(sram_wren),
+							.addr_incre(sram_addr_incre) );
 							
-
+							
+rdbw u13 (.clk(CLOCK_25), .bw_rdaddr(bw_rdaddr), .reset_n(DLY_RST_2), .ctr_en(sram_addr_incre) );
 
 
 tristate u14(.Clk(CLOCK_25), 
 				 .OE(1'b1), 
-				 .In(Read_DATA3), 
+				 .In({16{rd_bw}}), 
 				 .Data(SRAM_DQ) );
 
 
@@ -583,7 +593,6 @@ special_clock u12 (.CLOCK_25(CLOCK_25),
 						 .reset_n(DLY_RST_2),
 						 .slow_clock(slow_clk) );
 
-rdbw u13 (.clk(CLOCK_25), .bw_rdaddr(bw_rdaddr), .reset_n(DLY_RST_2));
 
 							
 sample_clip       u10 (  

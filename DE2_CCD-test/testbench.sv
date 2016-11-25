@@ -20,7 +20,14 @@ always begin : CLOCK_GENERATION
 end
 
 
-//sample_clip u(.*);
+sample_clip u(.d_icol_cont(d_icol_con),
+				  .d_irow_cont(d_irow_cont),
+				  .d_srow_cont(d_srow_cont),
+				  .d_scol_cont(d_scol_cont),
+				  .rd_req(rd_req),
+				  .reset_n(reset_n),
+				  .clk(clk)
+				  );
 
 initial begin : CLOCK_INITALIZATION
 	clk = 0;

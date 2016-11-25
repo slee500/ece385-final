@@ -30,7 +30,7 @@ module sample_clip (input clk,
 	
 	assign clk_divide_16 = ~counter[3];
 	assign sample_area = (icol_cont < 544 && icol_cont >= 96)? 1 : 0;
-	assign wren = (counter == 4'h0) & sample_area;
+	assign wren = (counter == 4'h0) & sample_area & irow_cont[3:0] == 4'h1;
 	assign pixl_cont = (srow_cont - 1) * 28 + scol_cont - 1;
 	
 	//image processing
@@ -86,7 +86,7 @@ module sample_clip (input clk,
 			end
 	end
 	
-	//create 4-bit counter for image resize
+	//create 4-bit counter for column resize
 	always_ff @ (posedge clk or negedge reset_n)
 	begin
 			if (~reset_n)
@@ -94,7 +94,9 @@ module sample_clip (input clk,
 			else if (rd_req)
 				counter <= counter + 1;		
 	end
-						
+	
+	
+	
 
 	//sampling image column count
 	always_ff @ (posedge clk_divide_16 or negedge reset_n)
@@ -120,7 +122,7 @@ module sample_clip (input clk,
 				srow_cont <= 5'h0;
 			else
 			begin
-				if (sample_area)
+				if (sample_area && irow_cont[3:0] == 4'h1)
 				begin
 					if (srow_cont < sROW_TOTAL)
 					begin

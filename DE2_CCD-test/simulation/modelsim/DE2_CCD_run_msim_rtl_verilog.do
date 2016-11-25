@@ -5,6 +5,8 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test {C:/Users/ychu26/ece385-final/DE2_CCD-test/rgb2gray.sv}
+vlog -sv -work work +incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test {C:/Users/ychu26/ece385-final/DE2_CCD-test/gray2bw.sv}
 vlog -sv -work work +incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test {C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv}
 
 vlog -sv -work work +incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test {C:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv}
