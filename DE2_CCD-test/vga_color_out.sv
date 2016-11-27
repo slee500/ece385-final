@@ -1,4 +1,4 @@
-module color_out (input clk,
+module vga_color_out (input clk,
 						//input reset_n,
 						input logic [3:0] key,
 						input logic [9:0] temp_R,
@@ -12,12 +12,23 @@ module color_out (input clk,
 	logic [11:0] temp_gray;
 	logic [9:0] gray;
 	logic [7:0] binary;
+	logic bw;
 	logic ctr_enable;
 
 
-	assign temp_gray = temp_R + temp_G + temp_B + temp_G;
-	assign gray = temp_gray >> 2;
-	assign binary = (gray[9:2] > 8'h80)? 8'hff : 8'h00;
+//	assign temp_gray = temp_R + temp_G + temp_B + temp_G;
+//	assign gray = temp_gray >> 2;
+//	assign binary = (gray[9:2] > 8'h80)? 8'hff : 8'h00;
+	rgb2gray u1(.pixl_R(temp_R),
+					.pixl_G(temp_G),
+					.pixl_B(temp_B),
+					.pixl_gray(gray) );
+					
+	gray2bw u2(.pixl_gray(gray),
+				  .pixl_bw(bw)     );	
+				  
+	assign binary = {8{bw}};
+	
 	//assign binary = 8'hff;
 
 	enum logic [1:0] {WAIT, PRESS, RELEASE} state, next_state; 

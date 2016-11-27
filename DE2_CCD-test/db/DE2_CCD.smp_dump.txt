@@ -5,8 +5,15 @@ mSetup_ST.0000 0 0 0
 mSetup_ST.0001 1 0 1 
 mSetup_ST.0010 1 1 0 
 
-State Machine - |DE2_CCD|color_out:u1_1|state
+State Machine - |DE2_CCD|vga_color_out:u1_1|state
 Name state.WAIT state.RELEASE state.PRESS 
 state.WAIT 0 0 0 
 state.PRESS 1 0 1 
 state.RELEASE 1 1 0 
+
+State Machine - |DE2_CCD|sram_controller:u16|state
+Name state.WR_1 state.WR_0 state.GET_DATA state.WAIT 
+state.WAIT 0 0 0 0 
+state.GET_DATA 0 0 1 1 
+state.WR_0 0 1 0 1 
+state.WR_1 1 0 0 1 

@@ -1,0 +1,106 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ychu26/ece385-final/DE2_CCD-test/simulation/modelsim
+vgray2bw
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1480033643
+!i10b 1
+!s100 P>Cj8d=ne>41dIMSi1Ra62
+INLSEf@4oXhRIGo[5ARNeF0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 gray2bw_sv_unit
+S1
+R0
+Z4 w1480028704
+8C:/Users/ychu26/ece385-final/DE2_CCD-test/gray2bw.sv
+FC:/Users/ychu26/ece385-final/DE2_CCD-test/gray2bw.sv
+L0 1
+Z5 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z6 !s108 1480033643.000000
+!s107 C:/Users/ychu26/ece385-final/DE2_CCD-test/gray2bw.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test|C:/Users/ychu26/ece385-final/DE2_CCD-test/gray2bw.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test
+vrgb2gray
+R1
+R2
+!i10b 1
+!s100 O>]WOMheGY=h8aRg_`1X93
+IYnUYL6VX_ZZ@U?GZ:^`X;3
+R3
+!s105 rgb2gray_sv_unit
+S1
+R0
+R4
+8C:/Users/ychu26/ece385-final/DE2_CCD-test/rgb2gray.sv
+FC:/Users/ychu26/ece385-final/DE2_CCD-test/rgb2gray.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1480033642.000000
+!s107 C:/Users/ychu26/ece385-final/DE2_CCD-test/rgb2gray.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test|C:/Users/ychu26/ece385-final/DE2_CCD-test/rgb2gray.sv|
+!i113 1
+R7
+R8
+vsample_clip
+R1
+R2
+!i10b 1
+!s100 8Z>ROz=3DoS1c`a7iJJVF2
+IKCLoH44gYdX3gQo>6aH>Z1
+R3
+!s105 sample_clip_sv_unit
+S1
+R0
+w1480033583
+8C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv
+FC:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test|C:/Users/ychu26/ece385-final/DE2_CCD-test/sample_clip.sv|
+!i113 1
+R7
+R8
+vtestbench
+R1
+R2
+!i10b 1
+!s100 :7oIUWES6bj?1g<3F0HdM1
+IoCYoJR1mcIZnI`Dn679`;2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1480033005
+8C:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv
+FC:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ychu26/ece385-final/DE2_CCD-test|C:/Users/ychu26/ece385-final/DE2_CCD-test/testbench.sv|
+!i113 1
+R7
+R8

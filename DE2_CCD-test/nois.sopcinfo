@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="nois" kind="nois" version="1.0" fabric="QSYS">
  <!-- Format version 15.0 145 (Future versions may contain additional information.) -->
- <!-- 2016.11.22.00:44:38 -->
+ <!-- 2016.11.23.22:34:58 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1479797078</value>
+  <value>1479962098</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>

@@ -1,0 +1,11 @@
+module read_ram(input array[0:783]);
+
+integer i;
+
+initial begin
+
+	$display("rdata");
+	for (i=0; i<784; i++)
+	$display("%d:h", i, array[i] )
+end
+endmodule

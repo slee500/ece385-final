@@ -284,7 +284,8 @@ wire							active;
 wire                            CLK;
 
 
-Sdram_PLL sdram_pll1	(
+//Sdram_PLL sdram_pll1	(
+my_Sdram_PLL sdram_pll1	(
 				.inclk0(REF_CLK),
 				.c0(CLK),
 				.c1(SDR_CLK)
@@ -344,7 +345,8 @@ sdr_data_path data_path1(
                 .DQM(IDQM)
                 );
 
-Sdram_FIFO 	write_fifo1(
+my_Sdram_WR_FIFO 	write_fifo1(
+//Sdram_FIFO 	write_fifo1(
 				.data(WR1_DATA),
 				.wrreq(WR1),
 				.wrclk(WR1_CLK),
@@ -357,7 +359,8 @@ Sdram_FIFO 	write_fifo1(
 				.rdusedw(write_side_fifo_rusedw1)
 				);
 
-Sdram_FIFO 	write_fifo2(
+my_Sdram_WR_FIFO 	write_fifo2(
+//Sdram_FIFO 	write_fifo2(
 				.data(WR2_DATA),
 				.wrreq(WR2),
 				.wrclk(WR2_CLK),
@@ -370,7 +373,8 @@ Sdram_FIFO 	write_fifo2(
 				.rdusedw(write_side_fifo_rusedw2)
 				);
 
-Sdram_FIFO 	write_fifo3(
+my_Sdram_WR_FIFO 	write_fifo3(
+//Sdram_FIFO 	write_fifo3(
 				.data(WR3_DATA),
 				.wrreq(WR3),
 				.wrclk(WR3_CLK),
@@ -383,7 +387,8 @@ Sdram_FIFO 	write_fifo3(
 				.rdusedw(write_side_fifo_rusedw3)
 				);
 
-Sdram_FIFO 	write_fifo4(
+my_Sdram_WR_FIFO 	write_fifo4(
+//Sdram_FIFO 	write_fifo4(
 				.data(WR4_DATA),
 				.wrreq(WR4),
 				.wrclk(WR4_CLK),
@@ -404,7 +409,8 @@ assign	mDATAIN	=	(WR_MASK[0])	?	mDATAIN1	:
 					(WR_MASK[2])	?	mDATAIN3	:
 										mDATAIN4	;										
 										
-Sdram_FIFO 	read_fifo1(
+my_Sdram_RD_FIFO 	read_fifo1(
+//Sdram_FIFO 	read_fifo1(
 				.data(mDATAOUT),
 				.wrreq(OUT_VALID&RD_MASK[0]),
 				.wrclk(CLK),
@@ -417,7 +423,8 @@ Sdram_FIFO 	read_fifo1(
 				.rdusedw(RD1_USE)
 				);
 				
-Sdram_FIFO 	read_fifo2(
+my_Sdram_RD_FIFO 	read_fifo2(
+//Sdram_FIFO 	read_fifo2(
 				.data(mDATAOUT),
 				.wrreq(OUT_VALID&RD_MASK[1]),
 				.wrclk(CLK),
@@ -430,7 +437,8 @@ Sdram_FIFO 	read_fifo2(
 				.rdusedw(RD2_USE)
 				);
 				
-Sdram_FIFO 	read_fifo3(
+my_Sdram_RD_FIFO 	read_fifo3(
+//Sdram_FIFO 	read_fifo3(
 				.data(mDATAOUT),
 				.wrreq(OUT_VALID&RD_MASK[2]),
 				.wrclk(CLK),
@@ -443,7 +451,8 @@ Sdram_FIFO 	read_fifo3(
 				.rdusedw(RD3_USE)
 				);
 				
-Sdram_FIFO 	read_fifo4(
+my_Sdram_RD_FIFO 	read_fifo4(
+//Sdram_FIFO 	read_fifo4(
 				.data(mDATAOUT),
 				.wrreq(OUT_VALID&RD_MASK[3]),
 				.wrclk(CLK),
@@ -788,7 +797,7 @@ begin
 				mWR		<=	1;
 				mRD		<=	0;
 			end
-			//	Write Side 2
+			//	Write Side 4
 			else if( (write_side_fifo_rusedw4 >= rWR4_LENGTH) && (rWR4_LENGTH!=0) )
 			begin
 				mADDR	<=	rWR4_ADDR;
