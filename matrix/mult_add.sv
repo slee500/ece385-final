@@ -30,7 +30,7 @@ module mult_add(input logic pixel, clk, reset, load,
 			else state <= next_state;
 		end
 		
-		always_ff @ (posedge clk) // Circular right shift
+		always_ff @ (posedge clk) // Circular shift
 		begin
 			pixels[1] <= pixel;
 			pixels[0] <= pixels[1];
