@@ -1,8 +1,8 @@
 // Matrix that loads data from the given memory / hardcoded for our multiplications
 
 module matrix(input logic[9:0] counter1, input logic[6:0] counter2,
-			output logic [4:0] counter1_out[0:99], counter2_out[0:9],
-			output logic [3:0] counter1_bias[0:99], counter2_bias[0:9]);
+			output shortint counter1_out[0:99], counter2_out[0:9],
+			output shortint counter1_bias[0:99], counter2_bias[0:9]);
 			
 	assign counter1_bias = '{0,0,0,1,0,-2,1,-1,-1,-2,0,0,0,-1,3,-1,2,0,1,3,-2,1,-3,2,-2,0,2,2,1,-3,1,-1,1,1,-1,-2,-2,-1,0,0,-1,-2,1,-1,0,0,-3,-1,-3,-4,-1,-1,1,2,-1,0,3,-1,1,0,-1,1,-1,-1,0,-1,0,0,-1,-4,0,0,-3,-3,-2,2,-1,0,-1,-2,-2,3,0,0,-2,-2,-1,-4,0,-1,-2,-1,-1,-1,0,1,-3,0,-3,1};
 	assign counter2_bias = '{-3,-2,0,-2,-3,-2,-2,-3,-1,-2};

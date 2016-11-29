@@ -8,7 +8,7 @@ module toplevel(input logic clk, reset, load, pixel,
 
 	
 	
-	enum logic [1:0] {WAIT, COMPUTE, READY} state, next_state;
+	
 	
 	multiply_add multadd(.*);
 	

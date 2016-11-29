@@ -12,17 +12,17 @@ module multiply_add (input logic pixel, clk, reset, load,
 		
 		logic [9:0] counter1;
 		logic [6:0] counter2;
-		logic [4:0] counter1_out[0:99], counter2_out[0:9];
-		logic [3:0] counter1_bias[0:99], counter2_bias[0:9];
+		shortint counter1_out[0:99], counter2_out[0:9];
+		shortint counter1_bias[0:99], counter2_bias[0:9];
 		
 		matrix matrix0(.*);
 		mult_add_stage1 mult_add1(.add(counter1_out), .bias(counter1_bias),
 											.counter(counter1), .complete(stage1_complete),
-											.result(result1_reg), .*);
+											.result(result1_reg), .load(stage1_load), .*);
 		
 		mult_add_stage2 mult_add2(.add(counter2_out), .bias(counter2_bias), 
 											.counter(counter2), .complete(stage2_complete),
-											.result(result2_reg), .pixel(result1_reg), .*);
+											.result(result2_reg), .pixel(result1_reg), .load(stage2_load), .*);
 		
 		
 		always_ff @ (posedge clk)
@@ -46,6 +46,51 @@ module multiply_add (input logic pixel, clk, reset, load,
 			endcase
 		end
 		
+		// We want to latch the output of the result
+		always_ff @ (posedge clk)
+		begin
+			case (state)
+				READY: begin
+					result[0] <= result[0];
+					result[1] <= result[1];
+					result[2] <= result[2];
+					result[3] <= result[3];
+					result[4] <= result[4];
+					result[5] <= result[5];
+					result[6] <= result[6];
+					result[7] <= result[7];
+					result[8] <= result[8];
+					result[9] <= result[9];
+				end
+				STAGE2: begin
+					result[0] <= result2_reg[0];
+					result[1] <= result2_reg[1];
+					result[2] <= result2_reg[2];
+					result[3] <= result2_reg[3];
+					result[4] <= result2_reg[4];
+					result[5] <= result2_reg[5];
+					result[6] <= result2_reg[6];
+					result[7] <= result2_reg[7];
+					result[8] <= result2_reg[8];
+					result[9] <= result2_reg[9];
+				end
+				default: begin
+					result[0] <= 0;
+					result[1] <= 0;
+					result[2] <= 0;
+					result[3] <= 0;
+					result[4] <= 0;
+					result[5] <= 0;
+					result[6] <= 0;
+					result[7] <= 0;
+					result[8] <= 0;
+					result[9] <= 0;
+				end
+			
+			endcase		
+		end
+		
+		
 		// next_state control logic
 		always_comb
 		begin
@@ -56,15 +101,15 @@ module multiply_add (input logic pixel, clk, reset, load,
 				end
 				
 				STAGE1: begin
-					if (stage1_complete == 1'b1) next_state = READY;
+					if (stage1_complete == 1'b1) next_state = STAGE2;
 				end
 				
 				STAGE2: begin
-					if (stage2_complete == 1'b1) next_state = STAGE2;
+					if (stage2_complete == 1'b1) next_state = READY;
 				end
 				
 				READY: begin
-					if (load == 1'b1) next_state = STAGE1;
+					if (load == 1'b1) next_state = WAIT;
 				end
 			endcase
 		
@@ -77,17 +122,6 @@ module multiply_add (input logic pixel, clk, reset, load,
 			stage2_load = 1'b0;
 			complete = 1'b0;
 			
-			result[0] = 16'bz;
-			result[1] = 16'bz;
-			result[2] = 16'bz;
-			result[3] = 16'bz;
-			result[4] = 16'bz;
-			result[5] = 16'bz;
-			result[6] = 16'bz;
-			result[7] = 16'bz;
-			result[8] = 16'bz;
-			result[9] = 16'bz;
-			
 			case(state)
 				WAIT: ;
 				STAGE1: stage1_load = 1'b1;
@@ -95,16 +129,7 @@ module multiply_add (input logic pixel, clk, reset, load,
 				
 				READY: begin
 					complete = 1'b1;
-					result[0] = result2_reg[0];
-					result[1] = result2_reg[1];
-					result[2] = result2_reg[2];
-					result[3] = result2_reg[3];
-					result[4] = result2_reg[4];
-					result[5] = result2_reg[5];
-					result[6] = result2_reg[6];
-					result[7] = result2_reg[7];
-					result[8] = result2_reg[8];
-					result[9] = result2_reg[9];
+					
 				end
 			endcase
 		end
@@ -120,10 +145,17 @@ module mult_add_stage1(input shortint add[0:99], // We add row by row (a total o
 					output logic complete,
 					output shortint result[0:99]);
 		
-		shortint add_reg[0:99], result_reg[0:99];
+		shortint add_reg[0:99];
+		int result_reg[0:99];
 		enum logic [1:0] {WAIT, COMPUTE, COMPUTE_2, READY} state, next_state;
 		logic [1:0] delay; // Internal delay for multiply-add IP (needs 3 cycles to show result)
+		logic [1:0] delay_r; // Delay to hold the result at the output
 		logic subtract; // Used in the COMPUTE_2 stage so we only subtract once
+	
+		// Bits renamed for use with the mult_acc names (internal reset, clk, pixel)
+		logic aclr3; // Internal reset signal
+		logic clock0; // Clock
+		logic [15:0] datab; // Pixel
 
 		// State transition logic
 		always_ff @ (posedge clk)
@@ -139,10 +171,14 @@ module mult_add_stage1(input shortint add[0:99], // We add row by row (a total o
 				COMPUTE: begin
 					counter <= counter + 1'b1;
 					delay <= 0;
+					delay_r <= 0;
 				end
 				COMPUTE_2: begin
 					counter <= 0;
 					delay <= delay + 1'b1;
+				end
+				READY: begin
+					delay_r <= delay_r + 1'b1;
 				end
 				default: counter <= 0;
 			endcase
@@ -167,7 +203,7 @@ module mult_add_stage1(input shortint add[0:99], // We add row by row (a total o
 				end
 				
 				READY: begin
-					if (load == 1'b1) next_state = COMPUTE;
+					if (delay_r == 2'b11) next_state = WAIT;
 				end
 			endcase
 		end
@@ -176,6 +212,7 @@ module mult_add_stage1(input shortint add[0:99], // We add row by row (a total o
 		// Output bits/flags logic
 		always_comb
 		begin
+			
 			subtract = 1'b0;
 			complete = 1'b0;
 			aclr3 = 1'b0;
@@ -196,18 +233,12 @@ module mult_add_stage1(input shortint add[0:99], // We add row by row (a total o
 				end
 				
 				READY: begin
-					aclr3 = 1'b1;
 					complete = 1'b1;
 				end
 			endcase	
 		end
 		
 		subtract subtract0(.sum(result), .*);
-		
-		// Bits renamed for use with the mult_acc names (internal reset, clk, pixel)
-		logic aclr3; // Internal reset signal
-		logic clock0; // Clock
-		logic [15:0] datab; // Pixel
 		
 		assign clock0 = clk;
 		//assign datab = pixel; --> MUX this value depending on the current state
@@ -316,39 +347,25 @@ module mult_add_stage1(input shortint add[0:99], // We add row by row (a total o
 
 endmodule
 		
-/*************** TODO: MAKE AMENDMENTS HERE ************************/
-
-		/*
-		logic stage1_complete, stage2_complete, stage1_load, stage2_load;
-		shortint result1_reg[0:99], result2_reg[0:9];
-		
-		logic [9:0] counter1;
-		logic [6:0] counter2;
-		logic [4:0] counter1_out[0:99], counter2_out[0:9];
-		logic [3:0] counter1_bias[0:99], counter2_bias[0:9];
-		
-		matrix matrix0(.*);
-		mult_add_stage1 mult_add1(.add(counter1_out), .bias(counter1_bias),
-											.counter(counter1), .complete(stage1_complete),
-											.result(result1_reg), .*);
-		
-		mult_add_stage2 mult_add2(.add(counter2_out), .bias(counter2_bias), 
-											.counter(counter2), .complete(stage2_complete),
-											.result(result2_reg), .pixel(result1_reg), .*); */
-		
 module mult_add_stage2(input shortint add[0:9], // We add row by row (a total of 100 rows)
 					input shortint bias[0:9], // Biasing weights
-					input logic pixel[0:99], // Taken from the 100-by-1 array result of part 1
+					input shortint pixel[0:99], // Taken from the 100-by-1 array result of part 1
 					input logic clk, reset, load,
 					
 					output logic [6:0] counter, // Max 100
 					output logic complete,
 					output shortint result[0:9]);
 		
-		shortint add_reg[0:99], result_reg[0:9];
+		shortint add_reg[0:99];
+		int result_reg[0:9];
 		enum logic [1:0] {WAIT, COMPUTE, COMPUTE_2, READY} state, next_state;
 		logic [1:0] delay; // Internal delay for multiply-add IP (needs 3 cycles to show result)
 		logic subtract; // Used in the COMPUTE_2 stage so we only subtract once
+		
+		// Bits renamed for use with the mult_acc names (internal reset, clk, pixel)
+		logic aclr3; // Internal reset signal
+		logic clock0; // Clock
+		logic [15:0] datab; // Pixel
 
 		// State transition logic
 		always_ff @ (posedge clk)
@@ -392,7 +409,7 @@ module mult_add_stage2(input shortint add[0:9], // We add row by row (a total of
 				end
 				
 				READY: begin
-					if (load == 1'b1) next_state = COMPUTE;
+					if (load == 1'b1) next_state = WAIT;
 				end
 			endcase
 		end
@@ -421,18 +438,12 @@ module mult_add_stage2(input shortint add[0:9], // We add row by row (a total of
 				end
 				
 				READY: begin
-					aclr3 = 1'b1;
 					complete = 1'b1;
 				end
 			endcase	
 		end
 		
 		subtract2 subtract02(.sum(result), .*);
-		
-		// Bits renamed for use with the mult_acc names (internal reset, clk, pixel)
-		logic aclr3; // Internal reset signal
-		logic clock0; // Clock
-		logic [15:0] datab; // Pixel
 		
 		assign clock0 = clk;
 		//assign datab = pixel; --> MUX this value depending on the current state
