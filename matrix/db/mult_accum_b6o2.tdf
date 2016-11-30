@@ -23,7 +23,7 @@ RETURNS ( result[31..0]);
 FUNCTION zaccum_p6k (aclr, clken, clock, data[31..0])
 RETURNS ( result[31..0]);
 
---synthesis_resources = dsp_9bit 2 
+--synthesis_resources = dsp_9bit 2 lut 32 reg 32 
 SUBDESIGN mult_accum_b6o2
 ( 
 	aclr3	:	input;

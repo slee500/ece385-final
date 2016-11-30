@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Nov 29 00:43:09 2016
+Analysis & Synthesis Status : Successful - Tue Nov 29 22:36:56 2016
 Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
 Revision Name : matrix
 Top-level Entity Name : toplevel
 Family : Cyclone IV E
-Total logic elements : 29,116
-    Total combinational functions : 29,116
-    Dedicated logic registers : 2,115
-Total registers : 2115
+Total logic elements : 28,130
+    Total combinational functions : 28,104
+    Dedicated logic registers : 2,215
+Total registers : 2215
 Total pins : 165
 Total virtual pins : 0
 Total memory bits : 0
