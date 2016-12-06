@@ -1,6 +1,7 @@
 // Note: One pixel is loaded per clock cycle
 
-module multiply_add (input logic pixel, clk, reset, load,					
+module multiply_add (input logic pixel, clk, reset, load,	
+					output logic [9:0] pixel_addr,
 					output logic complete,
 					output shortint result[0:9]);
 					
@@ -9,6 +10,9 @@ module multiply_add (input logic pixel, clk, reset, load,
 		
 		logic stage1_complete, stage2_complete, stage1_load, stage2_load;
 		shortint result1_reg[0:99], result2_reg[0:9];
+		
+		
+		assign pixel_addr = counter1; // Output address that we need to read the pixel data from memory
 		
 		logic [9:0] counter1;
 		logic [6:0] counter2;
@@ -34,7 +38,7 @@ module multiply_add (input logic pixel, clk, reset, load,
 		// Circular shift for the pixel bits in STAGE1
 		always_ff @ (posedge clk)
 		begin
-			case (state)
+			case (state)				
 				STAGE1: begin
 					pixels[1] <= pixel;
 					pixels[0] <= pixels[1];

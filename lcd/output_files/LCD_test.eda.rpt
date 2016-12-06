@@ -1,5 +1,5 @@
 EDA Netlist Writer report for LCD_test
-Tue Dec 06 00:17:43 2016
+Tue Dec 06 13:02:29 2016
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Dec 06 00:17:43 2016 ;
+; EDA Netlist Writer Status ; Successful - Tue Dec 06 13:02:29 2016 ;
 ; Revision Name             ; LCD_test                              ;
 ; Top-level Entity Name     ; LCD_test                              ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Simulation Generated Files                                                      ;
-+---------------------------------------------------------------------------------+
-; Generated Files                                                                 ;
-+---------------------------------------------------------------------------------+
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test_7_1200mv_85c_slow.vo     ;
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test_7_1200mv_0c_slow.vo      ;
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test_min_1200mv_0c_fast.vo    ;
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test.vo                       ;
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test_7_1200mv_85c_v_slow.sdo  ;
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test_7_1200mv_0c_v_slow.sdo   ;
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/User/Desktop/lcd/simulation/modelsim/LCD_test_v.sdo                    ;
-+---------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                         ;
++----------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                    ;
++----------------------------------------------------------------------------------------------------+
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test_7_1200mv_85c_slow.vo     ;
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test_7_1200mv_0c_slow.vo      ;
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test_min_1200mv_0c_fast.vo    ;
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test.vo                       ;
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/LCD_test_v.sdo                    ;
++----------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -89,20 +89,20 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Tue Dec 06 00:17:39 2016
+    Info: Processing started: Tue Dec 06 13:01:51 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off LCD_test -c LCD_test
-Info (204019): Generated file LCD_test_7_1200mv_85c_slow.vo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file LCD_test_7_1200mv_0c_slow.vo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file LCD_test_min_1200mv_0c_fast.vo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file LCD_test.vo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file LCD_test_7_1200mv_85c_v_slow.sdo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file LCD_test_7_1200mv_0c_v_slow.sdo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file LCD_test_min_1200mv_0c_v_fast.sdo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file LCD_test_v.sdo in folder "C:/Users/User/Desktop/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test_7_1200mv_85c_slow.vo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test_7_1200mv_0c_slow.vo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test_min_1200mv_0c_fast.vo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test.vo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test_7_1200mv_85c_v_slow.sdo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test_7_1200mv_0c_v_slow.sdo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test_min_1200mv_0c_v_fast.sdo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file LCD_test_v.sdo in folder "C:/Users/User/sbt4e-15.0-workspace/final/lcd/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 662 megabytes
-    Info: Processing ended: Tue Dec 06 00:17:43 2016
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 1025 megabytes
+    Info: Processing ended: Tue Dec 06 13:02:30 2016
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:00:40
 
 

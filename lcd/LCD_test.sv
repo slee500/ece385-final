@@ -1,4 +1,5 @@
 module LCD_test(input logic clk, reset, load, pixel,
+					output logic [9:0] pixel_addr,
 					output logic [7:0] LCD_DATA, // Data bus
 					output logic LCD_D_Cn, // data(H) or command(L)
 					output logic LCD_WEn, // read(H) or write(L)
@@ -6,7 +7,7 @@ module LCD_test(input logic clk, reset, load, pixel,
 					);
 					
 	logic [15:0] numbers;
-	assign numbers	=  {complete, load, 10'h0, digit[0:4]};
+	assign numbers	=  {complete, load, 10'h0, digit[4:0]};
 	
 	nios nios0 (.clk_clk(clk),         // clk.clk
 		.reset_reset_n(reset),				// reset.reset_n
