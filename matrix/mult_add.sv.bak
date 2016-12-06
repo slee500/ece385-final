@@ -1,2 +1,0 @@
-// Self-written Multiply-Accumulate Module because I couldn't get ALTMULT_ACCUM to work as I wanted
-module myMAC 

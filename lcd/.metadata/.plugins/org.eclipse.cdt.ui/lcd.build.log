@@ -1,0 +1,32 @@
+00:54:40 **** Incremental Build of configuration Nios II for project lcd ****
+make all 
+Info: Building ../lcd_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lcd_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lcd_bsp//HAL/inc -I../lcd_bsp/ -I../lcd_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c:16:0: warning: "LCD_BITBANG_BASE" redefined
+ #define LCD_BITBANG_BASE 0x00021000
+ ^
+In file included from main.c:14:0:
+../lcd_bsp/system.h:203:0: note: this is the location of the previous definition
+ #define LCD_BITBANG_BASE 0x21000
+ ^
+main.c: In function 'main':
+main.c:32:11: warning: unused variable 'load_mask' [-Wunused-variable]
+   alt_u16 load_mask = 0x4000; // Check if the load signal has been raised by the camera system
+           ^
+main.c:31:11: warning: unused variable 'complete_mask' [-Wunused-variable]
+   alt_u16 complete_mask = 0x8000; // Check if our calculation is complete
+           ^
+Info: Linking lcd.elf
+nios2-elf-g++  -T'../lcd_bsp//linker.x' -msys-crt0='../lcd_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lcd_bsp/  -msmallc  -Wl,-Map=lcd.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o lcd.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert lcd.elf --thread_model hal --cpu_name nios2_qsys_0 --qsys true --simulation_enabled false --id 0 --sidp 0x21028 --timestamp 1480794008 --stderr_dev jtaguart_0 --stdin_dev jtaguart_0 --stdout_dev jtaguart_0 --sopc_system_name nios --quartus_project_dir "C:/Users/User/Desktop/lcd" --jdi ../..//output_files/LCD_test.jdi --sopcinfo C:/Users/User/Desktop/lcd/software/lcd_bsp/../../nios.sopcinfo
+Info: (lcd.elf) 8224 Bytes program size (code + initialized data).
+Info:           31 KBytes free for stack + heap.
+Info: Creating lcd.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lcd.elf >lcd.objdump
+[lcd build complete]
+
+00:54:43 Build Finished (took 2s.216ms)
+

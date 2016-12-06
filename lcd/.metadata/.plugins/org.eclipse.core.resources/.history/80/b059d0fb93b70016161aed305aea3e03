@@ -1,0 +1,29 @@
+/*
+ * lcd.c
+ *
+ *  Created on: Dec 1, 2016
+ *      Author: slee500
+ */
+
+
+#include "altera_up_avalon_character_lcd.h"
+#include <stdio.h>
+
+int main() {
+	while (1) {
+		// Open up the character LCD
+		printf("Hello world!");
+		alt_up_character_lcd_dev* myLCD = alt_up_character_lcd_open_dev("/dev/character_lcd_0");
+
+
+
+		// Write something to the LCD
+		char myText[] = "FPGAs are fun!";
+		alt_up_character_lcd_write(myLCD, myText, 14);
+		while(1); // Infinite loop
+
+	}
+
+
+	return 0;
+}

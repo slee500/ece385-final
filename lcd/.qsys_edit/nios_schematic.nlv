@@ -1,0 +1,20 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios.onchip_memory2_0 -pg 1 -lvl 3 -y 230
+preplace inst nios.character_lcd_0 -pg 1 -lvl 3 -y 30
+preplace inst nios -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios.sysid_qsys_0 -pg 1 -lvl 3 -y 310
+preplace inst nios.nios2_qsys_0 -pg 1 -lvl 2 -y 230
+preplace inst nios.clk_0 -pg 1 -lvl 1 -y 430
+preplace inst nios.jtaguart_0 -pg 1 -lvl 3 -y 130
+preplace inst nios.numbers -pg 1 -lvl 3 -y 390
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.numbers,(SLAVE)numbers.external_connection) 1 0 3 NJ 420 NJ 420 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.lcd_external_interface,(SLAVE)character_lcd_0.external_interface) 1 0 3 NJ 80 NJ 80 NJ
+preplace netloc POINT_TO_POINT<net_container>nios</net_container>(MASTER)nios2_qsys_0.d_irq,(SLAVE)jtaguart_0.irq) 1 2 1 670
+preplace netloc FAN_OUT<net_container>nios</net_container>(SLAVE)sysid_qsys_0.clk,(SLAVE)numbers.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)jtaguart_0.clk,(SLAVE)character_lcd_0.clk,(MASTER)clk_0.clk,(SLAVE)nios2_qsys_0.clk) 1 1 2 360 360 690
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>nios</net_container>(MASTER)nios2_qsys_0.instruction_master,(SLAVE)nios2_qsys_0.jtag_debug_module,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)numbers.s1,(SLAVE)jtaguart_0.avalon_jtag_slave,(SLAVE)character_lcd_0.avalon_lcd_slave,(MASTER)nios2_qsys_0.data_master,(SLAVE)onchip_memory2_0.s1) 1 1 2 400 400 650
+preplace netloc FAN_OUT<net_container>nios</net_container>(SLAVE)onchip_memory2_0.reset1,(SLAVE)jtaguart_0.reset,(SLAVE)numbers.reset,(MASTER)clk_0.clk_reset,(SLAVE)character_lcd_0.reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)nios2_qsys_0.reset_n) 1 1 2 380 380 710
+levelinfo -pg 1 0 150 940
+levelinfo -hier nios 160 190 430 780 930

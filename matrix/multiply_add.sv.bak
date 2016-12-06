@@ -1,7 +1,0 @@
-module multiply_add (input logic pixel, clk, reset, load,					
-					output logic complete,
-					output shortint result[0:9]);
-					
-					
-					
-endmodule 
