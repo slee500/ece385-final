@@ -1,0 +1,6 @@
+module gray2bw (input logic [9:0] pixl_gray,
+					 output logic bw);
+
+	assign bw = (gray[9:2] > 8'h80)? 8'hff : 8'h00;		 
+					 
+endmodule
