@@ -780,13 +780,15 @@ wire [9:0] zero_counter;
 //assign LEDG[4] = ~DLY_RST_0;
 //assign LEDG[5] = photo_taken_ready;
 //assign LEDG[6] = ctr_en;
+release_pixl u23 (.clk(CLOCK_25), .reset(~DLY_RST_2), .pixl_ready(photo_taken_ready), .bw_rdaddr(lcd_address) );
 
 
 LCD LCD0(.clk(CLOCK_25), .reset(~DLY_RST_2), .load(photo_taken_ready), 
 			.number(number), // Output number
 			// Invert the input pixel 
 			.zero_counter(zero_counter),
-			.pixel(~rd_bw), .pixel_addr(lcd_address), 
+			.pixel(~rd_bw), 
+			//.pixel_addr(lcd_address), 
 			.complete(complete), .stages_complete(stages_complete), .waiting(waiting)
 			);
 			

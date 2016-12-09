@@ -15932,6 +15932,43 @@ wren_a => ram_block1a9.PORTAWE
 wren_a => ram_block1a9.ENA0
 
 
+|DE2_CCD|release_pixl:u23
+clk => bw_rdaddr[0]~reg0.CLK
+clk => bw_rdaddr[1]~reg0.CLK
+clk => bw_rdaddr[2]~reg0.CLK
+clk => bw_rdaddr[3]~reg0.CLK
+clk => bw_rdaddr[4]~reg0.CLK
+clk => bw_rdaddr[5]~reg0.CLK
+clk => bw_rdaddr[6]~reg0.CLK
+clk => bw_rdaddr[7]~reg0.CLK
+clk => bw_rdaddr[8]~reg0.CLK
+clk => bw_rdaddr[9]~reg0.CLK
+clk => state.CLK
+reset => bw_rdaddr[0]~reg0.ACLR
+reset => bw_rdaddr[1]~reg0.ACLR
+reset => bw_rdaddr[2]~reg0.ACLR
+reset => bw_rdaddr[3]~reg0.ACLR
+reset => bw_rdaddr[4]~reg0.ACLR
+reset => bw_rdaddr[5]~reg0.ACLR
+reset => bw_rdaddr[6]~reg0.ACLR
+reset => bw_rdaddr[7]~reg0.ACLR
+reset => bw_rdaddr[8]~reg0.ACLR
+reset => bw_rdaddr[9]~reg0.ACLR
+reset => state.ACLR
+pixl_ready => next_state.OUTPUTSELECT
+pixl_ready => cnt_en.DATAB
+bw_rdaddr[0] <= bw_rdaddr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[1] <= bw_rdaddr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[2] <= bw_rdaddr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[3] <= bw_rdaddr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[4] <= bw_rdaddr[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[5] <= bw_rdaddr[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[6] <= bw_rdaddr[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[7] <= bw_rdaddr[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[8] <= bw_rdaddr[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bw_rdaddr[9] <= bw_rdaddr[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |DE2_CCD|LCD:LCD0
 clk => multiply_add:multadd.clk
 clk => max_digit:max_digit0.clk

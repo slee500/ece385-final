@@ -1,6 +1,6 @@
 EDA Netlist Writer report for DE2_CCD
-Thu Dec 08 00:26:50 2016
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+Fri Dec 09 00:10:34 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
 ---------------------
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Dec 08 00:26:50 2016 ;
+; EDA Netlist Writer Status ; Successful - Fri Dec 09 00:10:34 2016 ;
 ; Revision Name             ; DE2_CCD                               ;
 ; Top-level Entity Name     ; DE2_CCD                               ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                      ;
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                 ;
-+---------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD_7_1200mv_85c_slow.svo    ;
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD_7_1200mv_0c_slow.svo     ;
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD_min_1200mv_0c_fast.svo   ;
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD.svo                      ;
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD_7_1200mv_85c_v_slow.sdo  ;
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD_7_1200mv_0c_v_slow.sdo   ;
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/DE2_CCD_v.sdo                    ;
-+---------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                               ;
++----------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                          ;
++----------------------------------------------------------------------------------------------------------+
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD_7_1200mv_85c_slow.svo    ;
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD_7_1200mv_0c_slow.svo     ;
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD_min_1200mv_0c_fast.svo   ;
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD.svo                      ;
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/DE2_CCD_v.sdo                    ;
++----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,21 +88,21 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Dec 08 00:26:10 2016
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Fri Dec 09 00:10:02 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off DE2_CCD -c DE2_CCD
-Info (204019): Generated file DE2_CCD_7_1200mv_85c_slow.svo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file DE2_CCD_7_1200mv_0c_slow.svo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file DE2_CCD_min_1200mv_0c_fast.svo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file DE2_CCD.svo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file DE2_CCD_7_1200mv_85c_v_slow.sdo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file DE2_CCD_7_1200mv_0c_v_slow.sdo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file DE2_CCD_min_1200mv_0c_v_fast.sdo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file DE2_CCD_v.sdo in folder "C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD_7_1200mv_85c_slow.svo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD_7_1200mv_0c_slow.svo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD_min_1200mv_0c_fast.svo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD.svo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD_7_1200mv_85c_v_slow.sdo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD_7_1200mv_0c_v_slow.sdo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD_min_1200mv_0c_v_fast.sdo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file DE2_CCD_v.sdo in folder "C:/Users/ychu26/ece385-final/final_proj_not_working/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1029 megabytes
-    Info: Processing ended: Thu Dec 08 00:26:51 2016
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Peak virtual memory: 1006 megabytes
+    Info: Processing ended: Fri Dec 09 00:10:34 2016
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:32
 
 

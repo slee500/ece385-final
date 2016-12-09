@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE2_CCD
-Thu Dec 08 00:21:50 2016
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+Fri Dec 09 00:07:00 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
 ---------------------
@@ -543,24 +543,24 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 08 00:21:50 2016      ;
-; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
-; Revision Name                      ; DE2_CCD                                    ;
-; Top-level Entity Name              ; DE2_CCD                                    ;
-; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 30,724                                     ;
-;     Total combinational functions  ; 30,146                                     ;
-;     Dedicated logic registers      ; 3,551                                      ;
-; Total registers                    ; 3551                                       ;
-; Total pins                         ; 382                                        ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 123,400                                    ;
-; Embedded Multiplier 9-bit elements ; 220                                        ;
-; Total PLLs                         ; 1                                          ;
-+------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Dec 09 00:07:00 2016       ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name                      ; DE2_CCD                                     ;
+; Top-level Entity Name              ; DE2_CCD                                     ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 30,743                                      ;
+;     Total combinational functions  ; 30,165                                      ;
+;     Dedicated logic registers      ; 3,562                                       ;
+; Total registers                    ; 3562                                        ;
+; Total pins                         ; 382                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 123,400                                     ;
+; Embedded Multiplier 9-bit elements ; 220                                         ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -655,127 +655,128 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
-+-------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                         ; Library ;
-+-------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; comparator.v                              ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/comparator.v                              ;         ;
-; subtract.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/subtract.sv                               ;         ;
-; multiply_add.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/multiply_add.sv                           ;         ;
-; mult_acc.v                                ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/mult_acc.v                                ;         ;
-; max_digit.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/max_digit.sv                              ;         ;
-; matrix.sv                                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/matrix.sv                                 ;         ;
-; LCD.sv                                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/LCD.sv                                    ;         ;
-; vga_color_out.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/vga_color_out.sv                          ;         ;
-; Sdram_Control_4Port/Sdram_Params.h        ; yes             ; User Unspecified File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/Sdram_Params.h        ;         ;
-; VGA_Param.h                               ; yes             ; User Unspecified File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/VGA_Param.h                               ;         ;
-; VGA_Controller.v                          ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/VGA_Controller.v                          ;         ;
-; DE2_CCD.v                                 ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/DE2_CCD.v                                 ;         ;
-; I2C_CCD_Config.v                          ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/I2C_CCD_Config.v                          ;         ;
-; I2C_Controller.v                          ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/I2C_Controller.v                          ;         ;
-; Reset_Delay.v                             ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Reset_Delay.v                             ;         ;
-; SEG7_LUT.v                                ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/SEG7_LUT.v                                ;         ;
-; SEG7_LUT_8.v                              ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/SEG7_LUT_8.v                              ;         ;
-; Sdram_Control_4Port/command.v             ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/command.v             ;         ;
-; Sdram_Control_4Port/control_interface.v   ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/control_interface.v   ;         ;
-; Sdram_Control_4Port/sdr_data_path.v       ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/sdr_data_path.v       ;         ;
-; Sdram_Control_4Port/Sdram_Control_4Port.v ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/Sdram_Control_4Port.v ;         ;
-; RAW2RGB.v                                 ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/RAW2RGB.v                                 ;         ;
-; CCD_Capture.v                             ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/CCD_Capture.v                             ;         ;
-; Mirror_Col.v                              ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Mirror_Col.v                              ;         ;
-; my_Line_Buffer.v                          ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/my_Line_Buffer.v                          ;         ;
-; my_Stack_RAM.v                            ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/my_Stack_RAM.v                            ;         ;
-; Sdram_Control_4Port/my_Sdram_RD_FIFO.v    ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/my_Sdram_RD_FIFO.v    ;         ;
-; Sdram_Control_4Port/my_Sdram_WR_FIFO.v    ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/my_Sdram_WR_FIFO.v    ;         ;
-; Sdram_Control_4Port/my_Sdram_PLL.v        ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Sdram_Control_4Port/my_Sdram_PLL.v        ;         ;
-; sample_clip.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/sample_clip.sv                            ;         ;
-; Bw_Pixl.v                                 ; yes             ; User Wizard-Generated File   ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/Bw_Pixl.v                                 ;         ;
-; rgb2gray.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/rgb2gray.sv                               ;         ;
-; gray2bw.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/gray2bw.sv                                ;         ;
-; speck_clock.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/speck_clock.sv                            ;         ;
-; rdbw.sv                                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/rdbw.sv                                   ;         ;
-; tristate.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/tristate.sv                               ;         ;
-; sram_controller.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/sram_controller.sv                        ;         ;
-; ready_sig.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/ready_sig.sv                              ;         ;
-; bw_rdaddr_mux.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/bw_rdaddr_mux.sv                          ;         ;
-; altshift_taps.tdf                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altshift_taps.tdf                                                     ;         ;
-; altdpram.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc                                                          ;         ;
-; lpm_counter.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_counter.inc                                                       ;         ;
-; lpm_compare.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_compare.inc                                                       ;         ;
-; lpm_constant.inc                          ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_constant.inc                                                      ;         ;
-; db/shift_taps_1uv.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/shift_taps_1uv.tdf                     ;         ;
-; db/altsyncram_jma1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/altsyncram_jma1.tdf                    ;         ;
-; db/cntr_lvf.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/cntr_lvf.tdf                           ;         ;
-; db/cmpr_8ic.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/cmpr_8ic.tdf                           ;         ;
-; altsyncram.tdf                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altsyncram.tdf                                                        ;         ;
-; stratix_ram_block.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                                 ;         ;
-; lpm_mux.inc                               ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_mux.inc                                                           ;         ;
-; lpm_decode.inc                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_decode.inc                                                        ;         ;
-; aglobal150.inc                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc                                                        ;         ;
-; a_rdenreg.inc                             ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                         ;         ;
-; altrom.inc                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altrom.inc                                                            ;         ;
-; altram.inc                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altram.inc                                                            ;         ;
-; db/altsyncram_ein1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/altsyncram_ein1.tdf                    ;         ;
-; altpll.tdf                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf                                                            ;         ;
-; stratix_pll.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc                                                       ;         ;
-; stratixii_pll.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratixii_pll.inc                                                     ;         ;
-; cycloneii_pll.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                                     ;         ;
-; db/my_sdram_pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/my_sdram_pll_altpll.v                  ;         ;
-; dcfifo.tdf                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/dcfifo.tdf                                                            ;         ;
-; lpm_add_sub.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                                       ;         ;
-; a_graycounter.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_graycounter.inc                                                     ;         ;
-; a_fefifo.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_fefifo.inc                                                          ;         ;
-; a_gray2bin.inc                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_gray2bin.inc                                                        ;         ;
-; dffpipe.inc                               ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/dffpipe.inc                                                           ;         ;
-; alt_sync_fifo.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/alt_sync_fifo.inc                                                     ;         ;
-; altsyncram_fifo.inc                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altsyncram_fifo.inc                                                   ;         ;
-; db/dcfifo_klp1.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dcfifo_klp1.tdf                        ;         ;
-; db/a_gray2bin_6ib.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/a_gray2bin_6ib.tdf                     ;         ;
-; db/a_graycounter_577.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/a_graycounter_577.tdf                  ;         ;
-; db/a_graycounter_1lc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/a_graycounter_1lc.tdf                  ;         ;
-; db/altsyncram_rf51.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/altsyncram_rf51.tdf                    ;         ;
-; db/dffpipe_oe9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dffpipe_oe9.tdf                        ;         ;
-; db/alt_synch_pipe_sld.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/alt_synch_pipe_sld.tdf                 ;         ;
-; db/dffpipe_re9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dffpipe_re9.tdf                        ;         ;
-; db/alt_synch_pipe_tld.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/alt_synch_pipe_tld.tdf                 ;         ;
-; db/dffpipe_se9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dffpipe_se9.tdf                        ;         ;
-; db/cmpr_n76.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/cmpr_n76.tdf                           ;         ;
-; db/dcfifo_ssp1.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dcfifo_ssp1.tdf                        ;         ;
-; db/a_gray2bin_7ib.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/a_gray2bin_7ib.tdf                     ;         ;
-; db/a_graycounter_677.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/a_graycounter_677.tdf                  ;         ;
-; db/a_graycounter_2lc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/a_graycounter_2lc.tdf                  ;         ;
-; db/altsyncram_bi51.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/altsyncram_bi51.tdf                    ;         ;
-; db/dffpipe_ve9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dffpipe_ve9.tdf                        ;         ;
-; db/alt_synch_pipe_0md.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/alt_synch_pipe_0md.tdf                 ;         ;
-; db/dffpipe_0f9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dffpipe_0f9.tdf                        ;         ;
-; db/alt_synch_pipe_1md.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/alt_synch_pipe_1md.tdf                 ;         ;
-; db/dffpipe_1f9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dffpipe_1f9.tdf                        ;         ;
-; db/cmpr_o76.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/cmpr_o76.tdf                           ;         ;
-; db/altsyncram_pgp1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/altsyncram_pgp1.tdf                    ;         ;
-; altmult_accum.tdf                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altmult_accum.tdf                                                     ;         ;
-; db/mult_accum_b6o2.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/mult_accum_b6o2.tdf                    ;         ;
-; db/ded_mult_1a81.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/ded_mult_1a81.tdf                      ;         ;
-; db/dffpipe_93c.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/dffpipe_93c.tdf                        ;         ;
-; db/zaccum_p6k.tdf                         ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/zaccum_p6k.tdf                         ;         ;
-; db/accum_rgk.tdf                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/accum_rgk.tdf                          ;         ;
-; lpm_compare.tdf                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_compare.tdf                                                       ;         ;
-; comptree.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/comptree.inc                                                          ;         ;
-; altshift.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altshift.inc                                                          ;         ;
-; db/cmpr_igg.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/db/cmpr_igg.tdf                           ;         ;
-+-------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++-------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                  ; Library ;
++-------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; comparator.v                              ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/comparator.v                              ;         ;
+; subtract.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/subtract.sv                               ;         ;
+; multiply_add.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/multiply_add.sv                           ;         ;
+; mult_acc.v                                ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/mult_acc.v                                ;         ;
+; max_digit.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/max_digit.sv                              ;         ;
+; matrix.sv                                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/matrix.sv                                 ;         ;
+; LCD.sv                                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/LCD.sv                                    ;         ;
+; vga_color_out.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/vga_color_out.sv                          ;         ;
+; Sdram_Control_4Port/Sdram_Params.h        ; yes             ; User Unspecified File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/Sdram_Params.h        ;         ;
+; VGA_Param.h                               ; yes             ; User Unspecified File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/VGA_Param.h                               ;         ;
+; VGA_Controller.v                          ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/VGA_Controller.v                          ;         ;
+; DE2_CCD.v                                 ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/DE2_CCD.v                                 ;         ;
+; I2C_CCD_Config.v                          ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/I2C_CCD_Config.v                          ;         ;
+; I2C_Controller.v                          ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/I2C_Controller.v                          ;         ;
+; Reset_Delay.v                             ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/Reset_Delay.v                             ;         ;
+; SEG7_LUT.v                                ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/SEG7_LUT.v                                ;         ;
+; SEG7_LUT_8.v                              ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/SEG7_LUT_8.v                              ;         ;
+; Sdram_Control_4Port/command.v             ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/command.v             ;         ;
+; Sdram_Control_4Port/control_interface.v   ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/control_interface.v   ;         ;
+; Sdram_Control_4Port/sdr_data_path.v       ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/sdr_data_path.v       ;         ;
+; Sdram_Control_4Port/Sdram_Control_4Port.v ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/Sdram_Control_4Port.v ;         ;
+; RAW2RGB.v                                 ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/RAW2RGB.v                                 ;         ;
+; CCD_Capture.v                             ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/CCD_Capture.v                             ;         ;
+; Mirror_Col.v                              ; yes             ; User Verilog HDL File        ; C:/Users/ychu26/ece385-final/final_proj_not_working/Mirror_Col.v                              ;         ;
+; my_Line_Buffer.v                          ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/my_Line_Buffer.v                          ;         ;
+; my_Stack_RAM.v                            ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/my_Stack_RAM.v                            ;         ;
+; Sdram_Control_4Port/my_Sdram_RD_FIFO.v    ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/my_Sdram_RD_FIFO.v    ;         ;
+; Sdram_Control_4Port/my_Sdram_WR_FIFO.v    ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/my_Sdram_WR_FIFO.v    ;         ;
+; Sdram_Control_4Port/my_Sdram_PLL.v        ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/Sdram_Control_4Port/my_Sdram_PLL.v        ;         ;
+; sample_clip.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/sample_clip.sv                            ;         ;
+; Bw_Pixl.v                                 ; yes             ; User Wizard-Generated File   ; C:/Users/ychu26/ece385-final/final_proj_not_working/Bw_Pixl.v                                 ;         ;
+; rgb2gray.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/rgb2gray.sv                               ;         ;
+; gray2bw.sv                                ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/gray2bw.sv                                ;         ;
+; speck_clock.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/speck_clock.sv                            ;         ;
+; rdbw.sv                                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/rdbw.sv                                   ;         ;
+; tristate.sv                               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/tristate.sv                               ;         ;
+; sram_controller.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/sram_controller.sv                        ;         ;
+; ready_sig.sv                              ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/ready_sig.sv                              ;         ;
+; bw_rdaddr_mux.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/bw_rdaddr_mux.sv                          ;         ;
+; release_pixl.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ychu26/ece385-final/final_proj_not_working/release_pixl.sv                           ;         ;
+; altshift_taps.tdf                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altshift_taps.tdf                              ;         ;
+; altdpram.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
+; lpm_counter.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_counter.inc                                ;         ;
+; lpm_compare.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_compare.inc                                ;         ;
+; lpm_constant.inc                          ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_constant.inc                               ;         ;
+; db/shift_taps_1uv.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/shift_taps_1uv.tdf                     ;         ;
+; db/altsyncram_jma1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/altsyncram_jma1.tdf                    ;         ;
+; db/cntr_lvf.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/cntr_lvf.tdf                           ;         ;
+; db/cmpr_8ic.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/cmpr_8ic.tdf                           ;         ;
+; altsyncram.tdf                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
+; stratix_ram_block.inc                     ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
+; lpm_mux.inc                               ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
+; lpm_decode.inc                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
+; aglobal150.inc                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/aglobal150.inc                                 ;         ;
+; a_rdenreg.inc                             ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
+; altrom.inc                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
+; altram.inc                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altram.inc                                     ;         ;
+; db/altsyncram_ein1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/altsyncram_ein1.tdf                    ;         ;
+; altpll.tdf                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altpll.tdf                                     ;         ;
+; stratix_pll.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratix_pll.inc                                ;         ;
+; stratixii_pll.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/stratixii_pll.inc                              ;         ;
+; cycloneii_pll.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/cycloneii_pll.inc                              ;         ;
+; db/my_sdram_pll_altpll.v                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/my_sdram_pll_altpll.v                  ;         ;
+; dcfifo.tdf                                ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/dcfifo.tdf                                     ;         ;
+; lpm_add_sub.inc                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                ;         ;
+; a_graycounter.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_graycounter.inc                              ;         ;
+; a_fefifo.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_fefifo.inc                                   ;         ;
+; a_gray2bin.inc                            ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/a_gray2bin.inc                                 ;         ;
+; dffpipe.inc                               ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/dffpipe.inc                                    ;         ;
+; alt_sync_fifo.inc                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/alt_sync_fifo.inc                              ;         ;
+; altsyncram_fifo.inc                       ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altsyncram_fifo.inc                            ;         ;
+; db/dcfifo_klp1.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dcfifo_klp1.tdf                        ;         ;
+; db/a_gray2bin_6ib.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/a_gray2bin_6ib.tdf                     ;         ;
+; db/a_graycounter_577.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/a_graycounter_577.tdf                  ;         ;
+; db/a_graycounter_1lc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/a_graycounter_1lc.tdf                  ;         ;
+; db/altsyncram_rf51.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/altsyncram_rf51.tdf                    ;         ;
+; db/dffpipe_oe9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dffpipe_oe9.tdf                        ;         ;
+; db/alt_synch_pipe_sld.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/alt_synch_pipe_sld.tdf                 ;         ;
+; db/dffpipe_re9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dffpipe_re9.tdf                        ;         ;
+; db/alt_synch_pipe_tld.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/alt_synch_pipe_tld.tdf                 ;         ;
+; db/dffpipe_se9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dffpipe_se9.tdf                        ;         ;
+; db/cmpr_n76.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/cmpr_n76.tdf                           ;         ;
+; db/dcfifo_ssp1.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dcfifo_ssp1.tdf                        ;         ;
+; db/a_gray2bin_7ib.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/a_gray2bin_7ib.tdf                     ;         ;
+; db/a_graycounter_677.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/a_graycounter_677.tdf                  ;         ;
+; db/a_graycounter_2lc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/a_graycounter_2lc.tdf                  ;         ;
+; db/altsyncram_bi51.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/altsyncram_bi51.tdf                    ;         ;
+; db/dffpipe_ve9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dffpipe_ve9.tdf                        ;         ;
+; db/alt_synch_pipe_0md.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/alt_synch_pipe_0md.tdf                 ;         ;
+; db/dffpipe_0f9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dffpipe_0f9.tdf                        ;         ;
+; db/alt_synch_pipe_1md.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/alt_synch_pipe_1md.tdf                 ;         ;
+; db/dffpipe_1f9.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dffpipe_1f9.tdf                        ;         ;
+; db/cmpr_o76.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/cmpr_o76.tdf                           ;         ;
+; db/altsyncram_pgp1.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/altsyncram_pgp1.tdf                    ;         ;
+; altmult_accum.tdf                         ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altmult_accum.tdf                              ;         ;
+; db/mult_accum_b6o2.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/mult_accum_b6o2.tdf                    ;         ;
+; db/ded_mult_1a81.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/ded_mult_1a81.tdf                      ;         ;
+; db/dffpipe_93c.tdf                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/dffpipe_93c.tdf                        ;         ;
+; db/zaccum_p6k.tdf                         ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/zaccum_p6k.tdf                         ;         ;
+; db/accum_rgk.tdf                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/accum_rgk.tdf                          ;         ;
+; lpm_compare.tdf                           ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/lpm_compare.tdf                                ;         ;
+; comptree.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/comptree.inc                                   ;         ;
+; altshift.inc                              ; yes             ; Megafunction                 ; c:/altera/15.0/quartus/libraries/megafunctions/altshift.inc                                   ;         ;
+; db/cmpr_igg.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ychu26/ece385-final/final_proj_not_working/db/cmpr_igg.tdf                           ;         ;
++-------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -783,20 +784,20 @@ agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                              ;
 +---------------------------------------------+--------------------------------------------------------------------+
-; Estimated Total logic elements              ; 30,724                                                             ;
+; Estimated Total logic elements              ; 30,743                                                             ;
 ;                                             ;                                                                    ;
-; Total combinational functions               ; 30146                                                              ;
+; Total combinational functions               ; 30165                                                              ;
 ; Logic element usage by number of LUT inputs ;                                                                    ;
-;     -- 4 input functions                    ; 25052                                                              ;
-;     -- 3 input functions                    ; 2869                                                               ;
-;     -- <=2 input functions                  ; 2225                                                               ;
+;     -- 4 input functions                    ; 25051                                                              ;
+;     -- 3 input functions                    ; 2877                                                               ;
+;     -- <=2 input functions                  ; 2237                                                               ;
 ;                                             ;                                                                    ;
 ; Logic elements by mode                      ;                                                                    ;
-;     -- normal mode                          ; 26733                                                              ;
-;     -- arithmetic mode                      ; 3413                                                               ;
+;     -- normal mode                          ; 26744                                                              ;
+;     -- arithmetic mode                      ; 3421                                                               ;
 ;                                             ;                                                                    ;
-; Total registers                             ; 3551                                                               ;
-;     -- Dedicated logic registers            ; 3551                                                               ;
+; Total registers                             ; 3562                                                               ;
+;     -- Dedicated logic registers            ; 3562                                                               ;
 ;     -- I/O registers                        ; 0                                                                  ;
 ;                                             ;                                                                    ;
 ; I/O pins                                    ; 382                                                                ;
@@ -808,8 +809,8 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                  ;
 ;                                             ;                                                                    ;
 ; Maximum fan-out node                        ; LCD:LCD0|multiply_add:multadd|mult_add_stage1:mult_add1|counter[0] ;
-; Maximum fan-out                             ; 9898                                                               ;
-; Total fan-out                               ; 129066                                                             ;
+; Maximum fan-out                             ; 9893                                                               ;
+; Total fan-out                               ; 129151                                                             ;
 ; Average fan-out                             ; 3.69                                                               ;
 +---------------------------------------------+--------------------------------------------------------------------+
 
@@ -819,14 +820,14 @@ agreement for further details.
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                          ; Library Name ;
 +--------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE2_CCD                                               ; 30146 (2)         ; 3551 (13)    ; 123400      ; 220          ; 0       ; 110       ; 382  ; 0            ; |DE2_CCD                                                                                                                                                                                     ; work         ;
+; |DE2_CCD                                               ; 30165 (2)         ; 3562 (13)    ; 123400      ; 220          ; 0       ; 110       ; 382  ; 0            ; |DE2_CCD                                                                                                                                                                                     ; work         ;
 ;    |Bw_Pixl:u11|                                       ; 0 (0)             ; 0 (0)        ; 784         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Bw_Pixl:u11                                                                                                                                                                         ; work         ;
 ;       |altsyncram:altsyncram_component|                ; 0 (0)             ; 0 (0)        ; 784         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Bw_Pixl:u11|altsyncram:altsyncram_component                                                                                                                                         ; work         ;
 ;          |altsyncram_ein1:auto_generated|              ; 0 (0)             ; 0 (0)        ; 784         ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Bw_Pixl:u11|altsyncram:altsyncram_component|altsyncram_ein1:auto_generated                                                                                                          ; work         ;
 ;    |CCD_Capture:u3|                                    ; 22 (22)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|CCD_Capture:u3                                                                                                                                                                      ; work         ;
 ;    |I2C_CCD_Config:u7|                                 ; 118 (72)          ; 67 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|I2C_CCD_Config:u7                                                                                                                                                                   ; work         ;
 ;       |I2C_Controller:u0|                              ; 46 (46)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|I2C_CCD_Config:u7|I2C_Controller:u0                                                                                                                                                 ; work         ;
-;    |LCD:LCD0|                                          ; 28530 (0)         ; 2228 (0)     ; 0           ; 220          ; 0       ; 110       ; 0    ; 0            ; |DE2_CCD|LCD:LCD0                                                                                                                                                                            ; work         ;
+;    |LCD:LCD0|                                          ; 28535 (0)         ; 2228 (0)     ; 0           ; 220          ; 0       ; 110       ; 0    ; 0            ; |DE2_CCD|LCD:LCD0                                                                                                                                                                            ; work         ;
 ;       |max_digit:max_digit0|                           ; 425 (281)         ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0                                                                                                                                                       ; work         ;
 ;          |comparator:compare_0|                        ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|comparator:compare_0                                                                                                                                  ; work         ;
 ;             |lpm_compare:LPM_COMPARE_component|        ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|comparator:compare_0|lpm_compare:LPM_COMPARE_component                                                                                                ; work         ;
@@ -855,9 +856,9 @@ agreement for further details.
 ;          |comparator:compare_8|                        ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|comparator:compare_8                                                                                                                                  ; work         ;
 ;             |lpm_compare:LPM_COMPARE_component|        ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|comparator:compare_8|lpm_compare:LPM_COMPARE_component                                                                                                ; work         ;
 ;                |cmpr_igg:auto_generated|               ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|comparator:compare_8|lpm_compare:LPM_COMPARE_component|cmpr_igg:auto_generated                                                                        ; work         ;
-;       |multiply_add:multadd|                           ; 28105 (187)       ; 2223 (174)   ; 0           ; 220          ; 0       ; 110       ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd                                                                                                                                                       ; work         ;
-;          |matrix:matrix0|                              ; 24740 (24740)     ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|matrix:matrix0                                                                                                                                        ; work         ;
-;          |mult_add_stage1:mult_add1|                   ; 2772 (35)         ; 1716 (16)    ; 0           ; 200          ; 0       ; 100       ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|mult_add_stage1:mult_add1                                                                                                                             ; work         ;
+;       |multiply_add:multadd|                           ; 28110 (187)       ; 2223 (174)   ; 0           ; 220          ; 0       ; 110       ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd                                                                                                                                                       ; work         ;
+;          |matrix:matrix0|                              ; 24744 (24744)     ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|matrix:matrix0                                                                                                                                        ; work         ;
+;          |mult_add_stage1:mult_add1|                   ; 2773 (36)         ; 1716 (16)    ; 0           ; 200          ; 0       ; 100       ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|mult_add_stage1:mult_add1                                                                                                                             ; work         ;
 ;             |mult_acc:mult_acc0|                       ; 16 (0)            ; 16 (0)       ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|mult_add_stage1:mult_add1|mult_acc:mult_acc0                                                                                                          ; work         ;
 ;                |altmult_accum:altmult_accum_component| ; 16 (0)            ; 16 (0)       ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|mult_add_stage1:mult_add1|mult_acc:mult_acc0|altmult_accum:altmult_accum_component                                                                    ; work         ;
 ;                   |mult_accum_b6o2:auto_generated|     ; 16 (0)            ; 16 (0)       ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|mult_add_stage1:mult_add1|mult_acc:mult_acc0|altmult_accum:altmult_accum_component|mult_accum_b6o2:auto_generated                                     ; work         ;
@@ -1584,7 +1585,7 @@ agreement for further details.
 ;                |dffpipe_ve9:ws_bwp|                    ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_bwp                                                            ; work         ;
 ;       |my_Sdram_RD_FIFO:read_fifo3|                    ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3                                                                                                                                  ; work         ;
 ;          |dcfifo:dcfifo_component|                     ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component                                                                                                          ; work         ;
-;             |dcfifo_ssp1:auto_generated|               ; 91 (15)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                                               ; work         ;
+;             |dcfifo_ssp1:auto_generated|               ; 91 (16)           ; 125 (33)     ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated                                                                               ; work         ;
 ;                |a_gray2bin_7ib:wrptr_g_gray2bin|       ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                                               ; work         ;
 ;                |a_gray2bin_7ib:ws_dgrp_gray2bin|       ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                                               ; work         ;
 ;                |a_graycounter_2lc:wrptr_g1p|           ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_2lc:wrptr_g1p                                                   ; work         ;
@@ -1595,7 +1596,7 @@ agreement for further details.
 ;                   |dffpipe_1f9:dffpipe16|              ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|alt_synch_pipe_1md:ws_dgrp|dffpipe_1f9:dffpipe16                              ; work         ;
 ;                |altsyncram_bi51:fifo_ram|              ; 0 (0)             ; 0 (0)        ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|altsyncram_bi51:fifo_ram                                                      ; work         ;
 ;                |cmpr_o76:rdempty_eq_comp|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:rdempty_eq_comp                                                      ; work         ;
-;                |cmpr_o76:wrfull_eq_comp|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:wrfull_eq_comp                                                       ; work         ;
+;                |cmpr_o76:wrfull_eq_comp|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|cmpr_o76:wrfull_eq_comp                                                       ; work         ;
 ;                |dffpipe_ve9:ws_brp|                    ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_brp                                                            ; work         ;
 ;                |dffpipe_ve9:ws_bwp|                    ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|dffpipe_ve9:ws_bwp                                                            ; work         ;
 ;       |my_Sdram_RD_FIFO:read_fifo4|                    ; 91 (0)            ; 125 (0)      ; 15360       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4                                                                                                                                  ; work         ;
@@ -1654,6 +1655,7 @@ agreement for further details.
 ;    |bw_rdaddr_mux:u20|                                 ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|bw_rdaddr_mux:u20                                                                                                                                                                   ; work         ;
 ;    |rdbw:u13|                                          ; 12 (12)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|rdbw:u13                                                                                                                                                                            ; work         ;
 ;    |ready_sig:u18|                                     ; 32 (32)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|ready_sig:u18                                                                                                                                                                       ; work         ;
+;    |release_pixl:u23|                                  ; 14 (14)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|release_pixl:u23                                                                                                                                                                    ; work         ;
 ;    |sample_clip:u10|                                   ; 140 (103)         ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sample_clip:u10                                                                                                                                                                     ; work         ;
 ;       |gray2bw:u2|                                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sample_clip:u10|gray2bw:u2                                                                                                                                                          ; work         ;
 ;       |rgb2gray:u1|                                    ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_CCD|sample_clip:u10|rgb2gray:u1                                                                                                                                                         ; work         ;
@@ -2169,27 +2171,30 @@ Encoding Type:  One-Hot
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|dffpipe_oe9:rs_bwp|dffe12a[9]                                                                ; Lost fanout                                                            ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|dffpipe_oe9:rs_brp|dffe12a[9]                                                                ; Lost fanout                                                            ;
 ; LCD:LCD0|max_digit:max_digit0|digit[5..15]                                                                                                                                                          ; Merged with LCD:LCD0|max_digit:max_digit0|digit[4]                     ;
-; Sdram_Control_4Port:u6|rWR1_ADDR[0,5]                                                                                                                                                               ; Merged with Sdram_Control_4Port:u6|rWR1_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|rWR1_ADDR[1..4]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rWR1_ADDR[6]                        ;
-; Sdram_Control_4Port:u6|rWR2_ADDR[2..6]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rWR2_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|rWR2_ADDR[0]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rWR2_ADDR[1]                        ;
+; Sdram_Control_4Port:u6|rWR1_ADDR[2..5]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rWR1_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rWR1_ADDR[0,1]                                                                                                                                                               ; Merged with Sdram_Control_4Port:u6|rWR1_ADDR[6]                        ;
+; Sdram_Control_4Port:u6|rWR2_ADDR[1,3..6]                                                                                                                                                            ; Merged with Sdram_Control_4Port:u6|rWR2_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rWR2_ADDR[0]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rWR2_ADDR[2]                        ;
 ; Sdram_Control_4Port:u6|rWR3_ADDR[0..21]                                                                                                                                                             ; Merged with Sdram_Control_4Port:u6|rWR3_ADDR[22]                       ;
 ; Sdram_Control_4Port:u6|rWR4_ADDR[0..21]                                                                                                                                                             ; Merged with Sdram_Control_4Port:u6|rWR4_ADDR[22]                       ;
-; Sdram_Control_4Port:u6|rRD1_ADDR[0..5]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rRD1_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|rRD2_ADDR[1..6]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rRD2_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rRD1_ADDR[0..6]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rRD1_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rRD2_ADDR[0,1,3..6]                                                                                                                                                          ; Merged with Sdram_Control_4Port:u6|rRD2_ADDR[7]                        ;
 ; Sdram_Control_4Port:u6|rRD3_ADDR[0..6]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rRD3_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|rRD4_ADDR[0..6]                                                                                                                                                              ; Merged with Sdram_Control_4Port:u6|rRD4_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rRD4_ADDR[3]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rRD4_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rRD4_ADDR[0..2,4,5]                                                                                                                                                          ; Merged with Sdram_Control_4Port:u6|rRD4_ADDR[6]                        ;
 ; Sdram_Control_4Port:u6|mLENGTH[0..6]                                                                                                                                                                ; Merged with Sdram_Control_4Port:u6|mLENGTH[7]                          ;
 ; Sdram_Control_4Port:u6|rWR1_ADDR[6]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rWR1_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|rWR2_ADDR[1]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rWR2_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|rRD1_ADDR[6]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rRD1_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|rRD2_ADDR[0]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rRD2_ADDR[7]                        ;
-; Sdram_Control_4Port:u6|mADDR[5]                                                                                                                                                                     ; Merged with Sdram_Control_4Port:u6|mADDR[7]                            ;
-; Sdram_Control_4Port:u6|mADDR[2,3]                                                                                                                                                                   ; Merged with Sdram_Control_4Port:u6|mADDR[4]                            ;
-; Sdram_Control_4Port:u6|control_interface:control1|SADDR[5]                                                                                                                                          ; Merged with Sdram_Control_4Port:u6|control_interface:control1|SADDR[7] ;
-; Sdram_Control_4Port:u6|control_interface:control1|SADDR[2,3]                                                                                                                                        ; Merged with Sdram_Control_4Port:u6|control_interface:control1|SADDR[4] ;
-; Sdram_Control_4Port:u6|mADDR[0,1,4,6]                                                                                                                                                               ; Merged with Sdram_Control_4Port:u6|mADDR[7]                            ;
-; Sdram_Control_4Port:u6|control_interface:control1|SADDR[0,1,4,6]                                                                                                                                    ; Merged with Sdram_Control_4Port:u6|control_interface:control1|SADDR[7] ;
+; Sdram_Control_4Port:u6|rWR2_ADDR[2]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rWR2_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rRD2_ADDR[2]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rRD2_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|rRD4_ADDR[6]                                                                                                                                                                 ; Merged with Sdram_Control_4Port:u6|rRD4_ADDR[7]                        ;
+; Sdram_Control_4Port:u6|mADDR[3]                                                                                                                                                                     ; Merged with Sdram_Control_4Port:u6|mADDR[7]                            ;
+; Sdram_Control_4Port:u6|mADDR[1]                                                                                                                                                                     ; Merged with Sdram_Control_4Port:u6|mADDR[6]                            ;
+; Sdram_Control_4Port:u6|mADDR[4]                                                                                                                                                                     ; Merged with Sdram_Control_4Port:u6|mADDR[5]                            ;
+; Sdram_Control_4Port:u6|control_interface:control1|SADDR[3]                                                                                                                                          ; Merged with Sdram_Control_4Port:u6|control_interface:control1|SADDR[7] ;
+; Sdram_Control_4Port:u6|control_interface:control1|SADDR[1]                                                                                                                                          ; Merged with Sdram_Control_4Port:u6|control_interface:control1|SADDR[6] ;
+; Sdram_Control_4Port:u6|control_interface:control1|SADDR[4]                                                                                                                                          ; Merged with Sdram_Control_4Port:u6|control_interface:control1|SADDR[5] ;
+; Sdram_Control_4Port:u6|mADDR[0,2,5,6]                                                                                                                                                               ; Merged with Sdram_Control_4Port:u6|mADDR[7]                            ;
+; Sdram_Control_4Port:u6|control_interface:control1|SADDR[0,2,5,6]                                                                                                                                    ; Merged with Sdram_Control_4Port:u6|control_interface:control1|SADDR[7] ;
 ; I2C_CCD_Config:u7|I2C_Controller:u0|SD[14,15]                                                                                                                                                       ; Merged with I2C_CCD_Config:u7|I2C_Controller:u0|SD[12]                 ;
 ; I2C_CCD_Config:u7|mI2C_DATA[14,15]                                                                                                                                                                  ; Merged with I2C_CCD_Config:u7|mI2C_DATA[12]                            ;
 ; Sdram_Control_4Port:u6|rWR1_ADDR[7]                                                                                                                                                                 ; Stuck at GND due to stuck port data_in                                 ;
@@ -2456,12 +2461,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3551  ;
+; Total registers                              ; 3562  ;
 ; Number of registers using Synchronous Clear  ; 243   ;
 ; Number of registers using Synchronous Load   ; 152   ;
-; Number of registers using Asynchronous Clear ; 2743  ;
+; Number of registers using Asynchronous Clear ; 2754  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 561   ;
+; Number of registers using Clock Enable       ; 570   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -2482,8 +2487,8 @@ Encoding Type:  One-Hot
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo3|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
-; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 8       ;
-; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|counter8a0 ; 6       ;
+; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo4|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|counter5a0  ; 7       ;
+; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|counter8a0 ; 7       ;
 ; Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|a_graycounter_1lc:wrptr_g1p|counter8a0 ; 6       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
 ; Sdram_Control_4Port:u6|my_Sdram_RD_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_ssp1:auto_generated|a_graycounter_677:rdptr_g1p|parity6     ; 4       ;
@@ -2515,34 +2520,34 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|digit[2]                        ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|SA[6]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|digit[1]                        ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|SA[5]                 ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|SA[8]                 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|control_interface:control1|timer[9]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|command_delay[1]      ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE2_CCD|sample_clip:u10|irow_cont[7]                                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|control_interface:control1|timer[13]   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|command_delay[5]      ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE2_CCD|sample_clip:u10|irow_cont[2]                                  ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE2_CCD|sample_clip:u10|srow_cont[2]                                  ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DE2_CCD|CCD_Capture:u3|X_Cont[1]                                      ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DE2_CCD|CCD_Capture:u3|X_Cont[10]                                     ;
 ; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |DE2_CCD|CCD_Capture:u3|Y_Cont[6]                                      ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD4_ADDR[17]                          ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD3_ADDR[14]                          ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD2_ADDR[13]                          ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD1_ADDR[12]                          ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR2_ADDR[22]                          ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR1_ADDR[14]                          ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|rp_done               ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD4_ADDR[22]                          ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD3_ADDR[10]                          ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD2_ADDR[21]                          ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rRD1_ADDR[20]                          ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR2_ADDR[14]                          ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|rWR1_ADDR[20]                          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|command:command1|rp_shift[0]           ;
 ; 64:1               ; 8 bits    ; 336 LEs       ; 80 LEs               ; 256 LEs                ; Yes        ; |DE2_CCD|I2C_CCD_Config:u7|mI2C_DATA[5]                                ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|CMD[1]                                 ;
-; 7:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mADDR[14]                              ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|ST[1]                                  ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|RD_MASK[2]                             ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|WR_MASK[1]                             ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_CCD|I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[5]             ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|Mux64                           ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|Mux89                           ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|Sdram_Control_4Port:u6|mDATAIN[4]                             ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|Mux99                           ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|vga_color_out:u1_1|Selector16                                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|CMD[0]                                 ;
+; 7:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mADDR[22]                              ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|ST[3]                                  ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|RD_MASK[1]                             ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |DE2_CCD|Sdram_Control_4Port:u6|mWR                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_CCD|I2C_CCD_Config:u7|I2C_Controller:u0|SD_COUNTER[1]             ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|Mux74                           ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|Mux94                           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|Sdram_Control_4Port:u6|mDATAIN[14]                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|max_digit:max_digit0|Mux110                          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |DE2_CCD|vga_color_out:u1_1|Selector21                                 ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |DE2_CCD|ready_sig:u18|Selector0                                       ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|state                           ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |DE2_CCD|LCD:LCD0|multiply_add:multadd|mult_add_stage2:mult_add2|state ;
@@ -23049,14 +23054,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+----------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LCD:LCD0"                                                                                      ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; stages_complete ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; waiting         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LCD:LCD0"                                                                                                           ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                  ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; stages_complete ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; waiting         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; pixel_addr      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -23404,12 +23410,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 382                         ;
-; cycloneiii_ff         ; 3551                        ;
-;     CLR               ; 2409                        ;
+; cycloneiii_ff         ; 3562                        ;
+;     CLR               ; 2411                        ;
 ;     CLR SCLR          ; 36                          ;
 ;     CLR SLD           ; 10                          ;
 ;     ENA               ; 153                         ;
-;     ENA CLR           ; 245                         ;
+;     ENA CLR           ; 254                         ;
 ;     ENA CLR SCLR      ; 32                          ;
 ;     ENA CLR SLD       ; 11                          ;
 ;     ENA SCLR          ; 16                          ;
@@ -23419,24 +23425,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 27                          ;
 ;     plain             ; 352                         ;
 ; cycloneiii_io_obuf    ; 123                         ;
-; cycloneiii_lcell_comb ; 30159                       ;
-;     arith             ; 3413                        ;
+; cycloneiii_lcell_comb ; 30178                       ;
+;     arith             ; 3421                        ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1468                        ;
-;         3 data inputs ; 1944                        ;
-;     normal            ; 26746                       ;
+;         2 data inputs ; 1475                        ;
+;         3 data inputs ; 1945                        ;
+;     normal            ; 26757                       ;
 ;         0 data inputs ; 10                          ;
-;         1 data inputs ; 154                         ;
-;         2 data inputs ; 605                         ;
-;         3 data inputs ; 925                         ;
-;         4 data inputs ; 25052                       ;
+;         1 data inputs ; 155                         ;
+;         2 data inputs ; 609                         ;
+;         3 data inputs ; 932                         ;
+;         4 data inputs ; 25051                       ;
 ; cycloneiii_mac_mult   ; 110                         ;
 ; cycloneiii_mac_out    ; 110                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 159                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 17.50                       ;
-; Average LUT depth     ; 4.46                        ;
+; Average LUT depth     ; 4.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -23445,7 +23451,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:07:07     ;
+; Top            ; 00:04:57     ;
 +----------------+--------------+
 
 
@@ -23454,10 +23460,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Dec 08 00:14:13 2016
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Fri Dec 09 00:01:39 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_CCD -c DE2_CCD
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.v
     Info (12023): Found entity 1: comparator
 Info (12021): Found 2 design units, including 2 entities, in source file subtract.sv
@@ -23562,6 +23568,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file testben
     Info (12023): Found entity 1: testbench_lcd
 Info (12021): Found 1 design units, including 1 entities, in source file testbench_comparator.sv
     Info (12023): Found entity 1: testbench_comparator
+Info (12021): Found 1 design units, including 1 entities, in source file release_pixl.sv
+    Info (12023): Found entity 1: release_pixl
 Warning (10236): Verilog HDL Implicit Net warning at testbench.sv(23): created implicit net for "d_icol_con"
 Warning (10236): Verilog HDL Implicit Net warning at DE2_CCD.v(601): created implicit net for "bw_wren"
 Warning (10236): Verilog HDL Implicit Net warning at sample_clip.sv(32): created implicit net for "sample_area"
@@ -24098,6 +24106,8 @@ Info (12133): Instantiated megafunction "Mirror_Col:u8|my_Stack_RAM:comb_62|alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pgp1.tdf
     Info (12023): Found entity 1: altsyncram_pgp1
 Info (12128): Elaborating entity "altsyncram_pgp1" for hierarchy "Mirror_Col:u8|my_Stack_RAM:comb_62|altsyncram:altsyncram_component|altsyncram_pgp1:auto_generated"
+Info (12128): Elaborating entity "release_pixl" for hierarchy "release_pixl:u23"
+Warning (10230): Verilog HDL assignment warning at release_pixl.sv(16): truncated value with size 32 to match size of target (10)
 Info (12128): Elaborating entity "LCD" for hierarchy "LCD:LCD0"
 Info (12128): Elaborating entity "multiply_add" for hierarchy "LCD:LCD0|multiply_add:multadd"
 Info (10264): Verilog HDL Case Statement information at multiply_add.sv(46): all case item expressions in this case statement are onehot
@@ -24215,7 +24225,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|q_b[13]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|q_b[14]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo3|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|q_b[15]"
-Warning (12241): 18 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 19 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[11]" and its non-tri-state driver.
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[14]" and its non-tri-state driver.
@@ -24402,7 +24412,7 @@ Warning (20013): Ignored assignments for entity "LCD_test" -- entity does not ex
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity LCD_test -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity LCD_test -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity LCD_test -section_id Top was ignored
-Info (144001): Generated suppressed messages file C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/DE2_CCD.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/ychu26/ece385-final/final_proj_not_working/DE2_CCD.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15400): WYSIWYG primitive "Sdram_Control_4Port:u6|my_Sdram_WR_FIFO:write_fifo4|dcfifo:dcfifo_component|dcfifo_klp1:auto_generated|altsyncram_rf51:fifo_ram|ram_block5a0" has a port clk0 that is stuck at GND
@@ -24447,24 +24457,24 @@ Warning (21074): Design contains 25 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "TD_DATA[7]"
     Warning (15610): No output dependent on input pin "TD_HS"
     Warning (15610): No output dependent on input pin "TD_VS"
-Info (21057): Implemented 31525 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 31544 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 46 input pins
     Info (21059): Implemented 221 output pins
     Info (21060): Implemented 115 bidirectional pins
-    Info (21061): Implemented 30763 logic cells
+    Info (21061): Implemented 30782 logic cells
     Info (21064): Implemented 159 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 220 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 352 warnings
-    Info: Peak virtual memory: 897 megabytes
-    Info: Processing ended: Thu Dec 08 00:21:51 2016
-    Info: Elapsed time: 00:07:38
-    Info: Total CPU time (on all processors): 00:07:58
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 353 warnings
+    Info: Peak virtual memory: 853 megabytes
+    Info: Processing ended: Fri Dec 09 00:07:01 2016
+    Info: Elapsed time: 00:05:22
+    Info: Total CPU time (on all processors): 00:05:33
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/User/Desktop/ece385-final-master/ece385-final-master/DE2_CCD-test/DE2_CCD.map.smsg.
+The suppressed messages can be found in C:/Users/ychu26/ece385-final/final_proj_not_working/DE2_CCD.map.smsg.
 
 
