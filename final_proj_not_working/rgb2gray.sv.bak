@@ -1,5 +1,0 @@
-module rgb2gray(input logic [9:0] pixl_R, pixl_G, pixl_B,
-					 output logic [7:8] pixl_gray)
-					 
-
-endmodule

@@ -1,4 +1,0 @@
-module sample_clip (input 
-						  output);
-	
-endmodule
