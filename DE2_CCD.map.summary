@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 09 00:07:00 2016
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : DE2_CCD
+Top-level Entity Name : DE2_CCD
+Family : Cyclone IV E
+Total logic elements : 30,743
+    Total combinational functions : 30,165
+    Dedicated logic registers : 3,562
+Total registers : 3562
+Total pins : 382
+Total virtual pins : 0
+Total memory bits : 123,400
+Embedded Multiplier 9-bit elements : 220
+Total PLLs : 1
